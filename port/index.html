@@ -127,6 +127,7 @@
     <section id="section3">
       <div>
         <article class="bgWhite">
+          <p class="project_label">my project <span>01</span></p>
           <h3 class="container">culturebunker<em>평화문화진지</em></h3>
           <figure class="site01">
             <!-- 주황색 원 -->
@@ -793,6 +794,7 @@
       </div>
       <div>
         <article class="bgWhite">
+          <p class="project_label">my project <span>02</span></p>
           <h3 class="container">kpil<em>공익인권법재단 공감</em></h3>
           <figure class="site02">
             <!-- 주황색 원 -->
@@ -3478,6 +3480,7 @@ h2.main__title {
       </div>
       <div>
         <article class="bgWhite">
+          <p class="project_label">my project <span>03</span></p>
           <h3 class="container">
             genderequity<em>서울시성평등활동지원센터</em>
           </h3>
@@ -3727,6 +3730,7 @@ h2.main__title {
       </div>
       <div>
         <article class="bgWhite">
+          <p class="project_label">my project <span>04</span></p>
           <h3 class="container">megabox<em>메가박스</em></h3>
           <figure class="site04">
             <!-- 주황색 원 -->
@@ -3779,6 +3783,7 @@ h2.main__title {
       </div>
       <div>
         <article class="bgWhite">
+          <p class="project_label">my project <span>05</span></p>
           <h3 class="container">asan-nanum<em>아산나눔재단</em></h3>
           <figure class="site04">
             <!-- 주황색 원 -->
@@ -5245,7 +5250,9 @@ jQuery(document).ready(function($){
           </div>
         </div>
       </article>
-      <article class="javascript"></article>
+      <article class="javascript_bgWhite">
+        <div class="container"></div>
+      </article>
     </section>
     <section id="section4" class="container right">
       <h2>
@@ -5445,20 +5452,6 @@ jQuery(document).ready(function($){
         left: "-100%",
         ease: Expo.easeInOut,
       });
-
-      $(window).on("scroll", function () {
-        var scrollPosition = $(document).scrollTop();
-        console.log(scrollPosition);
-        if (scrollPosition === 0) {
-        } else if (scrollPosition >= 80 && scrollPosition <= 85) {
-          var offset = $("#section2").offset();
-          $("html, body").animate({ scrollTop: offset.top }, 400);
-        } else if (scrollPosition > 800) {
-          // 리벨 효과
-        } else if (scrollPosition > 1314) {
-        }
-      });
-
       TweenMax.fromTo(
         "#h2 span span",
         { opacity: 0 },
