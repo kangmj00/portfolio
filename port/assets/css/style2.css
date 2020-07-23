@@ -1,0 +1,33 @@
+/* layout */
+#contents {}
+#section1 {
+    height: 100vh; 
+    background: url(../../../image/main__bg.png) center center;
+    background-size: cover;
+}
+#section2 {
+    height: 3000px;
+}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+
+/* sec1 */
+.sec1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.sec1 h1 {
+    font-family: 'Montserrat';
+    font-size: 8vw;
+    text-transform: uppercase;
+}
+.sec1 h1 em {display: block;}
+.sec1 h1 em:nth-child(1) {padding-left: 0vw;}
+.sec1 h1 em:nth-child(2) {padding-left: 9vw;}
+.sec1 h1 em:nth-child(3) {padding-left: 33vw;}
+.sec1 h1 em:nth-child(4) {padding-left: 0vw;}

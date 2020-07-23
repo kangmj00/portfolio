@@ -1,0 +1,777 @@
+@charset "UTF-8";
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.container.right {
+  text-align: right;
+}
+
+#section1 {
+  background-image: url("../../../image/Untitled-3.svg");
+  background-color: #2c2932;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#section1 h1 {
+  font-size: 8vw;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+#section1 h1 em {
+  display: block;
+}
+#section1 h1 em:nth-child(1) {
+  padding-left: 4vw;
+}
+#section1 h1 em:nth-child(2) {
+  padding-left: 15.5vw;
+}
+#section1 h1 em:nth-child(3) {
+  padding-left: 37vw;
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+#section1 h1 em:nth-child(3) span {
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+.hidetext {
+  position: absolute;
+}
+/* 중간 타이틀 */
+h2 {
+  padding-bottom: 2vh;
+  position: relative;
+  overflow: hidden;
+}
+h2 > span:nth-child(1) {
+  font-size: 3.5vw;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  vertical-align: top;
+  margin-right: 1vw;
+}
+h2 > span:nth-child(2) {
+  width: 58vw;
+  text-align: left;
+  display: inline-block;
+  font-size: 8vw;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 58vw;
+  height: 1px;
+  background-color: #fff;
+}
+
+/* 줄있는 작은 제목 */
+.sub_tit {
+  font-family: "Montserrat Subrayada", sans-serif;
+  width: 58vw;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  padding-top: 3vh;
+}
+.sub_tit:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+/* 내용 설명 */
+.exp_txt {
+  font-family: "s-core_dream4_reguler", sans-serif;
+  font-size: 2vw;
+  width: 58vw;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  padding: 5vh 0;
+}
+
+/* 화살표 들어있는 원 */
+.arrow_circle {
+  background-image: url(../../../image/arrow.png);
+  background-position: center center;
+  background-size: 10vmin;
+  background-repeat: no-repeat;
+  border: solid 1px #fff;
+  border-radius: 50%;
+  width: 30vmin;
+  height: 30vmin;
+  text-align: center;
+  display: inline-block;
+}
+.arrow_circle span {
+  opacity: 0;
+  line-height: 30vmin;
+  display: inline-block;
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+.arrow_circle:hover {
+  background-image: none;
+  background-color: #fff;
+  border-color: #fff;
+  transform: rotate(-0deg) !important;
+}
+.arrow_circle:hover span {
+  opacity: 1;
+  color: #151515;
+}
+
+/* 주황색 원 */
+.orange_circle {
+  background-color: #ffa63d;
+  font-family: "Montserrat Subrayada", sans-serif;
+  color: #fff;
+  border-radius: 50%;
+  width: 30vmin;
+  height: 30vmin;
+  text-align: center;
+  font-size: 1.3vw;
+}
+.orange_circle span {
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+
+/* 배경색이랑 같고 선이 있는 텍스트 */
+.text_border {
+  text-align: left;
+  margin-top: 16vh;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.text_border span {
+  font-weight: 600;
+  font-size: 8vw;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  margin-right: 2vw;
+}
+.text_border span:nth-child(2n) {
+  font-style: italic;
+}
+.text_border span:before {
+  color: #151515;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  -moz-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  -webkit-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  content: " ";
+  width: 5vw;
+  height: 1vh;
+  display: inline-block;
+  border: solid 1px #fff;
+  vertical-align: middle;
+  margin: 0 3vw;
+}
+/* 검정 텍스트 */
+.text_border span {
+  color: #151515;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  -moz-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  -webkit-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+/* 메인 내 사진 */
+#section2 {
+  text-align: right;
+}
+#section2 > figure {
+  background-image: url("../../../image/mainphoto.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 16vh 0;
+  height: 70vh;
+  width: 80vw;
+  display: inline-block;
+}
+
+/* 프로젝트 리스트 그리드 */
+#section2 ul {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1.7fr;
+  grid-gap: 4rem;
+  grid-auto-rows: minmax(30vh, auto);
+  margin-top: 10vh;
+  text-align: left;
+}
+#section2 ul li figure figcaption {
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+}
+/* 프로젝트 리스트 이미지 백그라운 공통사항 */
+#section2 ul li:nth-child(1) figure,
+#section2 ul li:nth-child(2) figure,
+#section2 ul li:nth-child(5) figure,
+#section2 ul li:nth-child(6) figure,
+#section2 ul li:nth-child(7) figure,
+#section2 ul li:nth-child(9) figure {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* 프로젝트 리스트 이미지 */
+#section2 ul li:nth-child(1) figure {
+  background-image: url("../../../image/site01.png");
+}
+#section2 ul li:nth-child(2) figure {
+  background-image: url("../../../image/site02.png");
+}
+#section2 ul li:nth-child(5) figure {
+  background-image: url("../../../image/site03.png");
+}
+#section2 ul li:nth-child(6) figure {
+  background-image: url("../../../image/site04.png");
+}
+#section2 ul li:nth-child(7) figure {
+  background-image: url("../../../image/site04.png");
+}
+#section2 ul li:nth-child(9) figure {
+  background-image: url("../../../image/site04.png");
+}
+/* 프로젝트 리스트 첫번째 컬럼 사이즈 */
+#section2 ul li:nth-child(1) figure,
+#section2 ul li:nth-child(7) figure {
+  height: 42vh;
+}
+/* 프로젝트 리스트 두번째 컬럼 사이즈 */
+#section2 ul li:nth-child(2) figure,
+#section2 ul li:nth-child(5) figure {
+  height: 74vh;
+}
+/* 프로젝트 리스트 세번째 컬럼 사이즈 */
+#section2 ul li:nth-child(6) figure,
+#section2 ul li:nth-child(9) figure {
+  height: 64vh;
+}
+/* 프로젝트 리스트 화살표 */
+#section2 ul li:nth-child(3),
+#section2 ul li:nth-child(4),
+#section2 ul li:nth-child(8) {
+  position: relative;
+}
+/* 프로젝트 리스트 화살표 */
+#section2 ul li:nth-child(3),
+#section2 ul li:nth-child(4),
+#section2 ul li:nth-child(8) {
+  justify-self: center;
+}
+#section2 ul li:nth-child(3) {
+  align-self: end;
+}
+#section2 ul li:nth-child(7) {
+  grid-column: 1;
+  grid-row: 3;
+}
+#section2 ul li:nth-child(8) {
+  grid-column: 1 / 4;
+  grid-row: 3;
+  align-self: end;
+}
+#section2 ul li:nth-child(9) {
+  grid-column: 3;
+  grid-row: 3 / 4;
+}
+#section2 ul li:nth-child(10) {
+  grid-column: 1 / 4;
+  justify-self: center;
+  align-self: end;
+}
+#section2 ul li:nth-child(10) div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 프로젝트 리스트 화살표 회전 */
+#section2 ul li:nth-child(4) div {
+  transform: rotate(-30deg);
+}
+#section2 ul li:nth-child(8) div {
+  transform: rotate(-90deg);
+}
+/* 프로젝트 리스트 썸네일 제목 */
+#section2 ul li h4 {
+  font-size: 2vw;
+  font-family: "s-core_dream8_heavy", sans-serif;
+  margin-bottom: 2vh;
+}
+/* 프로젝트 리스트 썸네일 부제목 */
+#section2 ul p {
+  font-size: 1.2vw;
+  font-weight: 500;
+  border-bottom: solid 1px #fff;
+  margin: 2.4vh 0;
+  padding-bottom: 2.4vh;
+  text-transform: capitalize;
+  position: relative;
+}
+#section2 ul p span {
+  position: absolute;
+  right: 0;
+}
+
+/* 프로젝트 사이트 */
+#section3 .bgWhite {
+  background-color: #efefef;
+  margin-top: 16vh;
+  padding: 16vh 0;
+}
+/* 프로젝트 사이트 제목 */
+#section3 .bgWhite h3 {
+  font-size: 8vw;
+  text-transform: uppercase;
+  font-family: "Montserrat Subrayada", sans-serif;
+  color: #efefef;
+  text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515, 0 -1px #151515;
+  -moz-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515, 0 -1px #151515;
+  -webkit-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515,
+    0 -1px #151515;
+}
+#section3 .bgWhite h3 em {
+  font-size: 6vw;
+  font-family: "s-core_dream6_bold", sans-serif;
+  color: #151515;
+  display: block;
+}
+/* 프로젝트 사이트 이미지 */
+#section3 .bgWhite figure {
+  background-image: url("../../../image/site01.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 68vh;
+  margin-top: -7.5vh;
+  text-align: right;
+}
+#section3 .bgWhite figure.site02 {
+  background-image: url("../../../image/site02.png");
+}
+#section3 .bgWhite figure.site03 {
+  background-image: url("../../../image/site03.png");
+}
+#section3 .bgWhite figure.site04 {
+  background-image: url("../../../image/site04.png");
+}
+/* 프로젝트 사이트 site view */
+#section3 .bgWhite figure div {
+  display: block;
+  line-height: 68vh;
+}
+/* 프로젝트 사이트 site view 주황색 원 */
+#section3 .bgWhite figure div a {
+  line-height: 30vmin;
+}
+
+/* 프로젝트 사이트 코드 미리보기  */
+#section3 .codeSection {
+  background-color: #151515;
+  margin-top: -8vh;
+  color: #fff;
+}
+#section3 .codeSection ul {
+  display: flex;
+}
+#section3 .codeSection li {
+  background-color: #151515;
+}
+#section3 .codeSection li a {
+  font-family: "Montserrat Subrayada", sans-serif;
+  display: block;
+  height: 8vh;
+  width: 10vw;
+  line-height: 8vh;
+  text-align: center;
+}
+#section3 .codeSection li a.active,
+#section3 .codeSection li a:hover {
+  background-color: #23241f;
+  color: #fff;
+}
+
+#section3 .codeSection div pre {
+  clear: both;
+  width: 100%;
+  background-color: #23241f;
+  display: none;
+  height: 60vh;
+  overflow: auto !important;
+}
+#section3 .codeSection div pre:nth-child(1) {
+  display: block;
+}
+#section3 .codeSection div pre div {
+  padding: 0;
+}
+/* 스크롤 다운 */
+#section3 .scrollDown {
+  height: 100vh;
+  margin-top: 16vh;
+}
+#section3 .scrollDown .arrow_circle {
+  margin-top: 16vh;
+}
+/* 프로젝트 사이트 모바일  */
+#section3 .mobile > div {
+  display: flex;
+  justify-content: space-between;
+}
+#section3 .mobile > div article {
+  flex-basis: 48%;
+  height: 90vh;
+  background-color: #efefef;
+}
+#section3 .mobile > div article .codeSection {
+  text-align: left;
+  width: 100%;
+  margin-top: 0;
+}
+#section3 .mobile > div article .codeSection ul {
+  background-color: #efefef;
+}
+#section3 .mobile > div article .codeSection li {
+  flex: 1 1 30%;
+}
+#section3 .mobile > div article .codeSection li a {
+  background-color: #efefef;
+  color: #151515;
+  width: auto;
+}
+#section3 .mobile > div article .codeSection li a.active,
+#section3 .mobile > div article .codeSection li a:hover {
+  background-color: #23241f;
+  color: #fff;
+}
+#section3 .mobile > div article .codeSection pre {
+  height: 82vh;
+}
+
+/* 프로젝트 사이트 애니메이션  */
+#section3 .animation {
+  background-color: #efefef;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#section3 .animation ul {
+  width: 30vw;
+}
+#section3 .animation ul li {
+  color: #c4c4c4;
+  font-size: 6vw;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+#section3 .animation ul li:hover,
+#section3 .animation ul li.active {
+  font-family: "Montserrat Subrayada", sans-serif;
+  cursor: pointer;
+  color: #151515;
+}
+#section3 .animation article div {
+  display: none;
+  width: 45vmin;
+  height: 45vmin;
+  border-radius: 50%;
+  background-color: #ffa63d;
+  text-indent: -9999px;
+  font-size: 0;
+}
+#section3 .animation article div.active {
+  display: block;
+}
+/* 03 about minji */
+#section4 {
+  margin: 16vh auto;
+}
+#section4 article {
+  width: 58vw;
+  display: inline-block;
+}
+#section4 article div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+#section4 article div figure {
+  background-image: url("../../../image/aboutphoto.png");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-basis: 55%;
+  height: 75vh;
+  order: 2;
+}
+#section4 article div aside {
+  text-align: left;
+  order: 1;
+  flex-basis: 38%;
+}
+#section4 article div aside p {
+  font-family: "s-core_dream4_regular", sans-serif;
+  font-size: 1.4vw;
+  line-height: 1.4em;
+  letter-spacing: -0.06em;
+  margin-bottom: 5vh;
+}
+#section4 article div .skillbox {
+  background-color: #3f7df4;
+  padding: 6vh 4vw;
+  order: 3;
+  margin-top: -23vh;
+}
+#section4 article div .skillbox li {
+  border-bottom: solid 1px #fff;
+  padding: 2.5vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 28vw;
+}
+#section4 article div .skillbox li h6 {
+  font-size: 2vw;
+  font-weight: 600;
+}
+#section4 article div .skillbox li span {
+  font-family: "s-core_dream4_regular", sans-serif;
+  font-size: 0.7vw;
+  text-align: left;
+  flex-basis: 46%;
+}
+
+/* my works style with */
+#section5 article {
+  text-align: left;
+  margin-top: 16vh;
+}
+#section5 article .text_border {
+  margin: 2vh 0;
+}
+/* 04 LET’S CONTACT */
+#section6 article:nth-child(1) {
+  margin: 16vh auto;
+}
+#section6 article:nth-child(1) ul {
+  text-align: left;
+  width: 58vw;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+}
+#section6 article:nth-child(1) li {
+  flex-basis: 35%;
+}
+#section6 article:nth-child(1) li h5 {
+  flex-basis: 35%;
+  font-size: 1vw;
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+#section6 article:nth-child(1) li p {
+  font-size: 1.5vw;
+  margin-top: 3vh;
+}
+/* 04 LET’S CONTACT 흰 바탕 부분 */
+#section6 article:nth-child(2) {
+  background-color: #efefef;
+  color: #151515;
+}
+/* contact me 부제목 */
+#section6 .sub_tit {
+  margin-top: 16vh;
+  margin-bottom: 10vh;
+}
+#section6 .sub_tit:after {
+  background-color: #151515;
+}
+/* HELLO */
+#section6 article:nth-child(2) div h3 {
+  font-family: "Montserrat Subrayada", sans-serif;
+  font-size: 7vw;
+  width: 58vw;
+  text-align: left;
+  display: inline-block;
+}
+/* form 형식 */
+#section6 article:nth-child(2) div form {
+  text-align: left;
+}
+#section6 article:nth-child(2) div form dl {
+  text-align: left;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+#section6 article:nth-child(2) div form dt {
+  font-size: 7vw;
+  width: 58vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.08em;
+  margin-bottom: 2vh;
+}
+#section6 article:nth-child(2) div form dt span {
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+/* form 태그 비율 지정 */
+#section6 article:nth-child(2) div form dt:nth-child(1),
+#section6 article:nth-child(2) div form dd:nth-child(2) {
+  flex-basis: 50%;
+}
+#section6 article:nth-child(2) div form dt:nth-child(3) {
+  flex-basis: 74%;
+}
+#section6 article:nth-child(2) div form dd:nth-child(4) {
+  flex-basis: 26%;
+}
+#section6 article:nth-child(2) div form dt:nth-child(5) {
+  flex-basis: 70%;
+}
+#section6 article:nth-child(2) div form dd:nth-child(6) {
+  flex-basis: 30%;
+}
+/* input text */
+#section6 article:nth-child(2) div form dd input {
+  width: calc(100% - 2vh);
+  text-align: center;
+  padding: 1vh;
+}
+/* input placeholder */
+#section6 article:nth-child(2) div form dd input::placeholder {
+  color: #151515;
+  opacity: 0.2;
+  font-weight: 600;
+  letter-spacing: -0.09em;
+  text-transform: lowercase;
+}
+/* 보내는 버튼 */
+#section6 .orange_circle {
+  margin: 10vh 0;
+  border: 0;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 1240px) {
+  #section2 ul {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+  }
+  #section2 ul li figure {
+    height: 45vh !important;
+  }
+  #section2 ul li:nth-child(7),
+  #section2 ul li:nth-child(8) {
+    grid-column: 1;
+  }
+  #section2 ul li:nth-child(9) {
+    grid-column: 2;
+  }
+  #section2 ul li:nth-child(10) {
+    grid-column: 1 / 3;
+  }
+  #section2 ul li:nth-child(3),
+  #section2 ul li:nth-child(4),
+  #section2 ul li:nth-child(8) {
+    display: none;
+  }
+  #section3 .bgWhite figure {
+    margin-top: 5vh;
+  }
+  #section3 .codeSection ul {
+    justify-content: space-between;
+  }
+  #section3 .codeSection ul li {
+    flex: 1 1 30%;
+  }
+  #section3 .codeSection ul li a {
+    width: auto;
+  }
+}
+@media screen and (max-width: 1020px) {
+  #section4 article div figure {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 960px) {
+  #section3 .mobile div {
+    display: block;
+  }
+  #section3 .mobile div article {
+    height: 64vh;
+    margin-bottom: 10vh;
+  }
+  #section3 .mobile > div {
+    display: block;
+  }
+  #section3 .mobile > div article {
+    height: 78vh;
+  }
+}
+@media screen and (max-width: 760px) {
+  .container {
+    width: 88%;
+    margin: 0 auto;
+  }
+  #section2 > figure {
+    background-position: 70% center;
+  }
+  #section2 ul {
+    display: block;
+  }
+  #section2 ul li {
+    margin-bottom: 10vh;
+  }
+  #section2 ul li figure {
+    height: 30vh !important;
+  }
+  #section2 ul li:nth-child(10) div {
+    margin: 0 auto;
+  }
+  #section4 article {
+    width: 100%;
+  }
+  #section4 article div {
+    display: block;
+  }
+  #section4 article div .skillbox {
+    margin-top: 0;
+  }
+  #section4 article div .skillbox li {
+    width: 100%;
+  }
+  #section4 article div aside p {
+    font-size: 2vw;
+    margin-top: 5vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #section4 article div .skillbox li h6 {
+    font-size: 3vw;
+  }
+  #section4 article div .skillbox li span {
+    font-size: 2vw;
+  }
+}

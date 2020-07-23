@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* 기본 세팅 */
+html,
+body,
+main,
+section,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+em,
+figure,
+figcaption,
+ul,
+li,
+dl,
+dd,
+dt,
+ol,
+form,
+input,
+pre,
+code {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  background-color: #151515;
+  color: #fff;
+}
+
+li,
+ol {
+  list-style: none;
+}
+
+/* a 리셋 */
+a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* form 리셋 */
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-bottom: solid 1px #151515;
+  background-color: transparent;
+}
+input::-ms-clear {
+  display: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* 폰트 */
+em {
+  font-style: normal;
+}
+
+figcaption {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* 한글 서체 에스코어드림 */
+@font-face {
+  font-family: "s-core_dream4_regular";
+  src: url("../../../font/scdream4.woff2") format("woff2"),
+    url("../../../font/scdream4.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "s-core_dream5_medium";
+  src: url("../../../font/scdream5.woff2") format("woff2"),
+    url("../../../font/scdream5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "s-core_dream6_bold";
+  src: url("../../../font/scdream6.woff2") format("woff2"),
+    url("../../../font/scdream6.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "s-core_dream7_extrabold";
+  src: url("../../../font/scdream7.woff2") format("woff2"),
+    url("../../../font/scdream7.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "s-core_dream8_heavy";
+  src: url("../../../font/scdream8.woff2") format("woff2"),
+    url("../../../font/scdream8.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
