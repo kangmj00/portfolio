@@ -90,7 +90,7 @@ jQuery(document).ready(function ($) {
       .setTween(tl)
       .addTo(controller);
   });
-
+  /* ***************** 스크롤 다운 섹션 **************** */
   $(".scrollDown").each(function () {
     var inner = $(this).find(".sub_tit");
     var outer = $(this).find(".sub_titWrap");
@@ -120,13 +120,9 @@ jQuery(document).ready(function ($) {
       triggerHook: 0.15,
     })
       .setTween(tl)
-      .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
-      })
       .addTo(controller);
   });
+
   /* ***************** 프로젝트 리스트 **************** */
   $(".project_list li").each(function () {
     var title = $(this).find("h4");
@@ -189,6 +185,94 @@ jQuery(document).ready(function ($) {
       .setTween(tl)
       .addTo(controller);
   });
+  /* ***************** 연락하기 **************** */
+  $("#section6 .container").each(function () {
+    var contact = $(this).find("ul");
+    var inner = $(this).find(".sub_tit");
+    var outer = $(this).find(".sub_titWrap");
+    var hello = $(this).find("h3");
+    var name = $(this).find("form dt:nth-child(1) span");
+    var myEmail = $(this).find("form dt:nth-child(3) span");
+    var looking = $(this).find("form dt:nth-child(5) span");
+    var textarea01 = $(this).find("form dd:nth-child(2) input");
+    var textarea02 = $(this).find("form dd:nth-child(4) input");
+    var textarea03 = $(this).find("form dd:nth-child(6) input");
+    var circle = $(this).find(".orange_circle");
+
+    var tl = new TimelineMax();
+
+    tl.fromTo(
+      contact,
+      0.5,
+      { opacity: 0, xPercent: 100 },
+      { opacity: 1, xPercent: 0, ease: animationTimingOut }
+    );
+    tl.from(outer, 0.25, { scaleX: 0 });
+    tl.fromTo(
+      inner,
+      0.65,
+      { opacity: 0, yPercent: -20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+    tl.fromTo(
+      hello,
+      0.5,
+      { opacity: 0, yPercent: -20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+    tl.fromTo(
+      name,
+      0.65,
+      { opacity: 0 },
+      { opacity: 1, ease: animationTimingOut }
+    );
+    tl.fromTo(
+      textarea01,
+      0.9,
+      { opacity: 0, width: 0 },
+      { opacity: 1, width: "100%", ease: Power4.easeInOut }
+    );
+    tl.fromTo(
+      myEmail,
+      0.65,
+      { opacity: 0 },
+      { opacity: 1, ease: animationTimingOut }
+    );
+    tl.fromTo(
+      textarea02,
+      0.9,
+      { opacity: 0, width: 0 },
+      { opacity: 1, width: "100%", ease: Power4.easeInOut }
+    );
+    tl.fromTo(
+      looking,
+      0.65,
+      { opacity: 0 },
+      { opacity: 1, ease: animationTimingOut }
+    );
+    tl.fromTo(
+      textarea03,
+      0.9,
+      { opacity: 0, width: 0, x: 0 },
+      { opacity: 1, width: "100%", ease: Power4.easeInOut }
+    );
+    tl.fromTo(
+      circle,
+      1.5,
+      { opacity: 0, rotation: 0 },
+      {
+        opacity: 1,
+        rotation: 360,
+      }
+    );
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.2,
+    })
+      .setTween(tl)
+      .addTo(controller);
+  });
 
   /* ***************** 화살표 원 **************** */
   $(".arrow_circle").each(function () {
@@ -204,7 +288,7 @@ jQuery(document).ready(function ($) {
 
     var tween1 = TweenMax.fromTo(
       circle01,
-      0.5,
+      0.1,
       { opacity: 0, rotation: 0 },
       {
         opacity: 1,
@@ -214,7 +298,7 @@ jQuery(document).ready(function ($) {
 
     var tween2 = TweenMax.fromTo(
       circle02,
-      0.5,
+      0.8,
       { opacity: 0, rotation: 0 },
       {
         opacity: 1,
@@ -224,7 +308,7 @@ jQuery(document).ready(function ($) {
 
     var tween3 = TweenMax.fromTo(
       circle03,
-      0.5,
+      0.8,
       { opacity: 0, rotation: 0 },
       {
         opacity: 1,
@@ -232,19 +316,19 @@ jQuery(document).ready(function ($) {
       }
     );
     var scene1 = new ScrollMagic.Scene({
-      triggerElement: ".project_list li:nth-child(3)",
+      triggerElement: ".project_list li:nth-child(2) .project_lstImgWrap",
     })
       .setTween(tween1)
       .addTo(controller);
     var scene2 = new ScrollMagic.Scene({
-      triggerElement: ".project_list li:nth-child(4)",
+      triggerElement: ".project_list li:nth-child(2) .subtitle_wrap",
       offset: 150,
       duration: 200,
     })
       .setTween(tween2)
       .addTo(controller);
     var scene3 = new ScrollMagic.Scene({
-      triggerElement: ".project_list li:nth-child(8)",
+      triggerElement: ".project_list li:nth-child(7) ",
     })
       .setTween(tween3)
       .addTo(controller);
