@@ -6,17 +6,12 @@ jQuery(document).ready(function ($) {
     split = "<span aria-hidden='true'>" + split + "</span>";
     $(this).html(split).attr("aria-label", txt);
   });
-
-  // section1에서 마우스 휠이나 트랙패드 키보드로 내릴시에 section2가 scrolltop 되면서 이미지가 왼쪽에서 오른쪽으로 서서히 나온다.
-  $("#section1").on("mousewheel DOMMouseScroll", function (e) {
-    // e.preventDefault();
+  $(window).on("scroll", function () {
+    var top = $(window).scrollTop();
   });
 
-  // 움직이는 글자
-  // h3에 있는 span 태그가 가로로 계속 움직이고 첫번째에 span태그가 맨 마지막 span 태그로 이동하면서 계속 움직이는  글자
-
   // 탭 메뉴 (site 코드 볼 수 있는 곳)
-  $(".codeSection ul li a").on("click", function (e) {
+  $(".codeSection ul li a, .animation_tap li a").on("click", function (e) {
     e.preventDefault();
     var $this = $(this);
     var index = $this.parent().index();
@@ -27,113 +22,238 @@ jQuery(document).ready(function ($) {
     contents.hide();
     contents.eq(index).fadeIn();
   });
-});
 
-// gsap
-setTimeout(function () {
-  gsap.fromTo(
-    "#section1 h1 em span",
-    { opacity: 0, y: 50 },
-    {
+  /* ********************************* */
+
+  // gsap
+  // 메인 타이틀
+  setTimeout(function () {
+    gsap.fromTo(
+      "#section1 h1 em span",
+      { opacity: 0 },
+      {
+        delay: 0.8,
+        opacity: 1,
+        duration: 0.4,
+        stagger: 0.09,
+        ease: "elastic.out(1, 0.3)",
+      }
+    );
+  });
+
+  TweenMax.to(".first", 1.5, {
+    delay: 0.1,
+    left: "-100%",
+    ease: Expo.easeInOut,
+  });
+  TweenMax.to(".second", 1.5, {
+    delay: 0.25,
+    left: "-100%",
+    ease: Expo.easeInOut,
+  });
+  TweenMax.to(".third", 1.5, {
+    delay: 0.4,
+    left: "-100%",
+    ease: Expo.easeInOut,
+  });
+  TweenMax.to(".fourth", 1.5, {
+    delay: 0.55,
+    left: "-100%",
+    ease: Expo.easeInOut,
+  });
+
+  /* ***************** 스크롤 매직 **************** */
+
+  var controller = new ScrollMagic.Controller();
+  var animationSpeed = 0.75;
+  var animationTimingIn = Expo.easeIn;
+  var animationTimingOut = Expo.easeOut;
+
+  /* ***************** 섹션 서브 타이틀 **************** */
+  $(".section").each(function () {
+    var inner = $(this).find(".section_txt");
+    var outer = $(this).find(".section_tit");
+    var tl = new TimelineMax();
+
+    tl.from(outer, 0.25, { scaleX: 0 });
+    tl.fromTo(
+      inner,
+      0.65,
+      { opacity: 0, yPercent: 20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.15,
+    })
+      .setTween(tl)
+      .addTo(controller);
+  });
+
+  /* ***************** 프로젝트 리스트 **************** */
+  $(".project_list li").each(function () {
+    var title = $(this).find("h4");
+    var projectImgWRap = $(this).find(".project_lstImgWrap");
+    var projectImg = $(this).find(".project_Img");
+    var projectImgReveal = $(this).find(".project_ImgReveal");
+    var subtitle_wrap = $(this).find(".subtitle_wrap");
+    var subtitle = $(this).find("p");
+
+    var tl = new TimelineMax();
+
+    tl.from(
+      title,
+      0.1,
+      {
+        opacity: 0,
+        x: "-20",
+        ease: animationTimingOut,
+      },
+      0.4
+    );
+
+    tl.from(projectImgWRap, 0.25, { scaleX: 0 });
+    tl.from(projectImg, 0.9, {
       opacity: 1,
-      y: 0,
-      duration: 0.4,
-      stagger: 0.09,
-      ease: "elastic.out(1, 0.3)",
+      translate: "100px",
+      transformOrigin: "-50%, -50%",
+      ease: animationTimingOut,
+    });
+    tl.fromTo(
+      projectImgReveal,
+      animationSpeed,
+      {
+        width: "100%",
+        opacity: 1,
+        scaleX: 1,
+        transformOrigin: "100% 50%",
+        ease: animationTimingIn,
+      },
+      {
+        opacity: 0,
+        width: 0,
+        scaleX: 0,
+        transformOrigin: "0 50%",
+        ease: animationTimingOut,
+      }
+    );
+    tl.from(subtitle_wrap, 0.25, { scaleX: 0 });
+    tl.fromTo(
+      subtitle,
+      animationSpeed,
+      { opacity: 0, yPercent: 20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+
+    new ScrollMagic.Scene({
+      triggerElement: this, // this의 부모에다가 넣을 수 없나?
+      triggerHook: 0.001,
+    })
+      .setTween(tl)
+      .addIndicators({
+        colorTrigger: "white",
+        colorStart: "white",
+        colorEnd: "white",
+      })
+      .addTo(controller);
+  });
+
+  /* ***************** 화살표 원 **************** */
+  $(".arrow_circle").each(function () {
+    var controller = new ScrollMagic.Controller({
+      globalSceneOptions: {
+        duration: "50%",
+        triggerHook: 0.25,
+      },
+    });
+    var circle01 = $(".project_list li:nth-child(3) .arrow_circle");
+    var circle02 = $(".project_list li:nth-child(4) .arrow_circle");
+    var circle03 = $(".project_list li:nth-child(8) .arrow_circle");
+
+    var tween1 = TweenMax.fromTo(
+      circle01,
+      0.5,
+      { opacity: 0, rotation: 0 },
+      {
+        opacity: 1,
+        rotation: 360,
+      }
+    );
+
+    var tween2 = TweenMax.fromTo(
+      circle02,
+      0.5,
+      { opacity: 0, rotation: 0 },
+      {
+        opacity: 1,
+        rotation: 320,
+      }
+    );
+
+    var tween3 = TweenMax.fromTo(
+      circle03,
+      0.5,
+      { opacity: 0, rotation: 0 },
+      {
+        opacity: 1,
+        rotation: 270,
+      }
+    );
+    var scene1 = new ScrollMagic.Scene({
+      triggerElement: ".project_list li:nth-child(3)",
+    })
+      .setTween(tween1)
+      .addTo(controller);
+    var scene2 = new ScrollMagic.Scene({
+      triggerElement: ".project_list li:nth-child(4)",
+      offset: 150,
+      duration: 200,
+    })
+      .setTween(tween2)
+      .addTo(controller);
+    var scene3 = new ScrollMagic.Scene({
+      triggerElement: ".project_list li:nth-child(8)",
+    })
+      .setTween(tween3)
+      .addTo(controller);
+  });
+
+  /* ***************** 메인 이미지 사진 **************** */
+  var tween1 = TweenMax.fromTo(
+    ".revealBg",
+    animationSpeed,
+    { x: "-100%", opacity: 1, ease: animationTimingIn },
+    {
+      x: "100%",
+      opacity: 0,
+      ease: animationTimingOut,
     }
   );
-}, 2000);
 
-// // NAVBAR
-// TweenMax.staggerFrom(
-//   ".navbar div",
-//   1.5,
-//   {
-//     delay: 1.5,
-//     opacity: 0,
-//     y: "20",
-//     ease: Expo.easeInOut,
-//   },
-//   0.08
-// );
+  var tween2 = TweenMax.fromTo(
+    ".mainMyBg",
+    2,
+    { x: "-100%", opacity: 0, ease: animationTimingIn },
+    {
+      x: "0",
+      opacity: 1,
+      ease: animationTimingOut,
+    }
+  );
 
-// // MEDIA
-// TweenMax.staggerFrom(
-//   ".media ul li",
-//   1.5,
-//   {
-//     delay: 1.5,
-//     opacity: 0,
-//     x: "-20",
-//     ease: Expo.easeInOut,
-//   },
-//   0.08
-// );
+  var scene1 = new ScrollMagic.Scene({
+    triggerElement: ".mainImg_wrap",
+    duration: "400",
+  })
+    .setTween(tween1)
+    .setPin(true)
+    .addTo(controller);
 
-// TEXT
-TweenMax.from("#section2 .container h2", 1.5, {
-  delay: 1,
-  y: "100%",
-  ease: Expo.easeInOut,
+  var scene2 = new ScrollMagic.Scene({
+    triggerElement: ".mainImg_wrap",
+    duration: "200",
+  })
+    .setTween(tween2)
+    .setPin(true)
+    .addTo(controller);
 });
-
-TweenMax.from("#section2 .container h2", 1.5, {
-  delay: 1.2,
-  y: "100%",
-  ease: Expo.easeInOut,
-});
-
-TweenMax.from("#section2 .container h2", 1.5, {
-  delay: 1.3,
-  y: "100%",
-  ease: Expo.easeInOut,
-});
-
-// TweenMax.from(".text h2", 1.5, {
-//   delay: 1.5,
-//   opacity: 0,
-//   x: "-10000",
-//   ease: Expo.easeInOut,
-// });
-
-// // SPONSOR
-// TweenMax.from(".sponsor img", 1.5, {
-//   delay: 1.5,
-//   opacity: 0,
-//   y: "20",
-//   ease: Expo.easeInOut,
-// });
-
-// TweenMax.from(".sponsor p", 1.5, {
-//   delay: 1.6,
-//   opacity: 0,
-//   y: "20",
-//   ease: Expo.easeInOut,
-// });
-
-// // DISTORTION
-// TweenMax.from(".distortion", 1.5, {
-//   delay: 2,
-//   opacity: 0,
-//   y: "20",
-//   ease: Expo.easeInOut,
-// });
-
-// // OVERLAY
-// TweenMax.to(".first", 1.5, {
-//   delay: 0.5,
-//   top: "-100%",
-//   ease: Expo.easeInOut,
-// });
-
-// TweenMax.to(".second", 1.5, {
-//   delay: 0.7,
-//   top: "-100%",
-//   ease: Expo.easeInOut,
-// });
-
-// TweenMax.to(".third", 1.5, {
-//   delay: 0.9,
-//   top: "-100%",
-//   ease: Expo.easeInOut,
-// });
