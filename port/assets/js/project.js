@@ -82,6 +82,7 @@ jQuery(document).ready(function ($) {
       { opacity: 0, yPercent: 20 },
       { opacity: 1, yPercent: 0, ease: animationTimingOut }
     );
+
     new ScrollMagic.Scene({
       triggerElement: this,
       triggerHook: 0.15,
@@ -90,6 +91,42 @@ jQuery(document).ready(function ($) {
       .addTo(controller);
   });
 
+  $(".scrollDown").each(function () {
+    var inner = $(this).find(".sub_tit");
+    var outer = $(this).find(".sub_titWrap");
+    var circle = $(this).find(".arrow_circle");
+
+    var tl = new TimelineMax();
+
+    tl.from(outer, 0.25, { scaleX: 0 });
+    tl.fromTo(
+      inner,
+      0.65,
+      { opacity: 0, yPercent: -20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+    tl.fromTo(
+      circle,
+      0.5,
+      { opacity: 0, rotation: 0 },
+      {
+        opacity: 1,
+        rotation: 360,
+      }
+    );
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.15,
+    })
+      .setTween(tl)
+      .addIndicators({
+        colorTrigger: "white",
+        colorStart: "white",
+        colorEnd: "white",
+      })
+      .addTo(controller);
+  });
   /* ***************** 프로젝트 리스트 **************** */
   $(".project_list li").each(function () {
     var title = $(this).find("h4");
@@ -150,11 +187,6 @@ jQuery(document).ready(function ($) {
       triggerHook: 0.001,
     })
       .setTween(tl)
-      .addIndicators({
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white",
-      })
       .addTo(controller);
   });
 
