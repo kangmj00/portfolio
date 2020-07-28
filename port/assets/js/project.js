@@ -75,7 +75,7 @@ jQuery(document).ready(function ($) {
     var outer = $(this).find(".section_tit");
     var tl = new TimelineMax();
 
-    tl.from(outer, 0.25, { scaleX: 0 });
+    tl.from(outer, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
     tl.fromTo(
       inner,
       0.65,
@@ -98,7 +98,7 @@ jQuery(document).ready(function ($) {
 
     var tl = new TimelineMax();
 
-    tl.from(outer, 0.25, { scaleX: 0 });
+    tl.from(outer, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
     tl.fromTo(
       inner,
       0.65,
@@ -145,8 +145,8 @@ jQuery(document).ready(function ($) {
       0.4
     );
 
-    tl.from(projectImgWRap, 0.25, { scaleX: 0 });
-    tl.from(projectImg, 0.9, {
+    tl.from(projectImgWRap, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+    tl.from(projectImg, 0.6, {
       opacity: 1,
       translate: "100px",
       transformOrigin: "-50%, -50%",
@@ -180,11 +180,67 @@ jQuery(document).ready(function ($) {
 
     new ScrollMagic.Scene({
       triggerElement: this, // this의 부모에다가 넣을 수 없나?
-      triggerHook: 0.001,
+      triggerHook: 0.008,
     })
       .setTween(tl)
       .addTo(controller);
   });
+  /* ***************** 프로젝트 사이트 **************** */
+  $("#section3 .bgWhite").each(function () {
+    var label = $(this).find(".project_label");
+    var siteTitEn = $(this).find("h3 em:nth-child(1)");
+    var siteTitKo = $(this).find("h3 em span");
+    var circle = $(this).find(".orange_circle");
+
+    var tl = new TimelineMax();
+
+    tl.fromTo(
+      label,
+      { opacity: 0, x: "-100%" },
+      {
+        opacity: 1,
+        x: 0,
+      }
+    );
+    tl.fromTo(
+      siteTitEn,
+      { opacity: 0, x: "-100%" },
+      {
+        opacity: 1,
+        x: 0,
+      }
+    );
+    tl.fromTo(
+      siteTitKo,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 0.4,
+        stagger: 0.09,
+        ease: animationTimingOut,
+      }
+    );
+    tl.fromTo(
+      circle,
+      0.5,
+      { opacity: 0, rotation: 0 },
+      {
+        opacity: 1,
+        rotation: 360,
+      }
+    );
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.2,
+    })
+      .setTween(tl)
+      .addTo(controller)
+      .addIndicators({
+        name: "1",
+      });
+  });
+
   /* ***************** 연락하기 **************** */
   $("#section6 .container").each(function () {
     var contact = $(this).find("ul");
@@ -203,11 +259,11 @@ jQuery(document).ready(function ($) {
 
     tl.fromTo(
       contact,
-      0.5,
-      { opacity: 0, xPercent: 100 },
+      0.4,
+      { opacity: 0, xPercent: -100 },
       { opacity: 1, xPercent: 0, ease: animationTimingOut }
     );
-    tl.from(outer, 0.25, { scaleX: 0 });
+    tl.from(outer, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
     tl.fromTo(
       inner,
       0.65,
@@ -216,49 +272,49 @@ jQuery(document).ready(function ($) {
     );
     tl.fromTo(
       hello,
-      0.5,
+      animationSpeed,
       { opacity: 0, yPercent: -20 },
       { opacity: 1, yPercent: 0, ease: animationTimingOut }
     );
     tl.fromTo(
       name,
-      0.65,
+      animationSpeed,
       { opacity: 0 },
       { opacity: 1, ease: animationTimingOut }
     );
     tl.fromTo(
       textarea01,
-      0.9,
+      0.6,
       { opacity: 0, width: 0 },
       { opacity: 1, width: "100%", ease: Power4.easeInOut }
     );
     tl.fromTo(
       myEmail,
-      0.65,
+      animationSpeed,
       { opacity: 0 },
       { opacity: 1, ease: animationTimingOut }
     );
     tl.fromTo(
       textarea02,
-      0.9,
+      0.6,
       { opacity: 0, width: 0 },
       { opacity: 1, width: "100%", ease: Power4.easeInOut }
     );
     tl.fromTo(
       looking,
-      0.65,
+      animationSpeed,
       { opacity: 0 },
       { opacity: 1, ease: animationTimingOut }
     );
     tl.fromTo(
       textarea03,
-      0.9,
+      0.6,
       { opacity: 0, width: 0, x: 0 },
       { opacity: 1, width: "100%", ease: Power4.easeInOut }
     );
     tl.fromTo(
       circle,
-      1.5,
+      0.8,
       { opacity: 0, rotation: 0 },
       {
         opacity: 1,

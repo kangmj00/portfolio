@@ -393,7 +393,7 @@ h2 .border_bottom {
   padding-bottom: 16vh;
 }
 /* 프로젝트 사이트 제목 */
-#section3 .bgWhite h3 {
+#section3 .bgWhite h3 em:nth-child(1) {
   font-size: 8vw;
   text-transform: uppercase;
   font-family: "Montserrat Subrayada", sans-serif;
@@ -403,11 +403,13 @@ h2 .border_bottom {
   -webkit-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515,
     0 -1px #151515;
 }
-#section3 .bgWhite h3 em {
+#section3 .bgWhite h3 em:nth-child(2) {
   font-size: 6vw;
-  font-family: "s-core_dream6_bold", sans-serif;
   color: #151515;
   display: block;
+}
+#section3 .bgWhite h3 em span {
+  font-family: "s-core_dream6_bold", sans-serif;
 }
 /* 프로젝트 사이트 이미지 */
 #section3 .bgWhite figure {
@@ -1781,7 +1783,10 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   align-items: center;
 }
 #section3 .javascript_bgWhite .container {
-  background-color: #23241f;
+  background: url("../img/cityskyline.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 80vh;
 }
 
@@ -2064,6 +2069,19 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   .container {
     width: 88%;
     margin: 0 auto;
+  }
+  .mainImg_wrap .mainImg {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+  }
+  .mainImg_wrap .mainImg .revealBg,
+  .mainImg_wrap .mainImg .mainMyBg {
+    width: inherit;
+    max-height: 400px;
+  }
+  .mainImg_wrap .mainImg .mainMyBg {
+    background-position: right bottom;
   }
   .sub_tit {
     font-size: 2vw;
