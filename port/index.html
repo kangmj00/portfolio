@@ -5415,6 +5415,7 @@ jQuery(document).ready(function($){
             </div>
             <h3>hello,</h3>
             <form
+              onsubmit="return checkz()"
               method="POST"
               novalidate
               action="https://formspree.io/mj.kaminji@gmail.com"
@@ -5483,6 +5484,43 @@ jQuery(document).ready(function($){
         nullTargetWarn: false,
         units: { left: "%", top: "%", rotation: "rad" },
       });
+
+      function checkz() {
+        var name = RegExp(/^[ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\s]+$/);
+        var email = RegExp(/^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/);
+
+        //이름 공백 검사
+        if ($("#name").val() == "") {
+          alert("이름을 입력해주세요");
+          $("#name").focus();
+          return false;
+        }
+        //이름 유효성 검사
+        if (!name.test($("#name").val())) {
+          alert("이름을 형식에 맞게 입력해주세요");
+          $("#name").focus();
+          return false;
+        }
+        //이메일 공백 확인
+        if ($("#email").val() == "") {
+          alert("이메일을 입력해주세요");
+          $("#email").focus();
+          return false;
+        }
+        //이메일 유효성 검사
+        if (!email.test($("#email").val())) {
+          alert("이메일 형식에 맞게 입력해주세요");
+          $("#email").val("");
+          $("#email").focus();
+          return false;
+        }
+        //문의 내용 검사
+        if ($("#textdetail").val() == "") {
+          alert("문의 사항을 입력해주세요");
+          $("#textdetail").focus();
+          return false;
+        }
+      }
     </script>
   </body>
 </html>
