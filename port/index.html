@@ -5466,8 +5466,89 @@ jQuery(document).ready(function($){
         </article>
       </div>
     </section>
+<<<<<<< HEAD
     <script src="assets/js/jquery-1.12.4.js"></script>
     <script src="assets/js/jquery-ui-1.12.1.min.js"></script>
+=======
+<<<<<<< HEAD
+    <script src="assets/js/jquery-1.12.4.js"></script>
+    <script src="assets/js/jquery-ui-1.12.1.min.js"></script>
+=======
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script>
+      // 메인 타이틀
+      setTimeout(function () {
+        gsap.fromTo(
+          "#section1 h1 em span",
+          { opacity: 0 },
+          {
+            delay: 0.8,
+            opacity: 1,
+            duration: 0.4,
+            stagger: 0.09,
+            ease: "elastic.out(1, 0.3)",
+          }
+        );
+      });
+      //overlay
+      TweenMax.to(".first", 1.5, {
+        delay: 0.1,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".second", 1.5, {
+        delay: 0.25,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".third", 1.5, {
+        delay: 0.4,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".fourth", 1.5, {
+        delay: 0.55,
+        left: "-100%",
+        ease: Expo.easeInOut,
+      });
+      TweenMax.fromTo(
+        "#h2 span span",
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.4,
+          stagger: 0.09,
+          ease: Expo.easeInOut,
+        }
+      );
+      TweenMax.to(".container h2 .border__bottom", 1, {
+        width: "58vw",
+        ease: Expo.easeInOut,
+      });
+      // 이미지 리스트
+      TweenMax.from(".program__list li:nth-child(1) h4", 1.5, {
+        opacity: 0,
+        x: "-20",
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".program__list li:nth-child(1) figure", 1.5, {
+        delay: 3.7,
+        opacity: 0,
+        x: "-20",
+        ease: Expo.easeInOut,
+      });
+      TweenMax.from(".program__list li:nth-child(1) p", 1.5, {
+        delay: 3.9,
+        opacity: 0,
+        x: "-20",
+        ease: Expo.easeInOut,
+      });
+>>>>>>> a094460830e7c19cde5fdf2854e1d63bbc4559ce
+>>>>>>> 0218002dcab17a7d48a8d84b1404ba51c73fcced
 
     <script src="assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
