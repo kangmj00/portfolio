@@ -9,14 +9,6 @@ jQuery(document).ready(function ($) {
   $(window).on("scroll", function () {
     var top = $(window).scrollTop();
   });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  // 움직이는 글자
-  // h3에 있는 span 태그가 가로로 계속 움직이고 첫번째에 span태그가 맨 마지막 span 태그로 이동하면서 계속 움직이는  글자
->>>>>>> a094460830e7c19cde5fdf2854e1d63bbc4559ce
->>>>>>> 0218002dcab17a7d48a8d84b1404ba51c73fcced
 
   // 탭 메뉴 (site 코드 볼 수 있는 곳)
   $(".codeSection ul li a, .animation_tap li a").on("click", function (e) {
@@ -30,10 +22,6 @@ jQuery(document).ready(function ($) {
     contents.hide();
     contents.eq(index).fadeIn();
   });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 0218002dcab17a7d48a8d84b1404ba51c73fcced
 
   /* ********************************* */
 
@@ -300,9 +288,4 @@ jQuery(document).ready(function ($) {
     .setTween(tween2)
     .setPin(true)
     .addTo(controller);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a094460830e7c19cde5fdf2854e1d63bbc4559ce
->>>>>>> 0218002dcab17a7d48a8d84b1404ba51c73fcced
 });
