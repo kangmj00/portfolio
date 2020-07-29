@@ -490,13 +490,14 @@ h2 .border_bottom {
 }
 /* 프로젝트 사이트 모바일  */
 #section3 .mobile .mobile_codeSection {
+  margin-top: 16vh;
   display: flex;
   justify-content: space-between;
 }
 #section3 .mobile .mobile_codeSection article {
   flex-basis: 48%;
-  height: 90vh;
-  background-color: #efefef;
+  background: #efefef url("../img/appli.png") no-repeat center;
+  background-size: contain;
 }
 #section3 .mobile .mobile_codeSection article .codeSection {
   text-align: left;
@@ -1798,20 +1799,30 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   width: 58vw;
   display: inline-block;
 }
-#section4 article div {
+#section4 article > div {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row-reverse;
 }
-#section4 article div figure {
+#section4 article .minji_ImgWrap {
+  flex-basis: 55%;
+  height: 75vh;
+  order: 2;
+}
+#section4 article .minji_ImgWrap .minji_Img {
   background-image: url("../../../image/aboutphoto.png");
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  flex-basis: 55%;
-  height: 75vh;
-  order: 2;
+  height: 100%;
+}
+#section4 article .minji_ImgWrap .minji_ImgReveal {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #3f7df4;
+  bottom: 0;
 }
 #section4 article div aside {
   text-align: left;
@@ -1827,21 +1838,22 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 }
 #section4 article div .skillbox {
   background-color: #3f7df4;
-  padding: 6vh 4vw;
+  padding: 6vh 3vw;
   order: 3;
   margin-top: -23vh;
 }
 #section4 article div .skillbox li {
   border-bottom: solid 1px #fff;
   padding: 2.5vh 0;
+}
+#section4 article div .skillbox li div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 28vw;
 }
 #section4 article div .skillbox li h6 {
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 600;
 }
 #section4 article div .skillbox li span {
@@ -2046,22 +2058,16 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   .project_label {
     margin-bottom: 3.8vh;
   }
-  #section3 .mobile div {
+  #section3 .mobile .mobile_codeSection {
     display: block;
   }
-  #section3 .codeSection div pre {
+  #section3 .mobile .mobile_codeSection pre {
     font-size: 1.8vw;
   }
-  #section3 .mobile div article {
-    height: 64vh;
-    margin-bottom: 10vh;
-  }
-  #section3 .mobile > div {
-    display: block;
-  }
-  #section3 .mobile > div article {
+  #section3 .mobile .mobile_codeSection article {
     height: 78vh;
     max-height: 452px;
+    margin-bottom: 5vh;
   }
 }
 

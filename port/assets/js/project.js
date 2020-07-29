@@ -148,7 +148,6 @@ jQuery(document).ready(function ($) {
     tl.from(projectImgWRap, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
     tl.from(projectImg, 0.6, {
       opacity: 1,
-      translate: "100px",
       transformOrigin: "-50%, -50%",
       ease: animationTimingOut,
     });
@@ -235,10 +234,158 @@ jQuery(document).ready(function ($) {
       triggerHook: 0.2,
     })
       .setTween(tl)
+      .addTo(controller);
+  });
+
+  /* ***************** 어플리케이션 **************** */
+  $("#section3 .mobile").each(function () {
+    var inner = $(this).find(".section_txt");
+    var outer = $(this).find(".section_tit");
+
+    var tl = new TimelineMax();
+
+    tl.fromTo(
+      outer,
+      0.25,
+      { scale: 0, transformOrigin: "0 100%" },
+      { scale: 1 }
+    );
+    tl.fromTo(
+      inner,
+      0.65,
+      { opacity: 0, yPercent: 20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.15,
+    })
+      .setTween(tl)
+      .addTo(controller);
+  });
+
+  /* ***************** 어바웃민지 **************** */
+  $("#section4").each(function () {
+    var exp = $(this).find(".exp_txt");
+    var ImgWrap = $(this).find(".minji_ImgWrap");
+    var Img = $(this).find(".minji_Img");
+    var ImgReveal = $(this).find(".minji_ImgReveal");
+    var dream01 = $(this).find("aside p:nth-child(1)");
+    var dream02 = $(this).find("aside p:nth-child(2)");
+    var inner = $(this).find(".sub_tit");
+    var outer = $(this).find(".sub_titWrap");
+
+    var tl = new TimelineMax();
+
+    tl.from(exp, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+
+    tl.from(ImgWrap, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+    tl.from(Img, 0.6, {
+      opacity: 1,
+      transformOrigin: "-50%, -50%",
+      ease: animationTimingOut,
+    });
+    tl.fromTo(
+      ImgReveal,
+      animationSpeed,
+      {
+        width: "100%",
+        opacity: 1,
+        scaleX: 1,
+        transformOrigin: "100% 50%",
+        ease: animationTimingIn,
+      },
+      {
+        opacity: 0,
+        width: 0,
+        scaleX: 0,
+        transformOrigin: "0 50%",
+        ease: animationTimingOut,
+      }
+    );
+
+    tl.from(dream01, 0.6, {
+      scaleX: 0,
+      transformOrigin: "0 100%",
+      ease: animationTimingOut,
+    });
+    tl.from(dream02, 0.8, {
+      scaleX: 0,
+      transformOrigin: "0 100%",
+      ease: animationTimingOut,
+    });
+
+    tl.from(outer, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+    tl.fromTo(
+      inner,
+      0.65,
+      { opacity: 0, yPercent: -20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.15,
+    })
+      .setTween(tl)
       .addTo(controller)
       .addIndicators({
         name: "1",
       });
+  });
+
+  /* ***************** 어바웃민지 **************** */
+  $("#section5").each(function () {
+    var inner = $(this).find(".sub_tit");
+    var outer = $(this).find(".sub_titWrap");
+
+    var tl = new TimelineMax();
+    tl.from(outer, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+    tl.fromTo(
+      inner,
+      0.65,
+      { opacity: 0, yPercent: -20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.15,
+    })
+      .setTween(tl)
+      .addTo(controller);
+  });
+
+  /* ***************** 스킬박스  **************** */
+  $(".skillbox").each(function () {
+    var skillbox = $(this);
+    var outer = $(this).find("li");
+    var inner = $(this).find("li div");
+    var skileTit = $(this).find("li div h6");
+    var skileExp = $(this).find("li div span");
+
+    var tl = new TimelineMax();
+    tl.from(skillbox, 0.25, {
+      scaleX: 0,
+      opacity: 0,
+      transformOrigin: "0 100%",
+    });
+    tl.from(outer, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+    tl.fromTo(
+      inner,
+      0.65,
+      { opacity: 0, yPercent: -20 },
+      { opacity: 1, yPercent: 0, ease: animationTimingOut }
+    );
+    tl.from(skileTit, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+    tl.from(skileExp, 0.25, { scaleX: 0, transformOrigin: "0 100%" });
+    new ScrollMagic.Scene({
+      triggerElement: this,
+      triggerHook: 0.15,
+    })
+      .setTween(tl)
+      .addTo(controller);
   });
 
   /* ***************** 연락하기 **************** */
@@ -386,9 +533,29 @@ jQuery(document).ready(function ($) {
     var scene3 = new ScrollMagic.Scene({
       triggerElement: ".project_list li:nth-child(7) ",
     })
+
       .setTween(tween3)
       .addTo(controller);
   });
+
+  /* ***************** 프로젝트 리스트에 오렌지 원 **************** */
+  var orange_circle = TweenMax.fromTo(
+    ".project_list li .orange_circle",
+    0.8,
+    { opacity: 0, rotation: 0 },
+    {
+      opacity: 1,
+      rotation: 360,
+    }
+  );
+
+  var orange_circleScene = new ScrollMagic.Scene({
+    triggerElement: ".project_list li:nth-child(8)",
+    duration: "400",
+  })
+    .setTween(orange_circle)
+    .setPin(true)
+    .addTo(controller);
 
   /* ***************** 메인 이미지 사진 **************** */
   var tween1 = TweenMax.fromTo(
