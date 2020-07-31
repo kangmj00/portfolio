@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/app/css/project.css" />
+    <link rel="stylesheet" type="text/css" href="/app/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>home</title>
+  </head>
+  <body>
+    <main class="home">
+      <header class="header">
+        <a href="" class="header__toggle"></a>
+        <section class="header__menu">
+          <nav class="header__menu--wrap">
+            <article class="header__menu--user">
+              <figure>
+                <figcaption>사용자 사진</figcaption>
+              </figure>
+              <div>
+                <h4>Minji Kang</h4>
+                <p>johndoe@symu.com</p>
+              </div>
+            </article>
+            <ul class="header__menu--nav">
+              <li>
+                <a href="" class="active">Home</a>
+              </li>
+              <li>
+                <a href="">Statistics Browse</a>
+              </li>
+              <li>
+                <a href="">Browse Food</a>
+              </li>
+              <li>
+                <a href="">Favorite Meals</a>
+              </li>
+              <li>
+                <a href="">Preferences</a>
+              </li>
+              <li>
+                <button class="header__menu--logOut">Log Out</button>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__menu--dimmed"></div>
+        </section>
+
+        <h3 class="header__tit">Overview</h3>
+      </header>
+      <section class="food__data">
+        <ul class="food__data--total">
+          <li>
+            <span>3</span>
+            <h6>Eaten</h6>
+          </li>
+          <li>
+            <div>
+              <span>1895</span>
+              <h6>kcal left</h6>
+            </div>
+          </li>
+          <li>
+            <span>77</span>
+            <h6>Burned</h6>
+          </li>
+        </ul>
+        <ul class="food__data--detail">
+          <li>
+            <h6>CARBS</h6>
+            <div></div>
+            <p><span>237</span> g left</p>
+          </li>
+          <li>
+            <h6>Protein</h6>
+            <div></div>
+            <p><span>177</span> g left</p>
+          </li>
+          <li>
+            <h6>CARBS</h6>
+            <div></div>
+            <p><span>75</span> g left</p>
+          </li>
+        </ul>
+      </section>
+      <section class="foodMeal__con">
+        <div class="foodMeal__con--tit">
+          <h4>
+            <a href="" class="foodMeal__con--prev">이전</a>
+            TODAY, 07 MAR
+            <a href="" class="foodMeal__con--next">다음</a>
+          </h4>
+        </div>
+        <ul class="foodMeal__con--list">
+          <li>
+            <figure>
+              <figcaption>apple img</figcaption>
+            </figure>
+            <article>
+              <h5>Apple</h5>
+              <p>Lorem ipsum dolor sit</p>
+              <div>
+                <span><em>35</em> G</span>
+                <span><em>189</em> KCAL</span>
+              </div>
+            </article>
+            <time class="foodMeal__conTime">
+              <span>08:15</span>
+              <span>AM</span>
+            </time>
+            <aside class="btn_delete"></aside>
+          </li>
+          <li>
+            <figure style="background-image: url('img/img_oat.png');">
+              <figcaption>Oatmeal img</figcaption>
+            </figure>
+            <article>
+              <h5>Oatmeal</h5>
+              <p>Lorem ipsum dolor sit</p>
+              <div>
+                <span><em>220</em> G</span>
+                <span><em>189</em> KCAL</span>
+              </div>
+            </article>
+            <time class="foodMeal__conTime">
+              <span>10:30</span>
+              <span>AM</span>
+            </time>
+            <aside class="btn_delete"></aside>
+          </li>
+          <li class="delete">
+            <figure>
+              <figcaption>apple img</figcaption>
+            </figure>
+            <article>
+              <h5>Apple</h5>
+              <p>Lorem ipsum dolor sit</p>
+              <div>
+                <span><em>35</em> G</span>
+                <span><em>189</em> KCAL</span>
+              </div>
+            </article>
+            <time class="foodMeal__conTime">
+              <span class="foodMeal__conTime--active">01:00</span>
+              <span>PM</span>
+            </time>
+            <aside class="btn_delete"></aside>
+          </li>
+          <li>
+            <figure style="background-image: url('img/img_sand.png');">
+              <figcaption>Sandwich img</figcaption>
+            </figure>
+            <article>
+              <h5>Sandwich</h5>
+              <p>Lorem ipsum dolor sit</p>
+              <div>
+                <span><em>35</em> G</span>
+                <span><em>189</em> KCAL</span>
+              </div>
+            </article>
+            <time class="foodMeal__conTime">
+              <span class="foodMeal__conTime--active">04:30</span>
+              <span>PM</span>
+            </time>
+            <aside class="btn_delete"></aside>
+          </li>
+          <li>
+            <figure style="background-image: url('img/img_sal.png');">
+              <figcaption>Salad with chicken img</figcaption>
+            </figure>
+            <article>
+              <h5>Salad with chicken</h5>
+              <p>Lorem ipsum dolor sit</p>
+              <div>
+                <span><em>220</em> G</span>
+                <span><em>189</em> KCAL</span>
+              </div>
+            </article>
+            <time class="foodMeal__conTime">
+              <span class="foodMeal__conTime--active">06:30</span>
+              <span>PM</span>
+            </time>
+            <aside class="btn_delete"></aside>
+          </li>
+          <li>
+            <figure style="background-image: url('img/img_oran.png');">
+              <figcaption>Orange img</figcaption>
+            </figure>
+            <article>
+              <h5>Orange</h5>
+              <p>Lorem ipsum dolor sit</p>
+              <div>
+                <span><em>35</em> G</span>
+                <span><em>189</em> KCAL</span>
+              </div>
+            </article>
+            <time class="foodMeal__conTime">
+              <span class="foodMeal__conTime--active">08:00</span>
+              <span>PM</span>
+            </time>
+            <aside class="btn_delete"></aside>
+          </li>
+        </ul>
+      </section>
+      <a href="" class="home__foodAdd"><span>Add new meal</span></a>
+    </main>
+  </body>
+</html>

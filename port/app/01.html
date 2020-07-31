@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/app/css/project.css" />
+    <link rel="stylesheet" type="text/css" href="/app/css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>login</title>
+  </head>
+  <body>
+    <main class="login">
+      <h1 class="login__logo"></h1>
+      <h2 class="login__tit">Welcome back!</h2>
+      <form
+        class="login__form"
+        onsubmit="return checkForm()"
+        action="/account.html"
+        method="post"
+      >
+        <div>
+          <label for="name">Username</label>
+          <input id="name" type="text" name="name" placeholder="Username" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <button class="basic__btn" type="submit">Log In</button>
+      </form>
+      <p class="login__exp">
+        Don’t have an account?<a href="../app/02_account.html">Register</a>
+      </p>
+    </main>
+
+    <script>
+      function checkForm() {
+        var name = RegExp(/[^a-zA-Z]$/);
+        var password = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+        //이름 공백 검사
+        if ($("#name").val() == "") {
+          alert("이름을 입력해주세요");
+          $("#name").focus();
+          return false;
+        }
+        //이름 유효성 검사
+        if (!name.test($("#name").val())) {
+          alert("이름을 형식에 맞게 입력해주세요");
+          $("#name").focus();
+          return false;
+        }
+
+        //비밀번호 공백 검사
+        if ($("#password").val() == "") {
+          alert("비밀번호를 입력해주세요");
+          $("#password").focus();
+          return false;
+        }
+
+        //비밀번호 유효성 검사
+        if (!password.test($("#password").val())) {
+          alert(
+            "비밀번호는 8자 이상이어야 하며, 숫자/대문자/소문자/특수문자를 모두 포함해야 합니다."
+          );
+          $("#password").focus();
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* 기본 세팅 */
+html,
+body,
+main,
+section,
+article,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+em,
+figure,
+figcaption,
+ul,
+li,
+dl,
+dd,
+dt,
+ol,
+form,
+input,
+hr,
+time,
+button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 10px;
+  color: #fff;
+  background-color: #2ecc71;
+}
+
+li,
+ol {
+  list-style: none;
+}
+
+em {
+  font-style: normal;
+}
+/* a 리셋 */
+a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* form 리셋 */
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+}
+input::-ms-clear {
+  display: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+button {
+  background: inherit;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 5.866vw;
+  font-weight: 700;
+}
+figcaption {
+  text-indent: -9999px;
+  font-size: 0;
+}
