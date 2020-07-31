@@ -5372,7 +5372,20 @@ jQuery(document).ready(function($){
       </article>
       <article class="javascript_bgWhite">
         <div class="container">
-          <canvas></canvas>
+          <aside class="move"></aside>
+          <script>
+            var javascriptArea = document.querySelector(".move");
+
+            javascriptArea.addEventListener("keydown", function (event) {
+              if (event.keyCode == 37) {
+                //left
+                alert("좌측 화살키를 누르셨습니다.");
+              } else if (event.keyCode == 38) {
+              } else if (event.keyCode == 39) {
+              } else if (event.keyCode == 40) {
+              }
+            });
+          </script>
         </div>
       </article>
     </section>

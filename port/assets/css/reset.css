@@ -96,40 +96,40 @@ figcaption {
 /* 한글 서체 에스코어드림 */
 @font-face {
   font-family: "s-core_dream4_regular";
-  src: url("../../../font/scdream4.woff2") format("woff2"),
-    url("../../../font/scdream4.woff") format("woff");
+  src: url("../font/scdream4.woff2") format("woff2"),
+    url("../font/scdream4.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "s-core_dream5_medium";
-  src: url("../../../font/scdream5.woff2") format("woff2"),
-    url("../../../font/scdream5.woff") format("woff");
+  src: url("../font/scdream5.woff2") format("woff2"),
+    url("../font/scdream5.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "s-core_dream6_bold";
-  src: url("../../../font/scdream6.woff2") format("woff2"),
-    url("../../../font/scdream6.woff") format("woff");
+  src: url("../font/scdream6.woff2") format("woff2"),
+    url("../font/scdream6.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "s-core_dream7_extrabold";
-  src: url("../../../font/scdream7.woff2") format("woff2"),
-    url("../../../font/scdream7.woff") format("woff");
+  src: url("../font/scdream7.woff2") format("woff2"),
+    url("../font/scdream7.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "s-core_dream8_heavy";
-  src: url("../../../font/scdream8.woff2") format("woff2"),
-    url("../../../font/scdream8.woff") format("woff");
+  src: url("../font/scdream8.woff2") format("woff2"),
+    url("../font/scdream8.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

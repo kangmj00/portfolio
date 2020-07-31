@@ -561,10 +561,10 @@ jQuery(document).ready(function ($) {
   var tween1 = TweenMax.fromTo(
     ".revealBg",
     animationSpeed,
-    { x: "-100%", opacity: 0, ease: animationTimingIn },
+    { x: "-100%", opacity: 1, ease: animationTimingIn },
     {
       x: "100%",
-      opacity: 1,
+      opacity: 0,
       ease: animationTimingOut,
     }
   );
