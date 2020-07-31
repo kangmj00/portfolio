@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!--// 글꼴 -->
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/monokai-sublime.min.css"
+    />
+    <title>javascirpt</title>
+
+    <script>
+      window.onload = function () {
+        var x = 0;
+        var y = 0;
+        // var a = 300;
+        // var b = 0;
+        var speed = 10;
+        var cony = document.querySelector("#cony");
+        // var brown = document.querySelector("#brown");
+
+        document.addEventListener("keydown", function (e) {
+          if (e.keyCode == 37) {
+            // left
+            x -= speed;
+            cony.style.transform = "scaleX(-1)";
+          } else if (e.keyCode == 38) {
+            // up
+            y -= speed;
+          } else if (e.keyCode == 39) {
+            // right
+            x += speed;
+            cony.style.transform = "scaleX(1)";
+          } else if (e.keyCode == 40) {
+            // down
+            y += speed;
+          }
+          cony.style.left = x + "px";
+          cony.style.top = y + "px";
+        });
+
+        // var keypress = {};
+        // setInterval(function () {
+        //   // p2
+        //   if (keypress["38"]) y -= speed; // up - w
+        //   if (keypress["40"]) y += speed; // down - s
+        //   if (keypress["37"]) x -= speed; // left - a
+        //   if (keypress["39"]) x += speed; // right - d
+        //   // p3
+        //   if (keypress["73"]) a -= speed; // up - i
+        //   if (keypress["75"]) a += speed; // down - k
+        //   if (keypress["74"]) b -= speed; // left - j
+        //   if (keypress["76"]) b += speed; // right - l
+        //   // update position
+        //   brown.style.left = x + "px";
+        //   brown.style.top = y + "px";
+
+        //   cony.style.left = a + "px";
+        //   cony.style.top = b + "px";
+        // }, 10);
+        // document.addEventListener("keydown", e => {
+        //   keypress[e.which.toString()] = true;
+        // });
+        // document.addEventListener("keydown", e => {
+        //   keypress[e.which.toString()] = false;
+        // });
+      };
+    </script>
+  </head>
+  <body>
+    <section id="section3">
+      <article class="javascript_bgWhite">
+        <div class="container">
+          <aside class="cony" id="cony"></aside>
+          <!-- <aside class="brown" id="brown"></aside> -->
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
