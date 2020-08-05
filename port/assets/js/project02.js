@@ -404,11 +404,210 @@ jQuery(document).ready(function ($) {
         ease: Expo.easeOut,
       });
 
-      $(document).keydown(function (e) {
-        if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-          e.preventDefault();
+      //   $(document).keydown(function (e) {
+      //     if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+      //       e.preventDefault();
+      //     }
+      //   }, false);
+    }
+
+    // about minji
+    if (scroll > $("#section4").offset().top - $(window).height() / 2) {
+      var porject = gsap.timeline();
+      porject.to("#section4 .section_tit", 0.7, {
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
+      porject.to("#section4 .section_txt", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 .exp_txt01 span:nth-child(1)", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 .exp_txt01 span:nth-child(2)", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 .exp_txt01 span:nth-child(3)", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 .exp_txt01 span:nth-child(4)", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+
+      porject.to("#section4 .exp_txt02 p:nth-child(1)", { width: "100%" });
+      porject.to(
+        "#section4 .exp_txt02 p:nth-child(1) span:nth-child(1)",
+        0.25,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
         }
-      }, false);
+      );
+      porject.to(
+        "#section4 .exp_txt02 p:nth-child(1) span:nth-child(2)",
+        0.25,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        }
+      );
+      porject.to(
+        "#section4 .exp_txt02 p:nth-child(1) span:nth-child(3)",
+        0.25,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        }
+      );
+      porject.to(
+        "#section4 .exp_txt02 p:nth-child(1) span:nth-child(4)",
+        0.25,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        }
+      );
+
+      porject.to("#section4 .exp_txt02 p:nth-child(2)", { width: "100%" });
+      porject.to(
+        "#section4 .exp_txt02 p:nth-child(2) span:nth-child(1)",
+        0.25,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        }
+      );
+      porject.to(
+        "#section4 .exp_txt02 p:nth-child(2) span:nth-child(2)",
+        0.25,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        }
+      );
+      porject.to(
+        "#section4 .exp_txt02 p:nth-child(2) span:nth-child(3)",
+        0.25,
+        {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        }
+      );
+
+      porject.to("#section4 .skillbox", { opacity: 1 });
+
+      porject.to("#section4 li:nth-child(1) div", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 li:nth-child(1)", 0.7, {
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
+      porject.to("#section4 li:nth-child(2) div", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 li:nth-child(2)", 0.7, {
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
+      porject.to("#section4 li:nth-child(3) div", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 li:nth-child(3)", 0.7, {
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
+      porject.to("#section4 li:nth-child(4) div", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 li:nth-child(4)", 0.7, {
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
+      porject.to("#section4 li:nth-child(5) div", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 li:nth-child(5)", 0.7, {
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
+      porject.to("#section4 li:nth-child(6) div", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to("#section4 li:nth-child(6)", 0.7, {
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
+
+      //skill box 성격
+      if (scroll > $("#section5").offset().top - $(window).height() / 2) {
+        var porject = gsap.timeline();
+        porject.to("#section5 .sub_titWrap", 0.7, {
+          scaleX: 1,
+          duration: 1,
+          transformOrigin: "-100%",
+        });
+        porject.to("#section5 .sub_tit", 0.25, {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        });
+        porject.to("#section5 .text_border", 0.25, {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        });
+      }
+
+      if (scroll > $("#section6").offset().top - $(window).height() / 2) {
+        var porject = gsap.timeline();
+        porject.to("#section6 .section_tit", 0.7, {
+          scaleX: 1,
+          duration: 1,
+          transformOrigin: "-100%",
+        });
+        porject.to("#section6 .section_txt", 0.25, {
+          opacity: 1,
+          duration: 1,
+          ease: Expo.easeOut,
+        });
+      }
     }
   });
 

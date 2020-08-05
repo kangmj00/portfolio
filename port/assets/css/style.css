@@ -111,7 +111,7 @@
 }
 
 /* 내용 설명 */
-.exp_txt {
+.exp_txt01 {
   font-family: "s-core_dream4_reguler", sans-serif;
   font-size: 2vw;
   width: 58vw;
@@ -119,6 +119,17 @@
   display: inline-block;
   position: relative;
   padding: 5vh 0;
+}
+.exp_txt01 span {
+  display: block;
+  opacity: 0;
+}
+.exp_txt02 p {
+  width: 0;
+}
+.exp_txt02 p span {
+  display: block;
+  opacity: 0;
 }
 
 /* 화살표 들어있는 원 */
@@ -2043,16 +2054,22 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   padding: 6vh 3vw;
   order: 3;
   margin-top: -23vh;
+  z-index: 1;
+  opacity: 0;
 }
 #section4 article div .skillbox li {
   border-bottom: solid 1px #fff;
   padding: 2.5vh 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 #section4 article div .skillbox li div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  opacity: 0;
 }
 #section4 article div .skillbox li h6 {
   font-size: 1.8vw;
@@ -2086,8 +2103,8 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 }
 
 /* 04 LET’S CONTACT */
-#section6 article:nth-child(1) {
-  margin: 16vh auto;
+#section6 > div {
+  margin-top: 16vh;
 }
 #section6 article:nth-child(1) ul {
   text-align: left;
@@ -2110,6 +2127,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 }
 /* 04 LET’S CONTACT 흰 바탕 부분 */
 #section6 article:nth-child(2) {
+  margin-top: 16vh;
   background-color: #efefef;
   color: #151515;
 }
