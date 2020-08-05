@@ -290,54 +290,24 @@
     <script src="../parallax2/js/gsap.min.js"></script>
     <script src="../assets/js/prism.js"></script>
     <script>
-      let x = 0;
-      let y = 0;
-
-      // $(".move-image").mousemove(function(e){
-      //     gsap.to(".cursor", {duration: .2, left: e.pageX - 10, top: e.pageY - 10});
-
-      //     //좌표값 중앙을 0으로 초기화
-      //     //x = 컨텐츠 박스의 width()/2 + 왼쪽의 여백값
-      //     //y = 컨텐츠 박스의 height()/2 + 윗쪽의 여백값
-
-      //     // let x =  $(".move-image").width()/2;
-      //     // let y =  $(".move-image").position().left;
-      //     x =  e.clientX - ($(".move-image").width()/2 + $(".move-image").position().left);
-      //     y =  e.clientY - ($(".move-image").height()/2 + $(".move-image").position().top);
-
-      //     $(".img").attr({"style":"transform: translate("+x/20+"px,"+y/20+"px)" });
-      // });
-
-      const moveImg = document.querySelector(".move-image");
-
-      moveImg.addEventListener("mousemove", function (e) {
-        const rect = this.getBoundingClientRect();
-        console.log(rect);
-        this.style.setProperty("--x", e.clientX - (rect.width / 2 + rect.left));
-        this.style.setProperty("--y", e.clientY - (rect.height / 2 + rect.top));
-
+      $(".move-image").mousemove(function (e) {
         gsap.to(".cursor", {
           duration: 0.2,
           left: e.pageX - 10,
           top: e.pageY - 10,
         });
-      });
-      moveImg.addEventListener("mouseleave", function () {
-        this.style.setProperty("--x", 0);
-        this.style.setProperty("--y", 0);
-      });
+        let x = $(".move-image").width() / 2;
+        let y = $(".move-image").position().left;
+        x =
+          e.clientX -
+          ($(".move-image").width() / 2 + $(".move-image").position().left);
+        y =
+          e.clientY -
+          ($(".move-image").height() / 2 + $(".move-image").position().top);
 
-      //출력용
-      $(window).mousemove(function (e) {
-        $(".clientX").text(e.clientX);
-        $(".clientY").text(e.clientY);
-        $(".mouseX").text(Math.floor(x) + "px");
-        $(".mouseY").text(Math.floor(y) + "px");
-      });
-
-      //좌표 확인
-      $(".cord").click(function () {
-        $(".cursor strong").fadeToggle();
+        $(".img").attr({
+          style: "transform: translate(" + x / 20 + "px," + y / 20 + "px)",
+        });
       });
     </script>
   </body>

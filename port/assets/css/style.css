@@ -49,6 +49,8 @@
   padding-bottom: 3vh;
   position: relative;
   width: 100%;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 .section_tit:after {
   content: " ";
@@ -59,18 +61,19 @@
   bottom: 0;
   right: 0;
 }
-h2 {
+.section_txt {
   position: relative;
   overflow: hidden;
+  opacity: 0;
 }
-h2 > span:nth-child(1) {
+.section_txt > span:nth-child(1) {
   font-size: 3.5vw;
   font-style: italic;
   letter-spacing: -0.02em;
   vertical-align: top;
   margin-right: 1vw;
 }
-h2 > span:nth-child(2) {
+.section_txt > span:nth-child(2) {
   width: 58vw;
   text-align: left;
   display: inline-block;
@@ -79,7 +82,7 @@ h2 > span:nth-child(2) {
   letter-spacing: -0.06em;
   text-transform: uppercase;
 }
-h2 .border_bottom {
+.section_txt .border_bottom {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -93,6 +96,9 @@ h2 .border_bottom {
   display: inline-flex;
   justify-content: flex-end;
   border-top: solid 1px #fff;
+  width: 58vw;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 .sub_tit {
   font-family: "Montserrat Subrayada", sans-serif;
@@ -101,6 +107,7 @@ h2 .border_bottom {
   display: inline-block;
   position: relative;
   padding-top: 3vh;
+  opacity: 0;
 }
 
 /* 내용 설명 */
@@ -126,6 +133,8 @@ h2 .border_bottom {
   height: 30vmin;
   text-align: center;
   display: inline-block;
+  opacity: 0;
+  transform: rotate(0deg);
 }
 .arrow_circle span {
   opacity: 0;
@@ -152,17 +161,21 @@ h2 .border_bottom {
   width: 30vmin;
   height: 30vmin;
   text-align: center;
+  transition: ease all 0.1s;
+}
+.orange_circle:hover {
+  transform: scale(0.95);
 }
 .orange_circle span {
   font-family: "Montserrat Subrayada", sans-serif;
 }
-
 /* 몇 번째 프로젝트 인지*/
 .project_label {
   font-family: "Montserrat Subrayada", sans-serif;
   background-color: #ffa63d;
   display: inline-block;
   padding: 2vh 1vw;
+  opacity: 0;
 }
 .project_label span {
   font-weight: 500;
@@ -176,6 +189,7 @@ h2 .border_bottom {
   overflow: hidden;
 }
 .text_border {
+  opacity: 0;
   margin-top: 16vh;
   display: flex;
   animation: scrolling 10s linear infinite;
@@ -275,6 +289,9 @@ h2 .border_bottom {
   font-size: 2vw;
   font-weight: 500;
   z-index: 3;
+}
+.mainImg_content .mainTxt p {
+  position: relative;
 }
 .mainImg_content .mainTxt span {
   display: block;
@@ -428,12 +445,12 @@ h2 .border_bottom {
   font-size: 0;
   line-height: 0;
 }
-#section2 ul li .project_lstImgWrap .project_ImgReveal {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background: #3f7df4;
-  bottom: 0;
+#section2 ul li .subtitle_wrap {
+  transform: scaleX(0);
+  transform-origin: -100% 0;
+}
+#section2 ul li .subtitle_wrap p {
+  opacity: 0;
 }
 /* 프로젝트 리스트 이미지 백그라운 공통사항 */
 #section2 ul li:nth-child(1) .project_Img,
@@ -521,6 +538,7 @@ h2 .border_bottom {
 }
 /* 프로젝트 리스트 썸네일 제목 */
 #section2 ul li h4 {
+  position: relative;
   font-size: 2vw;
   font-family: "s-core_dream8_heavy", sans-serif;
   margin-bottom: 2vh;
@@ -546,6 +564,7 @@ h2 .border_bottom {
   margin-top: 16vh;
   padding-top: 5vh;
   padding-bottom: 16vh;
+  width: 0;
 }
 /* 프로젝트 사이트 제목 */
 #section3 .bgWhite h3 em:nth-child(1) {
@@ -557,6 +576,7 @@ h2 .border_bottom {
   -moz-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515, 0 -1px #151515;
   -webkit-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515,
     0 -1px #151515;
+  opacity: 0;
 }
 #section3 .bgWhite h3 em:nth-child(2) {
   font-size: 6vw;
@@ -565,16 +585,27 @@ h2 .border_bottom {
 }
 #section3 .bgWhite h3 em span {
   font-family: "s-core_dream6_bold", sans-serif;
+  opacity: 0;
 }
 /* 프로젝트 사이트 이미지 */
-#section3 .bgWhite figure {
-  background-image: url("../img/site01.png");
+#section3 .bgWhite .site_wrap {
+  height: 68vh;
+  text-align: right;
+  position: relative;
+}
+#section3 .bgWhite .site_wrap .container {
+  position: absolute;
+  top: 0;
+  width: 92.5%;
+}
+#section3 .bgWhite .site_wrap figure {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 68vh;
-  margin-top: -7.5vh;
-  text-align: right;
+}
+#section3 .bgWhite figure.site01 {
+  background-image: url("../img/site01.png");
 }
 #section3 .bgWhite figure.site02 {
   background-image: url("../img/site02.png");
@@ -585,13 +616,16 @@ h2 .border_bottom {
 #section3 .bgWhite figure.site04 {
   background-image: url("../img/site04.png");
 }
+#section3 .bgWhite figure.site05 {
+  background-image: url("../img/site04.png");
+}
 /* 프로젝트 사이트 site view */
-#section3 .bgWhite figure div {
+#section3 .bgWhite .site_wrap div {
   display: block;
   line-height: 68vh;
 }
 /* 프로젝트 사이트 site view 주황색 원 */
-#section3 .bgWhite figure div a {
+#section3 .bgWhite .site_wrap div a {
   line-height: 30vmin;
 }
 
@@ -600,6 +634,9 @@ h2 .border_bottom {
   background-color: #151515;
   margin-top: -7vh;
   color: #fff;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 #section3 .codeSection ul {
   display: flex;
@@ -651,6 +688,8 @@ h2 .border_bottom {
 }
 #section3 .mobile .mobile_codeSection article {
   flex-basis: 48%;
+}
+#section3 .mobile .mobile_codeSection article:nth-child(1) {
   background: #efefef url("../img/appli.png") no-repeat center;
   background-size: contain;
 }
@@ -686,9 +725,13 @@ h2 .border_bottom {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 0;
 }
 #section3 .animation ul {
-  width: 30vw;
+  width: 32vw;
+}
+#section3 .animation ul li {
+  opacity: 0;
 }
 #section3 .animation ul li a {
   color: #c4c4c4;
@@ -696,12 +739,16 @@ h2 .border_bottom {
   font-weight: 600;
   letter-spacing: -0.06em;
   text-transform: uppercase;
+  width: 32vw;
 }
 #section3 .animation ul li a:hover,
 #section3 .animation ul li a.active {
   font-family: "Montserrat Subrayada", sans-serif;
   cursor: pointer;
   color: #151515;
+}
+#section3 .animation .animation_con {
+  opacity: 0;
 }
 #section3 .animation .animation_con > div {
   display: none;
@@ -1989,6 +2036,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   flex-basis: 55%;
   height: 75vh;
   order: 2;
+  position: relative;
 }
 #section4 article .minji_ImgWrap .minji_Img {
   background-image: url("../img/aboutphoto.png");
