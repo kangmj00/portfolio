@@ -372,7 +372,7 @@ jQuery(document).ready(function ($) {
         ease: Expo.easeOut,
       });
     }
-    if (scroll > $("#ani_scroll ").offset().top - $(window).height() / 2) {
+    if (scroll > $("#ani_scroll").offset().top - $(window).height() / 2) {
       var porject = gsap.timeline();
       porject.to("#ani_scroll .sub_titWrap", 0.7, {
         scaleX: 1,
@@ -389,6 +389,26 @@ jQuery(document).ready(function ($) {
         duration: 1,
         ease: Expo.easeOut,
       });
+    }
+
+    //javascript
+    if (
+      scroll >
+      $(".javascript_bgWhite").offset().top - $(window).height() / 2
+    ) {
+      var porject = gsap.timeline();
+      porject.to(".javascript_bgWhite", { width: "100%" });
+      porject.to(".javascript_bgWhite .canvas_wrap", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+
+      $(document).keydown(function (e) {
+        if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+          e.preventDefault();
+        }
+      }, false);
     }
   });
 
