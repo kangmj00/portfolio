@@ -64,11 +64,6 @@ window.addEventListener("scroll", function (e) {
     });
 
     moveImg.addEventListener("mousemove", function (e) {
-      gsap.to(".mainImg_cursor", {
-        duration: 0.2,
-        left: e.pageX - 10,
-        top: e.pageY - 10,
-      });
       const dir = this.getBoundingClientRect();
 
       this.style.setProperty("--x", e.clientX - (e.clientX / 2 + dir.left));
@@ -76,8 +71,8 @@ window.addEventListener("scroll", function (e) {
       this.style.setProperty("--y", e.clientY - (e.clientY / 2 + dir.top));
 
       moveImg.addEventListener("mouseleave", function () {
-        this.style.setProperty("--x", 0);
-        this.style.setProperty("--y", 0);
+        this.style.setProperty("--x", 2);
+        this.style.setProperty("--y", 2);
       });
     });
   }
