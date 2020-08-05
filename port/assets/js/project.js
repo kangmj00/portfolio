@@ -6,9 +6,6 @@ jQuery(document).ready(function ($) {
     split = "<span aria-hidden='true'>" + split + "</span>";
     $(this).html(split).attr("aria-label", txt);
   });
-  $(window).on("scroll", function () {
-    var top = $(window).scrollTop();
-  });
 
   // 탭 메뉴 (site 코드 볼 수 있는 곳)
   $(".codeSection ul li a, .animation_tap li a").on("click", function (e) {

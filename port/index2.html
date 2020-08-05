@@ -29,7 +29,19 @@
         <!-- //section1 -->
         
         <section id="section2">
-            
+            <div class="sec2">
+                <div class="move-image">
+                    <div class="mimg"><img src="assets/img/mainphoto.png" alt="이미지"></div>
+<!--
+                    <div class="mtext">
+                        <p>Luck is when preparedness meets opportunity.</p>
+                        <p>운이란 준비가 기회를 만나는 것이다.</p>
+                    </div>
+-->
+                </div>
+                
+                <h2>my projects</h2>
+            </div>
         </section>
         <!-- //section2 -->
         
@@ -60,6 +72,14 @@
         },2000);
         
         
+        $(window).scroll(function(){
+            let scroll = $(window).scrollTop();
+    
+            if( $("#section2").offset().top < scroll ){
+                
+            }
+            
+        });
         
         
         

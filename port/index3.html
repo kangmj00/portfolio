@@ -34,11 +34,14 @@
     <title>kang.minji portfolio</title>
   </head>
   <body>
-    <div class="overlay first"></div>
+    <!-- overlay -->
+    <!-- <div class="overlay first"></div>
     <div class="overlay second"></div>
     <div class="overlay third"></div>
-    <div class="overlay fourth"></div>
+    <div class="overlay fourth"></div> -->
+    <!-- // overlay -->
 
+    <!-- main title -->
     <section id="section1" class="section">
       <h1>
         <em class="splitText">the</em>
@@ -47,13 +50,43 @@
         <em class="splitText">EXPERIENCE</em>
       </h1>
     </section>
-    <section class="mainImg_wrap">
-      <div class="mainImg">
-        <div class="revealBg"></div>
-        <figure class="mainMyBg"></figure>
-      </div>
-    </section>
+    <!-- // main title -->
+
+    <!-- section2 start -->
     <section id="section2" class="section">
+      <!-- main my photo -->
+      <div class="mainImg_content">
+        <div class="mainImg_cursor"></div>
+        <article class="mainImg_wrap">
+          <!-- main img -->
+          <div
+            class="mainImg content-item-img reveal reveal-ltr"
+            data-delay="100"
+          >
+            <figure class="mainMyBg">
+              <figcaption>내 사진</figcaption>
+            </figure>
+          </div>
+          <!-- // main img -->
+        </article>
+        <!-- main photo text -->
+        <div class="mainTxt">
+          <p class="content-item-desc reveal reveal-ltr" data-delay="500">
+            <span>
+              Moments, livin' with your eyes half-open<br />
+              You've been thinking 'bout these changes
+            </span>
+          </p>
+          <p class="content-item-desc reveal reveal-ltr" data-delay="900">
+            <span>
+              반만 뜬 시선으로 살아온 순간들 속에서 계속해서 변화하고 싶어왔겠지
+            </span>
+          </p>
+        </div>
+        <!-- // main photo text -->
+      </div>
+      <!-- // main my photo -->
+
       <div class="container right">
         <article class="section_tit">
           <h2 class="section_txt">
@@ -5570,7 +5603,6 @@ jQuery(document).ready(function($){
     </section>
     <script src="assets/js/jquery-1.12.4.js"></script>
     <script src="assets/js/jquery-ui-1.12.1.min.js"></script>
-
     <script src="assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 

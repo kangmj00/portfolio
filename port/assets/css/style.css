@@ -225,34 +225,198 @@ h2 .border_bottom {
 }
 
 /* 메인 내 사진 */
-.mainImg_wrap {
-  text-align: right;
-}
-
-.mainImg_wrap .mainImg {
-  margin: 16vh 0;
-  height: 70vh;
-  width: 80vw;
-  display: inline-block;
+.mainImg_content {
   position: relative;
+  margin: 16vh 0 16vh 20vw;
+  width: 80vw;
   overflow: hidden;
 }
-.mainImg_wrap .mainImg .mainMyBg {
-  height: 70vh;
+.mainImg_content .mainImg_cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+  user-select: none;
+  pointer-events: none;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.mainImg_content .mainImg_wrap {
+  --x: 0;
+  --y: 0;
+  --d: 50;
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  z-index: 2;
+  overflow: hidden;
+  will-change: transform;
+}
+.mainImg_content .mainImg_wrap .mainImg {
+  height: 100%;
+  position: absolute;
+  will-change: transform;
+  transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.mainImg_content .mainImg_wrap:hover .mainImg {
+  transform: scale(1.025);
+}
+.mainImg_content .mainImg_wrap .mainImg .mainMyBg {
+  --d: 20;
+  height: 75vh;
   width: 80vw;
-  background-image: url("../img/mainphoto.png");
-  background-position: center center;
+  background-image: url("../img/mainphoto.jpg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+  transform: translate(
+    calc(var(--x) / var(--d) * 1px),
+    calc(var(--y) / var(--d) * 1px)
+  );
 }
-.mainImg_wrap .mainImg .revealBg {
-  height: 70vh;
-  width: 80vw;
-  background: #3f7df4;
+.mainImg_content .mainTxt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 65vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2vw;
+  font-weight: 500;
+  z-index: 3;
+}
+.mainImg_content .mainTxt span {
+  display: block;
+  color: #fff;
+}
+.mainImg_content .mainTxt p:nth-child(2) span {
+  font-family: "s-core_dream8_heavy", sans-serif;
+  margin-top: 3vh;
+}
+.reveal span,
+.reveal figure {
+  opacity: 0;
+}
+.reveal.in span,
+.reveal.in figure {
+  animation: textHidden 0.1s 1.1s forwards;
+}
+.reveal.in:before,
+.reveal.in:after {
+  content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
-  z-index: 2;
+  right: 0;
+  height: 100%;
+  z-index: 5;
+}
+.reveal.in:before {
+  background-color: rgba(0, 0, 0, 1);
+}
+.reveal.in:after {
+  background-color: rgba(255, 255, 255, 0.1);
+  animation-delay: 0.5s;
+}
+.reveal.reveal-ltr.in:before {
+  animation: revealLTR 1.8s ease-in-out;
+}
+.reveal.reveal-ltr.in:after {
+  animation: revealLTR 1s 0.6s ease-in-out;
+}
+.reveal.reveal-rtl.in:before {
+  animation: revealRTL 1.8s ease;
+}
+.reveal.reveal-rtl.in:after {
+  animation: revealRTL 1s 0.6s ease;
+}
+.reveal.reveal-ttb.in:before {
+  animation: revealTTB 1.8s ease backwards;
+}
+.reveal.reveal-ttb.in:after {
+  animation: revealTTB 1s 0.6s ease backwards;
+}
+.reveal.reveal-btt.in:before {
+  animation: revealBTT 1.8s ease;
+}
+.reveal.reveal-btt.in:after {
+  animation: revealBTT 1s 0.6s ease;
+}
+
+@keyframes textHidden {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes revealLTR {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  65% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes revealRTL {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  65% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+@keyframes revealTTB {
+  0% {
+    width: 100%;
+    height: 0;
+    top: 0;
+  }
+  65% {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  100% {
+    width: 100%;
+    height: 0;
+    top: 100%;
+  }
+}
+@keyframes revealBTT {
+  0% {
+    width: 100%;
+    top: auto;
+    height: 0;
+    bottom: 0;
+  }
+  65% {
+    width: 100%;
+    top: auto;
+    height: 100%;
+    bottom: 0;
+  }
+  100% {
+    width: 100%;
+    top: auto;
+    height: 0;
+    bottom: 100%;
+  }
 }
 
 /* 프로젝트 리스트 그리드 */
@@ -2082,6 +2246,9 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 @media screen and (max-width: 960px) {
   .project_label {
     margin-bottom: 3.8vh;
+  }
+  #section2 .mainImg_content .mainImg_wrap {
+    max-height: 400px;
   }
   #section3 .mobile .mobile_codeSection {
     display: block;
