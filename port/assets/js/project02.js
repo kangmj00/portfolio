@@ -122,17 +122,15 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
 
-      scr.to("#section2 .project_list li:nth-child(1) h4", 0.25, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(1) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(1) h4", 0.25, {
         delay: 1.5,
         color: "rgb(255,255,255)",
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
       });
       setTimeout(function () {
         $(
@@ -161,17 +159,15 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
 
-      scr.to("#section2 .project_list li:nth-child(2) h4", 0.25, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(2) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(2) h4", 0.25, {
         delay: 1.5,
         color: "rgb(255,255,255)",
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
       });
       setTimeout(function () {
         $(
@@ -230,17 +226,15 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
 
-      scr.to("#section2 .project_list li:nth-child(5) h4", 0.25, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(5) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(5) h4", 0.25, {
         delay: 1.5,
         color: "rgb(255,255,255)",
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
       });
       setTimeout(function () {
         $(
@@ -269,17 +263,15 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
 
-      scr.to("#section2 .project_list li:nth-child(6) h4", 0.25, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(6) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(6) h4", 0.25, {
         delay: 1.5,
         color: "rgb(255,255,255)",
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
       });
       setTimeout(function () {
         $(
@@ -308,17 +300,15 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
 
-      scr.to("#section2 .project_list li:nth-child(7) h4", 0.25, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(7) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(7) h4", 0.25, {
         delay: 1.5,
         color: "rgb(255,255,255)",
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
       });
       setTimeout(function () {
         $(
@@ -362,17 +352,15 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
 
-      scr.to("#section2 .project_list li:nth-child(9) h4", 0.25, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(9) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(9) h4", 0.25, {
         delay: 1.5,
         color: "rgb(255,255,255)",
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
       });
       setTimeout(function () {
         $(
