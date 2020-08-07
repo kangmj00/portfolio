@@ -194,7 +194,23 @@
     <section id="section3" class="section">
       <div id="site01">
         <article class="bgWhite">
-          <p class="project_label">my project <span>01</span></p>
+          <ul class="site_nav">
+            <li>
+              <a href="#site01">my project <span>01</span></a>
+            </li>
+            <li>
+              <a href="#site02"><span>02</span></a>
+            </li>
+            <li>
+              <a href="#site03"><span>03</span></a>
+            </li>
+            <li>
+              <a href="#site04"><span>04</span></a>
+            </li>
+            <li>
+              <a href="#site05"><span>05</span></a>
+            </li>
+          </ul>
           <h3 class="container">
             <em>culturebunker</em><em class="splitText">평화문화진지</em>
           </h3>
@@ -874,7 +890,23 @@
       </div>
       <div id="site02">
         <article class="bgWhite">
-          <p class="project_label">my project <span>02</span></p>
+          <ul class="site_nav">
+            <li>
+              <a href="#site02">my project <span>02</span></a>
+            </li>
+            <li>
+              <a href="#site01"><span>01</span></a>
+            </li>
+            <li>
+              <a href="#site03"><span>03</span></a>
+            </li>
+            <li>
+              <a href="#site04"><span>04</span></a>
+            </li>
+            <li>
+              <a href="#site05"><span>05</span></a>
+            </li>
+          </ul>
           <h3 class="container">
             <em>kpil</em><em class="splitText">공익인권법재단 공감</em>
           </h3>
@@ -3574,7 +3606,23 @@ h2.main__title {
       </div>
       <div id="site03">
         <article class="bgWhite">
-          <p class="project_label">my project <span>03</span></p>
+          <ul class="site_nav">
+            <li>
+              <a href="#site03">my project <span>03</span></a>
+            </li>
+            <li>
+              <a href="#site01"><span>01</span></a>
+            </li>
+            <li>
+              <a href="#site02"><span>02</span></a>
+            </li>
+            <li>
+              <a href="#site04"><span>04</span></a>
+            </li>
+            <li>
+              <a href="#site05"><span>05</span></a>
+            </li>
+          </ul>
           <h3 class="container">
             <em>genderequity</em
             ><em class="splitText">서울시성평등활동지원센터</em>
@@ -3836,7 +3884,23 @@ h2.main__title {
       </div>
       <div id="site04">
         <article class="bgWhite">
-          <p class="project_label">my project <span>04</span></p>
+          <ul class="site_nav">
+            <li>
+              <a href="#site04">my project <span>04</span></a>
+            </li>
+            <li>
+              <a href="#site01"><span>01</span></a>
+            </li>
+            <li>
+              <a href="#site02"><span>02</span></a>
+            </li>
+            <li>
+              <a href="#site03"><span>03</span></a>
+            </li>
+            <li>
+              <a href="#site05"><span>05</span></a>
+            </li>
+          </ul>
           <h3 class="container">
             <em>megabox</em><em class="splitText">메가박스</em>
           </h3>
@@ -3897,7 +3961,23 @@ h2.main__title {
       </div>
       <div id="site05">
         <article class="bgWhite">
-          <p class="project_label">my project <span>05</span></p>
+          <ul class="site_nav">
+            <li>
+              <a href="#site03">my project <span>05</span></a>
+            </li>
+            <li>
+              <a href="#site01"><span>01</span></a>
+            </li>
+            <li>
+              <a href="#site02"><span>02</span></a>
+            </li>
+            <li>
+              <a href="#site03"><span>03</span></a>
+            </li>
+            <li>
+              <a href="#site04"><span>04</span></a>
+            </li>
+          </ul>
           <h3 class="container">
             <em>asan-nanum</em><em class="splitText">아산나눔재단</em>
           </h3>
@@ -5077,7 +5157,7 @@ jQuery(document).ready(function($){
                 </ul>
                 <div>
                   <pre>
-                    <code> &lt;!DOCTYPE html&gt;
+                    <code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
@@ -5087,13 +5167,19 @@ jQuery(document).ready(function($){
     &lt;!-- css --&gt;
     &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/project.css&quot; /&gt;
     &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/reset.css&quot; /&gt;
+    &lt;link
+      href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap&quot;
+      rel=&quot;stylesheet&quot;
+    /&gt;
+    &lt;script src=&quot;js/jquery-1.12.4.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;js/project.js&quot;&gt;&lt;/script&gt;
 
     &lt;title&gt;home&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;main class=&quot;home&quot;&gt;
       &lt;header class=&quot;header&quot;&gt;
-        &lt;a href=&quot;&quot; class=&quot;header__toggle&quot;&gt;&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;header__toggle&quot;&gt;&lt;/a&gt;
         &lt;section class=&quot;header__menu&quot;&gt;
           &lt;nav class=&quot;header__menu--wrap&quot;&gt;
             &lt;article class=&quot;header__menu--user&quot;&gt;
@@ -5820,13 +5906,13 @@ jQuery(document).ready(function($){
                 프론트 개발자로 성장하고 싶은 <strong>'강민지'</strong>
               </span>
               <span>입니다. 성능을 고려하고 동적으로</span>
-              <span>DOM을 컨트롤 하여 어플리케이션 레벨의 </span>
-              <span>데이터 매이징을 진행하는게 저의 목표입니다.</span>
+              <span>DOM을 컨트롤 하여 어플리케이션</span>
+              <span>레벨의 데이터 매이징을 진행하는게 저의 목표입니다.</span>
             </p>
             <p>
               <span> 또한, 기술을 따라가기 급급하기 보다는</span>
-              <span>왜 이런 기술의 방향이 발생하는지 이해하고</span>
-              <span>사용자가 경험할 것을 설계하겠습니다.</span>
+              <span>왜 이런 기술의 방향이 발생하는지</span>
+              <span>이해하고 사용자가 경험할 것을 설계하겠습니다.</span>
             </p>
           </aside>
           <ul class="skillbox">

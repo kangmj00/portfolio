@@ -112,23 +112,16 @@
 
 /* 내용 설명 */
 .exp_txt01 {
+  margin: 5vh 0;
+}
+.exp_txt01 span {
   font-family: "s-core_dream4_reguler", sans-serif;
   font-size: 2vw;
   width: 58vw;
   text-align: left;
   display: inline-block;
   position: relative;
-  padding: 5vh 0;
-}
-.exp_txt01 span {
-  display: block;
-  opacity: 0;
-}
-.exp_txt02 p {
-  width: 0;
-}
-.exp_txt02 p span {
-  display: block;
+  margin-bottom: 0.5vh;
   opacity: 0;
 }
 
@@ -182,19 +175,28 @@
   font-family: "Montserrat Subrayada", sans-serif;
 }
 /* 몇 번째 프로젝트 인지*/
-.project_label {
+.site_nav {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+.site_nav li {
+  margin-bottom: 0.5vh;
+}
+.site_nav li a {
   font-family: "Montserrat Subrayada", sans-serif;
   background-color: #ffa63d;
-  display: inline-block;
+  min-width: 2.5vw;
   padding: 2vh 1vw;
+  text-align: center;
   opacity: 0;
   transform: scaleX(0);
   transform-origin: -100% 0;
 }
-.project_label span {
+.site_nav li a span {
   font-weight: 500;
-  padding-left: 0.5vw;
   font-style: italic;
+  padding: 0 0.5vw;
 }
 
 /* 배경색이랑 같고 선이 있는 텍스트 (움직이는 텍스트) */
@@ -582,8 +584,21 @@
   padding-top: 5vh;
   padding-bottom: 16vh;
   width: 0;
+  position: relative;
 }
 /* 프로젝트 사이트 제목 */
+#section3 .bgWhite h3 {
+  padding-top: 6vh;
+  margin-bottom: 6vh;
+  font-size: 8vw;
+  text-transform: uppercase;
+  font-family: "Montserrat Subrayada", sans-serif;
+  color: #efefef;
+  text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515, 0 -1px #151515;
+  -moz-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515, 0 -1px #151515;
+  -webkit-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515,
+    0 -1px #151515;
+}
 #section3 .bgWhite h3 em:nth-child(1) {
   font-size: 8vw;
   text-transform: uppercase;
@@ -706,7 +721,7 @@
   justify-content: space-between;
 }
 #section3 .mobile .mobile_codeSection article {
-  width: 48vw;
+  width: 42vw;
   position: relative;
 }
 #section3 .mobile .mobile_codeSection article:nth-child(1) ul li {
@@ -2088,11 +2103,17 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   flex-basis: 38%;
 }
 #section4 article div aside p {
+  width: 0;
+  margin-bottom: 5vh;
+}
+#section4 article div aside p span {
   font-family: "s-core_dream4_regular", sans-serif;
   font-size: 1.4vw;
   line-height: 1.4em;
   letter-spacing: -0.06em;
-  margin-bottom: 5vh;
+  margin-bottom: 0.5vh;
+  display: block;
+  opacity: 0;
 }
 #section4 article div .skillbox {
   background-color: #3f7df4;
@@ -2336,9 +2357,6 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   }
 }
 @media screen and (max-width: 960px) {
-  .project_label {
-    margin-bottom: 3.8vh;
-  }
   #section2 .mainImg_content .mainImg_wrap {
     max-height: 40vh;
   }
@@ -2365,13 +2383,19 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
     margin: 0 auto;
   }
   .sub_tit {
-    font-size: 2vw;
+    font-size: 3.5vw;
+  }
+  .site_nav li a {
+    padding: 1vh 0.3vh;
+    min-width: 5vw;
   }
   .orange_circle {
     font-size: 3vw;
   }
-  .project_label {
-    font-size: 2.5vw;
+  .exp_txt01 span {
+    font-size: 3.5vw;
+    line-height: 1em;
+    letter-spacing: -0.06em;
   }
   #section2 > figure {
     background-position: 70% center;
@@ -2420,13 +2444,17 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   }
   #section4 article div .skillbox {
     margin-top: 0;
+    padding: 6vh 10vw;
   }
   #section4 article div .skillbox li {
     width: 100%;
   }
   #section4 article div aside p {
-    font-size: 2vw;
-    margin-top: 5vh;
+    margin: 5vh 0;
+    text-align: center;
+  }
+  #section4 article div aside p span {
+    font-size: 3vw;
   }
   #section4 article div .skillbox li h6 {
     font-size: 3vw;
