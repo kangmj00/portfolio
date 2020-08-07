@@ -173,6 +173,7 @@
   height: 30vmin;
   text-align: center;
   transition: ease all 0.1s;
+  opacity: 0;
 }
 .orange_circle:hover {
   transform: scale(0.95);
@@ -187,6 +188,8 @@
   display: inline-block;
   padding: 2vh 1vw;
   opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 .project_label span {
   font-weight: 500;
@@ -200,10 +203,12 @@
   overflow: hidden;
 }
 .text_border {
-  opacity: 0;
   margin-top: 16vh;
   display: flex;
   animation: scrolling 10s linear infinite;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 @keyframes scrolling {
   0% {
@@ -553,6 +558,7 @@
   font-size: 2vw;
   font-family: "s-core_dream8_heavy", sans-serif;
   margin-bottom: 2vh;
+  opacity: 0;
 }
 /* 프로젝트 리스트 썸네일 부제목 */
 #section2 ul p {
@@ -638,6 +644,7 @@
 /* 프로젝트 사이트 site view 주황색 원 */
 #section3 .bgWhite .site_wrap div a {
   line-height: 30vmin;
+  opacity: 0;
 }
 
 /* 프로젝트 사이트 코드 미리보기  */
@@ -645,7 +652,6 @@
   background-color: #151515;
   margin-top: -7vh;
   color: #fff;
-  opacity: 0;
   transform: scaleX(0);
   transform-origin: -100% 0;
 }
@@ -683,6 +689,7 @@
 #section3 .codeSection div pre div {
   padding: 0;
 }
+
 /* 스크롤 다운 */
 #section3 .scrollDown {
   height: 100vh;
@@ -691,6 +698,7 @@
 #section3 .scrollDown .arrow_circle {
   margin-top: 16vh;
 }
+
 /* 프로젝트 사이트 모바일  */
 #section3 .mobile .mobile_codeSection {
   margin-top: 16vh;
@@ -2120,10 +2128,16 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   flex-basis: 35%;
   font-size: 1vw;
   font-family: "Montserrat Subrayada", sans-serif;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 #section6 article:nth-child(1) li p {
   font-size: 1.5vw;
   margin-top: 3vh;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 /* 04 LET’S CONTACT 흰 바탕 부분 */
 #section6 article:nth-child(2) {
@@ -2144,6 +2158,9 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   width: 58vw;
   text-align: left;
   display: inline-block;
+  opacity: 0;
+  transform-origin: 50% -100%;
+  transform: scaleY(0);
 }
 /* form 형식 */
 #section6 article:nth-child(2) div form {
@@ -2162,9 +2179,13 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   text-transform: uppercase;
   letter-spacing: -0.08em;
   margin-bottom: 2vh;
+  opacity: 0;
 }
 #section6 article:nth-child(2) div form dt span {
   font-family: "Montserrat Subrayada", sans-serif;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 /* form 태그 비율 지정 */
 #section6 article:nth-child(2) div form dt:nth-child(1),
@@ -2188,6 +2209,9 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   width: calc(100% - 2vh);
   text-align: center;
   padding: 1vh;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 /* input placeholder */
 #section6 article:nth-child(2) div form dd input::placeholder {
@@ -2279,7 +2303,10 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
     margin-bottom: 3.8vh;
   }
   #section2 .mainImg_content .mainImg_wrap {
-    max-height: 400px;
+    max-height: 40vh;
+  }
+  #section2 .mainImg_content .mainImg_wrap .mainImg .mainMyBg {
+    max-height: 40vh;
   }
   #section3 .mobile .mobile_codeSection {
     display: block;
@@ -2298,19 +2325,6 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   .container {
     width: 88%;
     margin: 0 auto;
-  }
-  .mainImg_wrap .mainImg {
-    display: block;
-    width: 100%;
-    max-height: 400px;
-  }
-  .mainImg_wrap .mainImg .revealBg,
-  .mainImg_wrap .mainImg .mainMyBg {
-    width: inherit;
-    max-height: 400px;
-  }
-  .mainImg_wrap .mainImg .mainMyBg {
-    background-position: right bottom;
   }
   .sub_tit {
     font-size: 2vw;
@@ -2353,6 +2367,9 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   }
   #section3 .bgWhite h3 em {
     font-size: 7vw;
+  }
+  #section3 .codeSection div pre {
+    font-size: 3vw;
   }
   #section3 .codeSection ul li a {
     font-size: 2vw;

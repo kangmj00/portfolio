@@ -94,7 +94,7 @@
         padding-bottom: calc(var(--imgwidth) / (var(--aspect-ratio)));
         will-change: transform;
       }
-      .content-item-img {
+      . {
         --overflow: 40px;
         height: calc(100% + (2 * var(--overflow)));
         position: absolute;
@@ -104,7 +104,7 @@
         background-position: 50% 0;
         will-change: transform;
       }
-      .content-item-desc {
+      . {
         font-size: 5vw;
         line-height: 1.2;
         font-weight: 600;
@@ -117,27 +117,27 @@
         position: relative;
         z-index: 20;
       }
-      .content-item:nth-child(even) .content-item-desc {
+      .content-item:nth-child(even) . {
         text-align: left;
         margin-right: 0;
         margin-left: -5vw;
       }
 
       /*
-        #section1 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so09.jpg);}
-        #section2 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so02.jpg);}
-        #section3 .content-item-img {background-image:  url(http://flairgale.cafe24.com/para/images/so03.jpg);}
-        #section4 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so04.jpg);}
-        #section5 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so05.jpg);}*/
-      #section6 .content-item-img {
+        #section1 .{background-image: url(http://flairgale.cafe24.com/para/images/so09.jpg);}
+        #section2 .{background-image: url(http://flairgale.cafe24.com/para/images/so02.jpg);}
+        #section3 .{background-image:  url(http://flairgale.cafe24.com/para/images/so03.jpg);}
+        #section4 .{background-image: url(http://flairgale.cafe24.com/para/images/so04.jpg);}
+        #section5 .{background-image: url(http://flairgale.cafe24.com/para/images/so05.jpg);}*/
+      #section6 . {
         background-image: url(http://flairgale.cafe24.com/para/images/so06.jpg);
       }
-      #section7 .content-item-img {
+      #section7 . {
         background-image: url(http://flairgale.cafe24.com/para/images/so07.jpg);
       }
       /*
-        #section8 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so08.jpg);}
-        #section9 .content-item-img {background-image: url(http://flairgale.cafe24.com/para/images/so01.jpg);}
+        #section8 .{background-image: url(http://flairgale.cafe24.com/para/images/so08.jpg);}
+        #section9 .{background-image: url(http://flairgale.cafe24.com/para/images/so01.jpg);}
 */
 
       /* option */
@@ -264,7 +264,7 @@
         }
       }
 
-      .content-item-desc strong {
+      .strong {
         display: inline-block;
         position: relative;
         font-size: 5vw;
@@ -280,14 +280,14 @@
           <span class="content-item-num">01</span>
           <h2 class="content-item-title">Basic Coding</h2>
           <div class="content-item-imgWrap">
-            <div class="content-item-img reveal reveal-ltr" data-delay="100">
+            <div class="reveal reveal-ltr">
               <img
                 src="http://flairgale.cafe24.com/para/images/so01.jpg"
                 alt="이미지"
               />
             </div>
           </div>
-          <p class="content-item-desc reveal reveal-ltr" data-delay="500">
+          <p class="reveal reveal-ltr" data-delay="500">
             <span>높은 목표를 세우고, 스스로 채직찔한다.</span>
           </p>
         </section>
@@ -295,14 +295,14 @@
           <span class="content-item-num">02</span>
           <h2 class="content-item-title">advice</h2>
           <div class="content-item-imgWrap">
-            <div class="content-item-img reveal reveal-ltr" data-delay="100">
+            <div class="reveal reveal-ltr">
               <img
                 src="http://flairgale.cafe24.com/para/images/so02.jpg"
                 alt="이미지"
               />
             </div>
           </div>
-          <p class="content-item-desc reveal reveal-ltr" data-delay="500">
+          <p class="reveal reveal-ltr" data-delay="500">
             <span>결과도 중요하지만, 과정을 더 중요하게 생각한다.</span>
           </p>
         </section>
@@ -310,14 +310,14 @@
           <span class="content-item-num">03</span>
           <h2 class="content-item-title">advice</h2>
           <div class="content-item-imgWrap">
-            <div class="content-item-img reveal reveal-rtl" data-delay="100">
+            <div class="reveal reveal-rtl">
               <img
                 src="http://flairgale.cafe24.com/para/images/so03.jpg"
                 alt="이미지"
               />
             </div>
           </div>
-          <p class="content-item-desc reveal reveal-rtl" data-delay="500">
+          <p class="reveal reveal-rtl" data-delay="500">
             <span>매 순간에 최선을 다하고, 끊임없이 변화한다.</span>
           </p>
         </section>
@@ -325,14 +325,14 @@
           <span class="content-item-num">04</span>
           <h2 class="content-item-title">advice</h2>
           <div class="content-item-imgWrap">
-            <div class="content-item-img reveal reveal-rtl" data-delay="100">
+            <div class="reveal reveal-rtl">
               <img
                 src="http://flairgale.cafe24.com/para/images/so04.jpg"
                 alt="이미지"
               />
             </div>
           </div>
-          <p class="content-item-desc reveal reveal-rtl" data-delay="500">
+          <p class="reveal reveal-rtl" data-delay="500">
             <span>모든지 기본을 중요하게 생각한다.</span>
           </p>
         </section>
@@ -340,7 +340,7 @@
           <span class="content-item-num">05</span>
           <h2 class="content-item-title">advice</h2>
           <div class="content-item-imgWrap">
-            <div class="content-item-img reveal reveal-ltr" data-delay="100">
+            <div class="reveal reveal-ltr">
               <img
                 src="http://flairgale.cafe24.com/para/images/so05.jpg"
                 alt="이미지"
@@ -378,10 +378,10 @@
             <div class="content-item-img"></div>
           </div>
           <p class="content-item-desc">
-            <strong class="reveal reveal-ttb" data-delay="100">
+            <strong class="reveal reveal-ttb">
               <span>내 스타일을 다른</span>
             </strong>
-            <strong class="reveal reveal-ttb" data-delay="300">
+            <strong class="reveal reveal-ttb">
               <span>사람에게 강요하지 않는다.</span>
             </strong>
           </p>
@@ -390,7 +390,7 @@
           <span class="content-item-num">08</span>
           <h2 class="content-item-title">advice</h2>
           <div class="content-item-imgWrap">
-            <div class="content-item-img reveal reveal-rtl" data-delay="100">
+            <div class="reveal reveal-rtl">
               <img
                 src="http://flairgale.cafe24.com/para/images/so08.jpg"
                 alt="이미지"
@@ -398,10 +398,10 @@
             </div>
           </div>
           <p class="content-item-desc">
-            <strong class="reveal reveal-btt" data-delay="100">
+            <strong class="reveal reveal-btt">
               <span>나 자신의 이익을 위해 </span>
             </strong>
-            <strong class="reveal reveal-btt" data-delay="300">
+            <strong class="reveal reveal-btt">
               <span>다른 사람을 이용하지 않는다.</span>
             </strong>
           </p>
@@ -410,7 +410,7 @@
           <span class="content-item-num">09</span>
           <h2 class="content-item-title">advice</h2>
           <div class="content-item-imgWrap">
-            <div class="content-item-img reveal reveal-btt" data-delay="100">
+            <div class="reveal reveal-btt">
               <img
                 src="http://flairgale.cafe24.com/para/images/so09.jpg"
                 alt="이미지"
