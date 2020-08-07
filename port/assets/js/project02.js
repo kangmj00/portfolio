@@ -714,6 +714,39 @@ jQuery(document).ready(function ($) {
         duration: 1,
         ease: Expo.easeOut,
       });
+      porject.to(".mobile_codeSection article:nth-child(1) ul li", 0.25, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      porject.to(
+        ".mobile_codeSection article:nth-child(1) ul li:nth-child(2)",
+        0.25,
+        {
+          left: "8%",
+        }
+      );
+      porject.to(
+        ".mobile_codeSection article:nth-child(1) ul li:nth-child(3)",
+        0.25,
+        {
+          left: "16%",
+        }
+      );
+      porject.to(
+        ".mobile_codeSection article:nth-child(1) ul li:nth-child(4)",
+        0.25,
+        {
+          left: "24%",
+        }
+      );
+      porject.to(
+        ".mobile_codeSection article:nth-child(1) ul li:nth-child(5)",
+        0.25,
+        {
+          left: "32%",
+        }
+      );
     }
     /* ************** app (mobile) scrolldown ***************** */
     if (

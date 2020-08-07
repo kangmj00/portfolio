@@ -346,10 +346,10 @@
   height: 4.5vmin;
 }
 .foodMeal__con--prev {
-  background-image: url("/app/img/prev.png");
+  background-image: url("../img/prev.png");
 }
 .foodMeal__con--next {
-  background-image: url("/app/img/next.png");
+  background-image: url("../img/next.png");
 }
 .foodMeal__con--list {
   background-color: #f9f9f9;
@@ -361,7 +361,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("/app/img/img_apple.png");
+  background-image: url("../img/img_apple.png");
   width: 23vmin;
   height: 23vmin;
   margin-left: 4.5vw;
@@ -430,7 +430,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 3.73vmin;
-  background-image: url("/app/img/btn_close.png");
+  background-image: url("../img/btn_close.png");
 }
 .home__foodAdd {
   position: fixed;
@@ -443,7 +443,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 3.73vmin;
-  background-image: url("/app/img/btn_add.png");
+  background-image: url("../img/btn_add.png");
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -461,7 +461,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 3.2vmin;
-  background-image: url("/app/img/btn_add.png");
+  background-image: url("../img/btn_add.png");
   margin: 0 4.5vw;
 }
 
@@ -478,7 +478,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url("/app/img/img_apple.png");
+  background-image: url("../img/img_apple.png");
   width: 100vw;
   height: 23.24vh;
 }
