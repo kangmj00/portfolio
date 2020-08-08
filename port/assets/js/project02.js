@@ -71,11 +71,27 @@ jQuery(document).ready(function ($) {
       }
     );
   });
-
+  /* ************** 스크롤에 따라 움직이는 화살표 ***************** */
+  $(function () {
+    var rot = 0,
+      totalScrollPosi = $(document).scrollTop();
+    $(window).scroll(function () {
+      var newLoc = $(document).scrollTop();
+      var diff = totalScrollPosi - newLoc;
+      (rot += diff), (totalScrollPosi = newLoc);
+      var rotationStr = "rotate(" + rot + "deg)";
+      $(".arrow_circle").css({
+        "-webkit-transform": rotationStr,
+        "-moz-transform": rotationStr,
+        transform: rotationStr,
+      });
+    });
+  }, 2000);
   /* ************** 스크롤 섹션 ***************** */
   $(window).scroll(function () {
     let scrollPosition = $(window).scrollTop();
 
+    /* ************** 코드 섹션 ***************** */
     $(".codeSection").each(function () {
       if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
         gsap.to(this, 0.75, {
@@ -205,7 +221,6 @@ jQuery(document).ready(function ($) {
       scr.to("#section2 .project_list li:nth-child(3) .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
     }
@@ -220,7 +235,6 @@ jQuery(document).ready(function ($) {
       scr.to("#section2 .project_list li:nth-child(4) .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 320,
         ease: Expo.easeOut,
       });
     }
@@ -346,7 +360,6 @@ jQuery(document).ready(function ($) {
       scr.to("#section2 .project_list li:nth-child(8) .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 270,
         ease: Expo.easeOut,
       });
     }
@@ -486,7 +499,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site01 .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
     }
@@ -542,7 +554,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site02 .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
     }
@@ -597,7 +608,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site03 .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
     }
@@ -652,7 +662,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site04 .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
     }
@@ -708,7 +717,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site05 .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
       $(".site_nav li").removeClass("none");
@@ -787,7 +795,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site_app .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
     }
@@ -852,7 +859,6 @@ jQuery(document).ready(function ($) {
       scr.to("#ani_scroll .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
-        rotation: 360,
         ease: Expo.easeOut,
       });
     }
