@@ -176,22 +176,23 @@
 }
 /* 몇 번째 프로젝트 인지*/
 .site_nav {
-  position: absolute;
+  position: fixed;
   left: 0;
+  top: 6vh;
   z-index: 10;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: -100% 0;
 }
 .site_nav li {
   margin-bottom: 0.5vh;
+  text-align: center;
 }
 .site_nav li a {
   font-family: "Montserrat Subrayada", sans-serif;
   background-color: #ffa63d;
-  min-width: 2.5vw;
+  min-width: 10vw;
   padding: 2vh 1vw;
-  text-align: center;
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: -100% 0;
 }
 .site_nav li a span {
   font-weight: 500;
@@ -324,11 +325,15 @@
   opacity: 0;
 }
 .reveal.in span,
-.reveal.in figure {
+.reveal.in figure,
+.reveal.in_txt span,
+.reveal.in_txt figure {
   animation: textHidden 0.1s 1.1s forwards;
 }
 .reveal.in:before,
-.reveal.in:after {
+.reveal.in:after,
+.reveal.in_txt:before,
+.reveal.in_txt:after {
   content: "";
   position: absolute;
   top: 0;
@@ -343,28 +348,43 @@
   background-color: rgba(255, 255, 255, 0.1);
   animation-delay: 0.5s;
 }
-.reveal.reveal-ltr.in:before {
+.reveal.in_txt:before {
+  background-color: rgba(36, 75, 255, 0.1);
+}
+.reveal.in_txt:after {
+  background-color: rgba(63, 125, 244, 1);
+  animation-delay: 0.5s;
+}
+.reveal.reveal-ltr.in:before,
+.reveal.reveal-ltr.in_txt:before {
   animation: revealLTR 1.8s ease-in-out;
 }
-.reveal.reveal-ltr.in:after {
+.reveal.reveal-ltr.in:after,
+.reveal.reveal-ltr.in_txt:after {
   animation: revealLTR 1s 0.6s ease-in-out;
 }
-.reveal.reveal-rtl.in:before {
+.reveal.reveal-rtl.in:before,
+.reveal.reveal-rtl.in_txt:before {
   animation: revealRTL 1.8s ease;
 }
-.reveal.reveal-rtl.in:after {
+.reveal.reveal-rtl.in:after,
+.reveal.reveal-rtl.in_txt:after {
   animation: revealRTL 1s 0.6s ease;
 }
-.reveal.reveal-ttb.in:before {
+.reveal.reveal-ttb.in:before,
+.reveal.reveal-ttb.in_txt:before {
   animation: revealTTB 1.8s ease backwards;
 }
-.reveal.reveal-ttb.in:after {
+.reveal.reveal-ttb.in:after,
+.reveal.reveal-ttb.in_txt:after {
   animation: revealTTB 1s 0.6s ease backwards;
 }
-.reveal.reveal-btt.in:before {
+.reveal.reveal-btt.in:before,
+.reveal.reveal-btt.in_txt:before {
   animation: revealBTT 1.8s ease;
 }
-.reveal.reveal-btt.in:after {
+.reveal.reveal-btt.in:after,
+.reveal.reveal-btt.in_txt:after {
   animation: revealBTT 1s 0.6s ease;
 }
 

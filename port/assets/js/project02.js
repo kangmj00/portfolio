@@ -20,11 +20,17 @@ jQuery(document).ready(function ($) {
     contents.eq(index).fadeIn();
   });
 
-  // 프로젝트 네비게이션
-  $(".site_nav li a").on("click", function (e) {
-    e.preventDefault(); //anchor이벤트의 기본동작을 막는다.
-    var thisTarget = $(this).attr("href");
-    $(window).scrollTop($(thisTarget).offset().top);
+  // project site menu
+  $(".site_nav a[href^='#']").on("click", function () {
+    let target = $($(this).attr("href"));
+
+    if (target.length) {
+      $("html, body").animate(
+        { scrollTop: target.offset().top },
+        600,
+        "easeInOutExpo"
+      );
+    }
   });
 
   /* ********************************* */
@@ -68,7 +74,8 @@ jQuery(document).ready(function ($) {
 
   /* ************** 스크롤 섹션 ***************** */
   $(window).scroll(function () {
-    let scroll = $(window).scrollTop();
+    let scrollPosition = $(window).scrollTop();
+    console.log(scrollPosition);
 
     $(".codeSection").each(function () {
       if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
@@ -81,8 +88,9 @@ jQuery(document).ready(function ($) {
         });
       }
     });
+
     /* ************** 메인 내 사진 ***************** */
-    if (scroll > $("#section2").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#section2").offset().top - $(window).height() / 2) {
       setTimeout(function () {
         $("#section2 .mainImg_wrap .reveal").addClass("in");
       });
@@ -90,13 +98,13 @@ jQuery(document).ready(function ($) {
         $("#section2 .mainTxt p:nth-child(1)").addClass("in");
       }, 300);
       setTimeout(function () {
-        $("#section2 .mainTxt p:nth-child(2)").addClass("in");
+        $("#section2 .mainTxt p:nth-child(2)").addClass("in_txt");
       }, 500);
     }
 
     /* ************** 01 my project title ***************** */
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .section_tit").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -116,7 +124,7 @@ jQuery(document).ready(function ($) {
 
     // 평화문화진지
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(1)").offset().top -
         $(window).height() / 2
     ) {
@@ -153,7 +161,7 @@ jQuery(document).ready(function ($) {
 
     // 공감
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(2)").offset().top -
         $(window).height() / 2
     ) {
@@ -190,7 +198,7 @@ jQuery(document).ready(function ($) {
 
     // 아래로 가는 화살표
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(3)").offset().top -
         $(window).height() / 2
     ) {
@@ -205,7 +213,7 @@ jQuery(document).ready(function ($) {
 
     // 대각선 화살표
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(4)").offset().top -
         $(window).height() / 2
     ) {
@@ -220,7 +228,7 @@ jQuery(document).ready(function ($) {
 
     // 성평등활동센터
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(5)").offset().top -
         $(window).height() / 2
     ) {
@@ -257,7 +265,7 @@ jQuery(document).ready(function ($) {
 
     // 메가박스
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(6)").offset().top -
         $(window).height() / 2
     ) {
@@ -294,7 +302,7 @@ jQuery(document).ready(function ($) {
 
     // 아산나눔재단
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(7)").offset().top -
         $(window).height() / 2
     ) {
@@ -331,7 +339,7 @@ jQuery(document).ready(function ($) {
 
     // 오른쪽으로 가는 화살표
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(8)").offset().top -
         $(window).height() / 2
     ) {
@@ -346,7 +354,7 @@ jQuery(document).ready(function ($) {
 
     // 어플리케이션
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .project_list li:nth-child(9)").offset().top -
         $(window).height() / 2
     ) {
@@ -400,29 +408,16 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site01 ***************** */
-    if (scroll > $("#site01").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#site01").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
+
+      scr.to(".site_nav", {
+        opacity: 1,
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
       scr.to("#site01 .bgWhite", { width: "100%" });
-      scr.to("#site01 .bgWhite .site_nav li:nth-child(1) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site01 .bgWhite .site_nav li:nth-child(2) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site01 .bgWhite .site_nav li:nth-child(3) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site01 .bgWhite .site_nav li:nth-child(4) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site01 .bgWhite .site_nav li:nth-child(5) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
       scr.to("#site01 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site01 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -442,7 +437,7 @@ jQuery(document).ready(function ($) {
     }
     /* ************** site01 scrolldown ***************** */
     if (
-      scroll >
+      scrollPosition >
       $("#site01 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -471,29 +466,9 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site02 ***************** */
-    if (scroll > $("#site02").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#site02").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site02 .bgWhite", { width: "100%" });
-      scr.to("#site02 .bgWhite .site_nav li:nth-child(1) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site02 .bgWhite .site_nav li:nth-child(2) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site02 .bgWhite .site_nav li:nth-child(3) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site02 .bgWhite .site_nav li:nth-child(4) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site02 .bgWhite .site_nav li:nth-child(5) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
       scr.to("#site02 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site02 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -513,7 +488,7 @@ jQuery(document).ready(function ($) {
     }
     /* ************** site02 scrolldown ***************** */
     if (
-      scroll >
+      scrollPosition >
       $("#site02 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -542,29 +517,9 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site03 ***************** */
-    if (scroll > $("#site03").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#site03").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site03 .bgWhite", { width: "100%" });
-      scr.to("#site03 .bgWhite .site_nav li:nth-child(1) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site03 .bgWhite .site_nav li:nth-child(2) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site03 .bgWhite .site_nav li:nth-child(3) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site03 .bgWhite .site_nav li:nth-child(4) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site03 .bgWhite .site_nav li:nth-child(5) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
       scr.to("#site03 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site03 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -584,7 +539,7 @@ jQuery(document).ready(function ($) {
     }
     /* ************** site03 scrolldown ***************** */
     if (
-      scroll >
+      scrollPosition >
       $("#site03 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -613,29 +568,9 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site04 ***************** */
-    if (scroll > $("#site04").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#site04").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site04 .bgWhite", { width: "100%" });
-      scr.to("#site04 .bgWhite .site_nav li:nth-child(1) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site04 .bgWhite .site_nav li:nth-child(2) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site04 .bgWhite .site_nav li:nth-child(3) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site04 .bgWhite .site_nav li:nth-child(4) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site04 .bgWhite .site_nav li:nth-child(5) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
       scr.to("#site04 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site04 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -655,7 +590,7 @@ jQuery(document).ready(function ($) {
     }
     /* ************** site04 scrolldown ***************** */
     if (
-      scroll >
+      scrollPosition >
       $("#site04 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -684,30 +619,10 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site05 ***************** */
-    if (scroll > $("#site05").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#site05").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
 
       scr.to("#site05 .bgWhite", { width: "100%" });
-      scr.to("#site05 .bgWhite .site_nav li:nth-child(1) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site05 .bgWhite .site_nav li:nth-child(2) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site05 .bgWhite .site_nav li:nth-child(3) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site05 .bgWhite .site_nav li:nth-child(4) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
-      scr.to("#site05 .bgWhite .site_nav li:nth-child(5) a ", {
-        scaleX: 1,
-        opacity: 1,
-      });
       scr.to("#site05 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site05 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -727,7 +642,7 @@ jQuery(document).ready(function ($) {
     }
     /* ************** site05 scrolldown ***************** */
     if (
-      scroll >
+      scrollPosition >
       $("#site05 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -756,7 +671,7 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** app (mobile) ***************** */
-    if (scroll > $("#site_app").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#site_app").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site_app .section_tit", 0.7, {
         scaleX: 1,
@@ -804,7 +719,7 @@ jQuery(document).ready(function ($) {
     }
     /* ************** app (mobile) scrolldown ***************** */
     if (
-      scroll >
+      scrollPosition >
       $("#site_app .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -833,7 +748,7 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** animation ***************** */
-    if (scroll > $("#ani").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#ani").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#ani", { width: "100%" });
       scr.to("#ani .animation_tap li:nth-child(1)", 0.5, {
@@ -868,7 +783,10 @@ jQuery(document).ready(function ($) {
       });
     }
     /* ************** animation scrolldown ***************** */
-    if (scroll > $("#ani_scroll").offset().top - $(window).height() / 2) {
+    if (
+      scrollPosition >
+      $("#ani_scroll").offset().top - $(window).height() / 2
+    ) {
       var scr = gsap.timeline();
       scr.to("#ani_scroll .sub_titWrap", 0.7, {
         scaleX: 1,
@@ -896,7 +814,7 @@ jQuery(document).ready(function ($) {
 
     /* ************** javascript ***************** */
     if (
-      scroll >
+      scrollPosition >
       $(".javascript_bgWhite").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
@@ -915,7 +833,7 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** about minji ***************** */
-    if (scroll > $("#section4").offset().top - $(window).height() / 2) {
+    if (scrollPosition > $("#section4").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
 
       // about minji tit
@@ -1061,7 +979,10 @@ jQuery(document).ready(function ($) {
       });
 
       /* **************  my works style with ***************** */
-      if (scroll > $("#section5").offset().top - $(window).height() / 2) {
+      if (
+        scrollPosition >
+        $("#section5").offset().top - $(window).height() / 2
+      ) {
         var scr = gsap.timeline();
 
         // 작은 글자 타이틀
@@ -1104,7 +1025,10 @@ jQuery(document).ready(function ($) {
       }
 
       /* **************  contact title ***************** */
-      if (scroll > $("#section6").offset().top - $(window).height() / 2) {
+      if (
+        scrollPosition >
+        $("#section6").offset().top - $(window).height() / 2
+      ) {
         var scr = gsap.timeline();
         scr.to("#section6 .section_tit", 0.7, {
           scaleX: 1,
@@ -1148,7 +1072,7 @@ jQuery(document).ready(function ($) {
 
       /* **************  contact form ***************** */
       if (
-        scroll >
+        scrollPosition >
         $("#section6 article:nth-child(2)").offset().top -
           $(window).height() / 2
       ) {
@@ -1178,7 +1102,7 @@ jQuery(document).ready(function ($) {
 
       /* **************  send ***************** */
       if (
-        scroll >
+        scrollPosition >
         $("#section6 article:nth-child(2) form").offset().top -
           $(window).height() / 2
       ) {
