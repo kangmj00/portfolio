@@ -129,10 +129,21 @@ jQuery(document).ready(function ($) {
         duration: 1,
         transformOrigin: "-100%",
       });
-      scr.to("#section2 .section_txt", 0.25, {
+      scr.to("#section2 .section_txt", 0.5, {
         opacity: 1,
-        duration: 1,
+        duration: 2,
         ease: Expo.easeOut,
+      });
+      scr.to("#section2 .section_txt > span:nth-child(1) ", 0.2, {
+        opacity: 1,
+        ease: Expo.easeOut,
+      });
+      scr.to("#section2 .section_txt .splitText span", 0.5, {
+        opacity: 1,
+        duration: 0.4,
+        translateY: 0,
+        stagger: 0.1,
+        ease: Expo.easeInOut,
       });
     }
 
@@ -732,10 +743,21 @@ jQuery(document).ready(function ($) {
         duration: 1,
         transformOrigin: "-100%",
       });
-      scr.to("#site_app .section_txt", 0.25, {
+      scr.to("#site_app .section_txt", 0.5, {
         opacity: 1,
-        duration: 1,
+        duration: 2,
         ease: Expo.easeOut,
+      });
+      scr.to("#site_app .section_txt > span:nth-child(1) ", 0.2, {
+        opacity: 1,
+        ease: Expo.easeOut,
+      });
+      scr.to("#site_app .section_txt .splitText span", 0.5, {
+        opacity: 1,
+        duration: 0.4,
+        translateY: 0,
+        stagger: 0.1,
+        ease: Expo.easeInOut,
       });
       scr.to(".mobile_codeSection article:nth-child(1) ul li", 0.25, {
         opacity: 1,
@@ -894,10 +916,21 @@ jQuery(document).ready(function ($) {
         duration: 1,
         transformOrigin: "-100%",
       });
-      scr.to("#section4 .section_txt", 0.25, {
+      scr.to("#section4 .section_txt", 0.5, {
         opacity: 1,
-        duration: 1,
+        duration: 2,
         ease: Expo.easeOut,
+      });
+      scr.to("#section4 .section_txt > span:nth-child(1) ", 0.2, {
+        opacity: 1,
+        ease: Expo.easeOut,
+      });
+      scr.to("#section4 .section_txt .splitText span", 0.5, {
+        opacity: 1,
+        duration: 0.4,
+        translateY: 0,
+        stagger: 0.1,
+        ease: Expo.easeInOut,
       });
       //무엇도 직선으로 움지이지 않는다.
       scr.to("#section4 .exp_txt01 span:nth-child(1)", 0.25, {
@@ -1087,10 +1120,21 @@ jQuery(document).ready(function ($) {
           duration: 1,
           transformOrigin: "-100%",
         });
-        scr.to("#section6 .section_txt", 0.25, {
+        scr.to("#section6 .section_txt", 0.5, {
           opacity: 1,
-          duration: 1,
+          duration: 2,
           ease: Expo.easeOut,
+        });
+        scr.to("#section6 .section_txt > span:nth-child(1) ", 0.2, {
+          opacity: 1,
+          ease: Expo.easeOut,
+        });
+        scr.to("#section6 .section_txt .splitText span", 0.5, {
+          opacity: 1,
+          duration: 0.4,
+          translateY: 0,
+          stagger: 0.1,
+          ease: Expo.easeInOut,
         });
         scr.to("#section6 ul li:nth-child(1) h5", 0.25, {
           opacity: 1,
