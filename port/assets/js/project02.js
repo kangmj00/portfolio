@@ -75,7 +75,6 @@ jQuery(document).ready(function ($) {
   /* ************** 스크롤 섹션 ***************** */
   $(window).scroll(function () {
     let scrollPosition = $(window).scrollTop();
-    console.log(scrollPosition);
 
     $(".codeSection").each(function () {
       if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
@@ -391,7 +390,7 @@ jQuery(document).ready(function ($) {
 
     // project all
     if (
-      scroll >
+      scrollPosition >
       $("#section2 .container .project_list li:nth-child(10)").offset().top -
         $(window).height() / 2
     ) {
@@ -406,17 +405,44 @@ jQuery(document).ready(function ($) {
         }
       );
     }
+    // 사이트 메뉴 없어질 때
+    if (scrollPosition < $("#section3").offset().top) {
+      var scr = gsap.timeline();
+
+      scr.to(".site_nav", {
+        opacity: 0,
+      });
+    }
+    // 사이트 메뉴 나타날 때
+    if (scrollPosition > $("#site01").offset().top - 200) {
+      var scr = gsap.timeline();
+
+      scr.to(".site_nav", {
+        opacity: 1,
+      });
+      $(".site_nav li a").removeClass("active");
+      $(".site_nav li:nth-child(1) a").addClass("active");
+      scr.to(".site_nav li:nth-child(1) a", {
+        opacity: 1,
+      });
+      scr.to(".site_nav li:nth-child(2) a", {
+        opacity: 1,
+      });
+      scr.to(".site_nav li:nth-child(3) a", {
+        opacity: 1,
+      });
+      scr.to(".site_nav li:nth-child(4) a", {
+        opacity: 1,
+      });
+      scr.to(".site_nav li:nth-child(5) a", {
+        opacity: 1,
+      });
+    }
 
     /* ************** site01 ***************** */
     if (scrollPosition > $("#site01").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
 
-      scr.to(".site_nav", {
-        opacity: 1,
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
       scr.to("#site01 .bgWhite", { width: "100%" });
       scr.to("#site01 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site01 .bgWhite h3 em span", 0.01, {
@@ -466,8 +492,13 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site02 ***************** */
+    if (scrollPosition > $("#site02").offset().top - 200) {
+      $(".site_nav li a").removeClass("active");
+      $(".site_nav li:nth-child(2) a").addClass("active");
+    }
     if (scrollPosition > $("#site02").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
+
       scr.to("#site02 .bgWhite", { width: "100%" });
       scr.to("#site02 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site02 .bgWhite h3 em span", 0.01, {
@@ -517,6 +548,10 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site03 ***************** */
+    if (scrollPosition > $("#site03").offset().top - 200) {
+      $(".site_nav li a").removeClass("active");
+      $(".site_nav li:nth-child(3) a").addClass("active");
+    }
     if (scrollPosition > $("#site03").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site03 .bgWhite", { width: "100%" });
@@ -568,6 +603,10 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site04 ***************** */
+    if (scrollPosition > $("#site04").offset().top - 200) {
+      $(".site_nav li a").removeClass("active");
+      $(".site_nav li:nth-child(4) a").addClass("active");
+    }
     if (scrollPosition > $("#site04").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site04 .bgWhite", { width: "100%" });
@@ -619,6 +658,10 @@ jQuery(document).ready(function ($) {
     }
 
     /* ************** site05 ***************** */
+    if (scrollPosition > $("#site05").offset().top - 200) {
+      $(".site_nav li a").removeClass("active");
+      $(".site_nav li:nth-child(5) a").addClass("active");
+    }
     if (scrollPosition > $("#site05").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
 
@@ -668,10 +711,12 @@ jQuery(document).ready(function ($) {
         rotation: 360,
         ease: Expo.easeOut,
       });
+      $(".site_nav li").removeClass("none");
     }
 
     /* ************** app (mobile) ***************** */
     if (scrollPosition > $("#site_app").offset().top - $(window).height() / 2) {
+      $(".site_nav li").addClass("none");
       var scr = gsap.timeline();
       scr.to("#site_app .section_tit", 0.7, {
         scaleX: 1,

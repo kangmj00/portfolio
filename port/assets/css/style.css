@@ -180,19 +180,26 @@
   left: 0;
   top: 6vh;
   z-index: 10;
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: -100% 0;
 }
 .site_nav li {
   margin-bottom: 0.5vh;
   text-align: center;
 }
+.site_nav li.none {
+  margin-bottom: 0.5vh;
+  display: none;
+}
 .site_nav li a {
+  display: block;
   font-family: "Montserrat Subrayada", sans-serif;
   background-color: #ffa63d;
   min-width: 10vw;
   padding: 2vh 1vw;
+  opacity: 0;
+  transform: translateX(-65%);
+}
+.site_nav li a.active {
+  transform: translateX(0);
 }
 .site_nav li a span {
   font-weight: 500;
