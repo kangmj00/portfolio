@@ -1233,7 +1233,7 @@ jQuery(document).ready(function ($) {
       ($(".mainImg_wrap").height() / 2 + $(".mainImg_wrap").position().top);
 
     $(".mainMyBg").attr({
-      style: "transform: translate(" + x / 20 + "px," + y / 20 + "px)",
+      style: "transform: translate(" + x / 20 + "px," + y / 10 + "px)",
     });
   });
 });

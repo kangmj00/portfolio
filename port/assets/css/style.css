@@ -268,7 +268,7 @@
 .mainImg_content {
   position: relative;
   display: inline-block;
-  margin: 16vh 0;
+  margin: 25vh 0;
   width: 80vw;
   overflow: hidden;
 }
@@ -283,7 +283,11 @@
   will-change: transform;
 }
 .mainImg_content .mainImg_wrap .mainImg {
-  height: 100%;
+  overflow: hidden;
+  width: 100vw;
+  height: 75vh;
+  left: -5%;
+  top: -5%;
   position: absolute;
   will-change: transform;
   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
@@ -293,8 +297,8 @@
 }
 .mainImg_content .mainImg_wrap .mainImg .mainMyBg {
   --d: 20;
-  height: 75vh;
-  width: 85vw;
+  height: 100vh;
+  width: 100vw;
   background-image: url("../img/mainphoto.jpg");
   background-position: center;
   background-size: cover;
