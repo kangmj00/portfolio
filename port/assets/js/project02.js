@@ -21,9 +21,10 @@ jQuery(document).ready(function ($) {
   });
 
   // project site menu
-  $(".site_nav a[href^='#']").on("click", function () {
-    let target = $($(this).attr("href"));
+  $(".site_nav a[href^='#']").on("click", function (e) {
+    e.preventDefault();
 
+    let target = $($(this).attr("href"));
     if (target.length) {
       $("html, body").animate(
         { scrollTop: target.offset().top },

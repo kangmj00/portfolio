@@ -220,17 +220,17 @@
   white-space: nowrap;
   will-change: transform;
   transform: translateX(0);
-  animation: scrolling 10s linear infinite;
+  animation: scrolling 10s linear infinite alternate;
   opacity: 0;
   transform: scaleX(0);
   transform-origin: -100% 0;
 }
 @keyframes scrolling {
   0% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-20%);
   }
 }
 .text_border span {
@@ -471,6 +471,10 @@
     height: 0;
     bottom: 100%;
   }
+}
+/* 한글자씩 나오는 텍스트 (split) */
+.splitText span {
+  display: inline-block;
 }
 
 /* 프로젝트 리스트 그리드 */
@@ -2192,7 +2196,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-70vw);
+    transform: translateX(-100%);
   }
 }
 
