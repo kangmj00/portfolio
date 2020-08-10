@@ -122,8 +122,9 @@
   margin: 5vh 0;
 }
 .exp_txt01 span {
-  font-family: "s-core_dream4_reguler", sans-serif;
+  font-family: "s-core_dream5_medium";
   font-size: 2vw;
+  letter-spacing: -0.1rem;
   width: 58vw;
   text-align: left;
   display: inline-block;
@@ -724,9 +725,9 @@
 #section3 .codeSection li a {
   font-family: "Montserrat Subrayada", sans-serif;
   display: block;
-  height: 7vh;
+  height: 6vh;
   width: 10vw;
-  line-height: 7vh;
+  line-height: 6vh;
   text-align: center;
 }
 #section3 .codeSection li a.active,
@@ -834,47 +835,119 @@
 /* 프로젝트 사이트 애니메이션  */
 #section3 .animation {
   background-color: #efefef;
+  color: #151515;
   height: 100vh;
   width: 0;
+  margin: 0;
+  padding: 10vh 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
-#section3 .ani_menu {
-}
-#section3 .ani_menu .ani_item {
-}
-#section3 .ani_menu .ani_con {
-}
-#section3 .ani_menu .ani_txt {
-}
-#section3 .ani_menu .ani_txt li {
-}
-#section3 .animation .anima_txt {
-  position: relative;
+
+.animation .container {
   overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  --marquee-width: 100vw;
   --offset: 20vw;
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
+  counter-reset: menu;
 }
-#section3 .animation .anima_txt li {
+.ani_item {
+  cursor: default;
+  position: relative;
+  margin-bottom: 2vh;
+}
+.ani_item a {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  -webkit-text-stroke: 1.2px #151515;
+  text-stroke: 1.2px #151515;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  transition: opacity 0.4s;
+}
+.ani_item a:hover {
+  transition-duration: 0.1s;
+  opacity: 0;
+  color: #151515;
+  outline: none;
+}
+.ani_con {
+  pointer-events: none;
+  position: absolute;
+  height: 30vh;
+  min-height: 200px;
+  opacity: 0;
+  left: 80%;
+  top: 50%;
+  transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
+}
+
+.ani_item a:hover + .ani_con {
+  opacity: 1;
+  transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+  transition: all 0.4s;
+}
+.ani_txtWrap {
+  position: absolute;
+  top: 0;
+  width: var(--marquee-width);
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: color-burn;
+}
+
+.ani_txt {
   width: fit-content;
   display: flex;
   position: relative;
   transform: translate3d(var(--move-initial), 0, 0);
-  animation: move 5s linear infinite;
+  animation: marquee 5s linear infinite;
   animation-play-state: paused;
   opacity: 0;
   transition: opacity 0.1s;
 }
-#section3 .animation .anima_txt li span {
-  white-space: nowrap;
-  font-family: "Montserrat Subrayada", sans-serif;
-  color: #151515;
-  font-size: 10vw;
-  padding: 0 2vw;
-}
-.animation:hover li {
+
+.ani_item a:hover ~ .ani_txtWrap .ani_txt {
   animation-play-state: running;
+  opacity: 1;
+  transition-duration: 0.4s;
 }
-@keyframes move {
+
+.ani_txt li {
+  text-align: center;
+}
+
+.ani_item a,
+.ani_txt li {
+  white-space: nowrap;
+  font-size: 8vw;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.ani_txt li {
+  font-style: italic;
+  margin-left: 3vw;
+  font-weight: 800;
+}
+.ani_txt li:hover,
+.ani_txt li:focus {
+  font-style: italic;
+  color: #151515;
+  outline: none;
+}
+
+@keyframes marquee {
   0% {
     transform: translate3d(var(--move-initial), 0, 0);
   }
@@ -882,31 +955,6 @@
   100% {
     transform: translate3d(var(--move-final), 0, 0);
   }
-}
-
-#section3 .animation .animation_con {
-  opacity: 0;
-}
-#section3 .animation .animation_con > div {
-  display: none;
-  width: 45vmin;
-  height: 45vmin;
-  border-radius: 50%;
-  background-color: #ffa63d;
-  text-indent: -9999px;
-  font-size: 0;
-}
-#section3 .animation .animation_con > div.active {
-  display: block;
-}
-
-/* 애니메이션 */
-#section3 .animation article div .animation_wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45vmin;
-  position: relative;
 }
 /* circle animation */
 .img_circle {
@@ -2018,7 +2066,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 .tail_circle > div {
   width: 6vmin;
   height: 6vmin;
-  background: #fff;
+  background: #3f7df4;
   border-radius: 50%;
   animation: moveY 1s linear infinite;
 }
@@ -2087,13 +2135,13 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 /* cat */
 .cat_wrap {
   position: relative;
-  width: 70%;
+  width: 35vmin;
+  height: 16vmin;
   margin: 0 auto;
 }
 .cat_wrap:before {
   content: "";
   display: block;
-  padding-top: 49.37%;
 }
 .cat {
   position: absolute;
@@ -2102,7 +2150,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   top: 0;
   bottom: 0;
   background: transparent url("../img/ani_sprite.png") no-repeat 0 0;
-  background-size: 100%;
+  background-size: 91%;
   animation: catwalk 1s steps(11) infinite;
 }
 @keyframes catwalk {
@@ -2431,6 +2479,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   }
   #section3 .mobile .mobile_codeSection {
     display: block;
+    margin-top: 5vh;
   }
   #section3 .mobile .mobile_codeSection pre {
     font-size: 1.8vw;

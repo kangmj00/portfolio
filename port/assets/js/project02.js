@@ -826,11 +826,6 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#ani").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#ani", { width: "100%" });
-      scr.to("#ani .animation_con", 0.5, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
     }
     /* ************** animation scrolldown ***************** */
     if (

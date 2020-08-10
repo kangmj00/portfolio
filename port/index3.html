@@ -18,10 +18,24 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/monokai-sublime.min.css"
     />
-
     <!-- // css -->
 
-    <!-- script -->
+    <!-- OG 태그 -->
+    <meta
+      property="og:url"
+      content="http://kangminji.dothome.co.kr/port/index3.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="강민지의 프론트엔드 포트폴리오" />
+    <meta
+      property="og:description"
+      content="내가 하고 싶은 것을 하겠다고 말하는 사람에게 세상은 길을 열어준다."
+    />
+    <meta
+      property="og:image"
+      content="http://kangminji.dothome.co.kr/port/assets/img/mainphoto.jpg"
+    />
+    <!-- // OG highlihgt -->
 
     <!-- code highlihgt -->
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/highlight.min.js"></script>
@@ -47,7 +61,7 @@
         <em class="splitText">the</em>
         <em class="splitText">unique</em>
         <em class="splitText">website</em>
-        <em class="splitText">EXPERIENCE</em>
+        <em class="splitText">experience</em>
       </h1>
     </section>
     <!-- // main title -->
@@ -5424,50 +5438,10 @@ jQuery(document).ready(function($){
         </article>
       </div>
       <div id="ani" class="animation">
-        <article class="container">
-          <ul class="ani_menu">
-            <li class="ani_item">
-              <a href="">Saturn Hula Hooping</a>
-              <div class="ani_con"></div>
-              <ul class="ani_txt">
-                <li>Saturn Hula Hooping</li>
-                <li>Saturn Hula Hooping</li>
-                <li>Saturn Hula Hooping</li>
-                <li>Saturn Hula Hooping</li>
-              </ul>
-            </li>
-            <li>
-              <span>circles</span>
-              <span>circles</span>
-              <span>circles</span>
-              <span>circles</span>
-            </li>
-            <li>
-              <span>3D Cube</span>
-              <span>3D Cube</span>
-              <span>3D Cube</span>
-              <span>3D Cube</span>
-            </li>
-            <li>
-              <span>Tail</span>
-              <span>Tail</span>
-              <span>Tail</span>
-              <span>Tail</span>
-            </li>
-            <li>
-              <span>Cat</span>
-              <span>Cat</span>
-              <span>Cat</span>
-              <span>Cat</span>
-            </li>
-          </ul>
-        </article>
-        <!-- <article class="animation_con">
-          <div class="active">
-            <article class="animation_wrap">
-              <h6>
-                planet animation
-              </h6>
+        <ul class="ani_menu container">
+          <li class="ani_item">
+            <a>Hula Hooping</a>
+            <div class="ani_con">
               <div class="planet">
                 <div class="planet_saturn">
                   <div class="planet_saturn__face">
@@ -5649,13 +5623,19 @@ jQuery(document).ready(function($){
                   </div>
                 </div>
               </div>
-            </article>
-          </div>
-          <div>
-            <article class="animation_wrap">
-              <h6>
-                circles animation
-              </h6>
+            </div>
+            <div class="ani_txtWrap">
+              <ul class="ani_txt" aria-hidden="true">
+                <li>Hula Hooping</li>
+                <li>Hula Hooping</li>
+                <li>Hula Hooping</li>
+                <li>Hula Hooping</li>
+              </ul>
+            </div>
+          </li>
+          <li class="ani_item">
+            <a>Circles Animation</a>
+            <div class="ani_con">
               <svg
                 class="img_circle"
                 xmlns="http://www.w3.org/2000/svg"
@@ -5666,13 +5646,19 @@ jQuery(document).ready(function($){
                 <circle cx="170" cy="170" r="110" stroke="#0780B3" />
                 <circle cx="170" cy="170" r="85" stroke="#3DC6FF" />
               </svg>
-            </article>
-          </div>
-          <div>
-            <article class="animation_wrap">
-              <h6>
-                3D Cube animation
-              </h6>
+            </div>
+            <div class="ani_txtWrap">
+              <ul class="ani_txt" aria-hidden="true">
+                <li>Circles Animation</li>
+                <li>Circles Animation</li>
+                <li>Circles Animation</li>
+                <li>Circles Animation</li>
+              </ul>
+            </div>
+          </li>
+          <li class="ani_item">
+            <a>3D Cube</a>
+            <div class="ani_con">
               <div class="cube_box">
                 <div class="front">
                   <span class="dice_circle"></span>
@@ -5708,13 +5694,19 @@ jQuery(document).ready(function($){
                   <span class="dice_circle"></span>
                 </div>
               </div>
-            </article>
-          </div>
-          <div>
-            <article class="animation_wrap">
-              <h6>
-                tail animation
-              </h6>
+            </div>
+            <div class="ani_txtWrap">
+              <ul class="ani_txt" aria-hidden="true">
+                <li>3D Cube</li>
+                <li>3D Cube</li>
+                <li>3D Cube</li>
+                <li>3D Cube</li>
+              </ul>
+            </div>
+          </li>
+          <li class="ani_item">
+            <a>Tail Animation</a>
+            <div class="ani_con">
               <div class="tail">
                 <div class="tail_circle">
                   <div></div>
@@ -5732,19 +5724,33 @@ jQuery(document).ready(function($){
                   <div></div>
                 </div>
               </div>
-            </article>
-          </div>
-          <div>
-            <article class="animation_wrap">
-              <h6>
-                Cat animation
-              </h6>
+            </div>
+            <div class="ani_txtWrap">
+              <ul class="ani_txt" aria-hidden="true">
+                <li>Tail Animation</li>
+                <li>Tail Animation</li>
+                <li>Tail Animation</li>
+                <li>Tail Animation</li>
+              </ul>
+            </div>
+          </li>
+          <li class="ani_item">
+            <a>Cat Animation</a>
+            <div class="ani_con">
               <div class="cat_wrap">
                 <div class="cat"></div>
               </div>
-            </article>
-          </div>
-        </article> -->
+            </div>
+            <div class="ani_txtWrap">
+              <ul class="ani_txt" aria-hidden="true">
+                <li>Cat Animation</li>
+                <li>Cat Animation</li>
+                <li>Cat Animation</li>
+                <li>Cat Animation</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
       <article id="ani_scroll" class="scrollDown">
         <div class="container right">
