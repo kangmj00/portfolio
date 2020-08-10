@@ -140,7 +140,7 @@ jQuery(document).ready(function ($) {
       });
       scr.to("#section2 .section_txt .splitText span", 0.5, {
         opacity: 1,
-        duration: 0.4,
+        duration: 0.1,
         translateY: 0,
         stagger: 0.1,
         ease: Expo.easeInOut,
@@ -754,7 +754,7 @@ jQuery(document).ready(function ($) {
       });
       scr.to("#site_app .section_txt .splitText span", 0.5, {
         opacity: 1,
-        duration: 0.4,
+        duration: 0.1,
         translateY: 0,
         stagger: 0.1,
         ease: Expo.easeInOut,
@@ -826,31 +826,6 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#ani").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#ani", { width: "100%" });
-      scr.to("#ani .animation_tap li:nth-child(1)", 0.5, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
-      scr.to("#ani .animation_tap li:nth-child(2)", 0.5, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
-      scr.to("#ani .animation_tap li:nth-child(3)", 0.5, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
-      scr.to("#ani .animation_tap li:nth-child(4)", 0.5, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
-      scr.to("#ani .animation_tap li:nth-child(5)", 0.5, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       scr.to("#ani .animation_con", 0.5, {
         opacity: 1,
         duration: 1,
@@ -927,7 +902,7 @@ jQuery(document).ready(function ($) {
       });
       scr.to("#section4 .section_txt .splitText span", 0.5, {
         opacity: 1,
-        duration: 0.4,
+        duration: 0.1,
         translateY: 0,
         stagger: 0.1,
         ease: Expo.easeInOut,
@@ -1131,7 +1106,7 @@ jQuery(document).ready(function ($) {
         });
         scr.to("#section6 .section_txt .splitText span", 0.5, {
           opacity: 1,
-          duration: 0.4,
+          duration: 0.1,
           translateY: 0,
           stagger: 0.1,
           ease: Expo.easeInOut,
