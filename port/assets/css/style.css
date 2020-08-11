@@ -2564,6 +2564,9 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   #section3 .codeSection ul li a {
     font-size: 2vw;
   }
+  #section3 .mobile .mobile_codeSection article:nth-child(1) ul li {
+    width: 54vw;
+  }
   #section3 .javascript_bgWhite .java_txt p {
     font-size: 3vw;
     line-height: 1.9;
