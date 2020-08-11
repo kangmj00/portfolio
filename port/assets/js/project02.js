@@ -158,7 +158,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(1) h4.reveal").addClass("in");
+        $("#section2 .project_list li:nth-child(1) h4.reveal").addClass(
+          "in_txt"
+        );
       });
       scr.to("#section2 .project_list li:nth-child(1) h4", 0.25, {
         delay: 1.5,
@@ -195,7 +197,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(2) h4.reveal").addClass("in");
+        $("#section2 .project_list li:nth-child(2) h4.reveal").addClass(
+          "in_txt"
+        );
       });
       scr.to("#section2 .project_list li:nth-child(2) h4", 0.25, {
         delay: 1.5,
@@ -260,7 +264,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(5) h4.reveal").addClass("in");
+        $("#section2 .project_list li:nth-child(5) h4.reveal").addClass(
+          "in_txt"
+        );
       });
       scr.to("#section2 .project_list li:nth-child(5) h4", 0.25, {
         delay: 1.5,
@@ -297,7 +303,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(6) h4.reveal").addClass("in");
+        $("#section2 .project_list li:nth-child(6) h4.reveal").addClass(
+          "in_txt"
+        );
       });
       scr.to("#section2 .project_list li:nth-child(6) h4", 0.25, {
         delay: 1.5,
@@ -334,7 +342,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(7) h4.reveal").addClass("in");
+        $("#section2 .project_list li:nth-child(7) h4.reveal").addClass(
+          "in_txt"
+        );
       });
       scr.to("#section2 .project_list li:nth-child(7) h4", 0.25, {
         delay: 1.5,
@@ -425,7 +435,8 @@ jQuery(document).ready(function ($) {
         {
           opacity: 1,
           duration: 1,
-          rotation: 360,
+          scaleX: 1,
+          scaleY: 1,
           ease: Expo.easeOut,
         }
       );
@@ -469,6 +480,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       scr.to("#site01 .bgWhite", { width: "100%" });
+      setTimeout(function () {
+        $("#site01 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      });
       scr.to("#site01 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site01 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -479,10 +493,10 @@ jQuery(document).ready(function ($) {
         $("#site01 .reveal").addClass("in");
       }, 3000);
       scr.to("#site01 .orange_circle", 3, {
-        delay: 0.5,
+        delay: 1,
         opacity: 1,
-        duration: 1,
-        rotation: 360,
+        scaleX: 1,
+        scaleY: 1,
         ease: Expo.easeOut,
       });
     }
@@ -524,6 +538,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       scr.to("#site02 .bgWhite", { width: "100%" });
+      setTimeout(function () {
+        $("#site02 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      });
       scr.to("#site02 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site02 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -534,10 +551,11 @@ jQuery(document).ready(function ($) {
         $("#site02 .reveal").addClass("in");
       }, 3000);
       scr.to("#site02 .orange_circle", 3, {
-        delay: 0.5,
+        delay: 1,
         opacity: 1,
         duration: 1,
-        rotation: 360,
+        scaleX: 1,
+        scaleY: 1,
         ease: Expo.easeOut,
       });
     }
@@ -578,6 +596,9 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site03").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site03 .bgWhite", { width: "100%" });
+      setTimeout(function () {
+        $("#site03 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      });
       scr.to("#site03 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site03 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -588,10 +609,11 @@ jQuery(document).ready(function ($) {
         $("#site03 .reveal").addClass("in");
       }, 3000);
       scr.to("#site03 .orange_circle", 3, {
-        delay: 0.5,
+        delay: 1,
         opacity: 1,
         duration: 1,
-        rotation: 360,
+        scaleX: 1,
+        scaleY: 1,
         ease: Expo.easeOut,
       });
     }
@@ -632,6 +654,9 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site04").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site04 .bgWhite", { width: "100%" });
+      setTimeout(function () {
+        $("#site04 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      });
       scr.to("#site04 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site04 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -642,10 +667,11 @@ jQuery(document).ready(function ($) {
         $("#site04 .reveal").addClass("in");
       }, 3000);
       scr.to("#site04 .orange_circle", 3, {
-        delay: 0.5,
+        delay: 1,
         opacity: 1,
         duration: 1,
-        rotation: 360,
+        scaleX: 1,
+        scaleY: 1,
         ease: Expo.easeOut,
       });
     }
@@ -687,6 +713,9 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       scr.to("#site05 .bgWhite", { width: "100%" });
+      setTimeout(function () {
+        $("#site05 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      });
       scr.to("#site05 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site05 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -697,10 +726,11 @@ jQuery(document).ready(function ($) {
         $("#site05 .reveal").addClass("in");
       }, 3000);
       scr.to("#site05 .orange_circle", 3, {
-        delay: 0.5,
+        delay: 1,
         opacity: 1,
         duration: 1,
-        rotation: 360,
+        scaleX: 1,
+        scaleY: 1,
         ease: Expo.easeOut,
       });
     }
@@ -766,28 +796,28 @@ jQuery(document).ready(function ($) {
       });
       scr.to(
         ".mobile_codeSection article:nth-child(1) ul li:nth-child(2)",
-        0.25,
+        0.2,
         {
           left: "8%",
         }
       );
       scr.to(
         ".mobile_codeSection article:nth-child(1) ul li:nth-child(3)",
-        0.25,
+        0.2,
         {
           left: "16%",
         }
       );
       scr.to(
         ".mobile_codeSection article:nth-child(1) ul li:nth-child(4)",
-        0.25,
+        0.2,
         {
           left: "24%",
         }
       );
       scr.to(
         ".mobile_codeSection article:nth-child(1) ul li:nth-child(5)",
-        0.25,
+        0.2,
         {
           left: "32%",
         }
@@ -863,17 +893,32 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
       scr.to(".javascript_bgWhite", { width: "100%" });
-      scr.to(".javascript_bgWhite .canvas_wrap", 0.25, {
-        opacity: 1,
+      scr.to(".javascript_bgWhite .section_tit", 0.7, {
+        scaleX: 1,
         duration: 1,
+        transformOrigin: "-100%",
+      });
+      scr.to(".javascript_bgWhite .section_txt", 0.5, {
+        opacity: 1,
+        duration: 2,
         ease: Expo.easeOut,
       });
-
-      //   $(document).keydown(function (e) {
-      //     if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-      //       e.preventDefault();
-      //     }
-      //   }, false);
+      scr.to(".javascript_bgWhite .section_txt > span:nth-child(1) ", 0.2, {
+        opacity: 1,
+        ease: Expo.easeOut,
+      });
+      scr.to(".javascript_bgWhite .section_txt .splitText span", 0.5, {
+        opacity: 1,
+        duration: 0.1,
+        translateY: 0,
+        stagger: 0.1,
+        ease: Expo.easeInOut,
+      });
+      $(".javascript_bgWhite .canvas_wrap").keydown(function (e) {
+        if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+          e.preventDefault();
+        }
+      }, false);
     }
 
     /* ************** about minji ***************** */
@@ -1229,7 +1274,8 @@ jQuery(document).ready(function ($) {
         scr.to("#section6 .orange_circle", {
           opacity: 1,
           duration: 1,
-          rotation: 360,
+          scaleX: 1,
+          scaleY: 1,
           ease: Expo.easeOut,
         });
       }

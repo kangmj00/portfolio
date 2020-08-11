@@ -175,6 +175,7 @@
   text-align: center;
   transition: ease all 0.1s;
   opacity: 0;
+  transform: scale(0);
 }
 .orange_circle:hover {
   transform: scale(0.95);
@@ -705,13 +706,12 @@
 /* 프로젝트 사이트 site view 주황색 원 */
 #section3 .bgWhite .site_wrap div a {
   line-height: 30vmin;
-  opacity: 0;
 }
 
 /* 프로젝트 사이트 코드 미리보기  */
 #section3 .codeSection {
   background-color: #151515;
-  margin-top: -7vh;
+  margin-top: -6vh;
   color: #fff;
   transform: scaleX(0);
   transform-origin: -100% 0;
@@ -755,6 +755,7 @@
 #section3 .scrollDown {
   height: 100vh;
   padding-top: 16vh;
+  overflow: hidden;
 }
 #section3 .scrollDown .arrow_circle {
   margin-top: 16vh;
@@ -836,7 +837,6 @@
 #section3 .animation {
   background-color: #efefef;
   color: #151515;
-  height: 100vh;
   width: 0;
   margin: 0;
   padding: 10vh 0;
@@ -868,11 +868,10 @@
   display: inline-block;
   cursor: pointer;
   position: relative;
-  -webkit-text-stroke: 1.2px #151515;
-  text-stroke: 1.2px #151515;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  color: transparent;
+  color: #efefef;
+  text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515, 0 -1px #151515;
+  -moz-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515, 0 -1px #151515;
+  -webkit-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515;
   transition: opacity 0.4s;
 }
 .ani_item a:hover {
@@ -884,10 +883,11 @@
 .ani_con {
   pointer-events: none;
   position: absolute;
-  height: 30vh;
-  min-height: 200px;
+  height: 30vmin;
+  width: 30vmin;
+  min-height: 10vmin;
   opacity: 0;
-  left: 80%;
+  left: 100%;
   top: 50%;
   transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
 }
@@ -931,14 +931,14 @@
 .ani_txt li {
   white-space: nowrap;
   font-size: 8vw;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
 }
 
 .ani_txt li {
   font-style: italic;
   margin-left: 3vw;
-  font-weight: 800;
+  font-weight: 600;
 }
 .ani_txt li:hover,
 .ani_txt li:focus {
@@ -2026,25 +2026,6 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
     transform: rotateX(360deg) rotateY(360deg);
   }
 }
-
-.cube_box:hover .front {
-  transform: translateZ(18vmin);
-}
-.cube_box:hover .back {
-  transform: translateZ(-18vmin) rotateY(180deg);
-}
-.cube_box:hover .right {
-  transform: rotateY(-270deg) translateZ(8vmin) translateX(8vmin);
-}
-.cube_box:hover .left {
-  transform: rotateY(270deg) translateZ(8vmin) translateX(-8vmin);
-}
-.cube_box:hover .top {
-  transform: rotateX(-270deg) translateZ(8vmin) translateY(-8vmin);
-}
-.cube_box:hover .bottom {
-  transform: rotateX(270deg) translateZ(8vmin) translateY(8vmin);
-}
 .cube_box .dice_circle {
   flex: 1 1 30%;
 }
@@ -2165,18 +2146,45 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 /*-- 프로젝트 자바스크립트 섹션 --*/
 #section3 .javascript_bgWhite {
   background-color: #efefef;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 0;
+  padding: 16vh 0;
+}
+#section3 .javascript_bgWhite .container .section_tit:after {
+  background-color: #151515;
+}
+#section3 .javascript_bgWhite .container .section_txt span {
+  color: #151515;
+}
+#section3 .javascript_bgWhite .java_txt {
+  margin: 5vh 0;
+  width: 58vw;
+  display: inline-block;
+}
+#section3 .javascript_bgWhite .java_txt p {
+  text-align: left;
+  color: #151515;
+  font-family: "s-core_dream5_medium";
+  font-size: 2vw;
+  letter-spacing: -0.1rem;
+  width: 58vw;
+  text-align: left;
+}
+#section3 .javascript_bgWhite .java_txt p small {
+  display: block;
+  font-family: "s-core_dream4_regular", sans-serif;
+  font-size: 1.4vw;
+  line-height: 1.4em;
+  letter-spacing: -0.06em;
 }
 #section3 .javascript_bgWhite .canvas_wrap {
-  height: 80vh;
-  width: 85vw;
-  margin: 0 auto;
-  opacity: 0;
+  text-align: left;
+  background-color: #151515;
+  padding: 5vh;
 }
+#section3 .javascript_bgWhite .canvas_wrap iframe {
+  width: 100%;
+  height: 82vmin;
+}
+
 /* 03 about minji */
 #section4 {
   margin: 16vh auto;
@@ -2421,6 +2429,11 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 }
 
 /* 미디어 쿼리 */
+@media screen and (max-width: 1400px) {
+  #section3 .javascript_bgWhite .canvas_wrap iframe {
+    height: 67vh;
+  }
+}
 @media screen and (max-width: 1240px) {
   #section2 ul {
     grid-template-columns: 1fr 1fr;
@@ -2551,6 +2564,19 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   #section3 .codeSection ul li a {
     font-size: 2vw;
   }
+  #section3 .javascript_bgWhite .java_txt p {
+    font-size: 3vw;
+    line-height: 1.9;
+  }
+  #section3 .javascript_bgWhite .java_txt p br {
+    display: none;
+  }
+  #section3 .javascript_bgWhite .java_txt p small {
+    font-size: 2.6vw;
+  }
+  #section3 .javascript_bgWhite .canvas_wrap iframe {
+    height: 46vh;
+  }
   #section4 article {
     width: 100%;
   }
@@ -2589,5 +2615,10 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   #section6 article:nth-child(1) li p {
     font-size: 3.8vw;
     margin-top: 0.2vh;
+  }
+  @media screen and (max-width: 420px) {
+    #section3 .javascript_bgWhite .canvas_wrap iframe {
+      height: 32vh;
+    }
   }
 }

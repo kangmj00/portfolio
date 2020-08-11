@@ -28,7 +28,8 @@ form,
 input,
 pre,
 code,
-hr {
+hr,
+iframe {
   padding: 0;
   margin: 0;
   border: 0;
@@ -92,7 +93,6 @@ figcaption {
   font-size: 0;
   line-height: 0;
 }
-
 /* 한글 서체 에스코어드림 */
 @font-face {
   font-family: "s-core_dream4_regular";
