@@ -158,9 +158,7 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(1) h4.reveal").addClass(
-          "in_txt"
-        );
+        $("#section2 .project_list li:nth-child(1) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(1) h4", 0.25, {
         delay: 1.5,
@@ -197,9 +195,7 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(2) h4.reveal").addClass(
-          "in_txt"
-        );
+        $("#section2 .project_list li:nth-child(2) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(2) h4", 0.25, {
         delay: 1.5,
@@ -264,9 +260,7 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(5) h4.reveal").addClass(
-          "in_txt"
-        );
+        $("#section2 .project_list li:nth-child(5) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(5) h4", 0.25, {
         delay: 1.5,
@@ -303,9 +297,7 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(6) h4.reveal").addClass(
-          "in_txt"
-        );
+        $("#section2 .project_list li:nth-child(6) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(6) h4", 0.25, {
         delay: 1.5,
@@ -342,9 +334,7 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       setTimeout(function () {
-        $("#section2 .project_list li:nth-child(7) h4.reveal").addClass(
-          "in_txt"
-        );
+        $("#section2 .project_list li:nth-child(7) h4.reveal").addClass("in");
       });
       scr.to("#section2 .project_list li:nth-child(7) h4", 0.25, {
         delay: 1.5,
