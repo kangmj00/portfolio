@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
   setTimeout(function () {
     gsap.fromTo(
       "#section1 h1 em span",
-      0.25,
+      0.09,
       { opacity: 0 },
       {
         delay: 0.8,
@@ -96,7 +96,6 @@ jQuery(document).ready(function ($) {
     $(".codeSection").each(function () {
       if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
         gsap.to(this, 0.75, {
-          delay: 1,
           opacity: 1,
           scaleX: 1,
           duration: 1,
@@ -124,15 +123,11 @@ jQuery(document).ready(function ($) {
       $("#section2 .section_tit").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#section2 .section_tit", 0.7, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
       scr.to("#section2 .section_txt", 0.5, {
         opacity: 1,
-        duration: 2,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
       });
       scr.to("#section2 .section_txt > span:nth-child(1) ", 0.2, {
         opacity: 1,
@@ -140,7 +135,6 @@ jQuery(document).ready(function ($) {
       });
       scr.to("#section2 .section_txt .splitText span", 0.5, {
         opacity: 1,
-        duration: 0.1,
         translateY: 0,
         stagger: 0.1,
         ease: Expo.easeInOut,
@@ -424,7 +418,7 @@ jQuery(document).ready(function ($) {
         "#section2 .container .project_list li:nth-child(10) .orange_circle",
         {
           opacity: 1,
-          duration: 1,
+          duration: 4,
           scaleX: 1,
           scaleY: 1,
           ease: Expo.easeOut,
@@ -445,22 +439,23 @@ jQuery(document).ready(function ($) {
 
       scr.to(".site_nav", {
         opacity: 1,
+        transformOrigin: "100%",
       });
       $(".site_nav li a").removeClass("active");
       $(".site_nav li:nth-child(1) a").addClass("active");
-      scr.to(".site_nav li:nth-child(1) a", {
+      scr.to(".site_nav li:nth-child(1) a", 0.01, {
         opacity: 1,
       });
-      scr.to(".site_nav li:nth-child(2) a", {
+      scr.to(".site_nav li:nth-child(2) a", 0.04, {
         opacity: 1,
       });
-      scr.to(".site_nav li:nth-child(3) a", {
+      scr.to(".site_nav li:nth-child(3) a", 0.07, {
         opacity: 1,
       });
-      scr.to(".site_nav li:nth-child(4) a", {
+      scr.to(".site_nav li:nth-child(4) a", 0.1, {
         opacity: 1,
       });
-      scr.to(".site_nav li:nth-child(5) a", {
+      scr.to(".site_nav li:nth-child(5) a", 0.13, {
         opacity: 1,
       });
     }
@@ -470,20 +465,20 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       scr.to("#site01 .bgWhite", { width: "100%" });
-      setTimeout(function () {
-        $("#site01 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      scr.to("#site01 .bgWhite h3 em:nth-child(1)", {
+        scaleX: 1,
+        opacity: 1,
+        transformOrigin: "0%",
       });
-      scr.to("#site01 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site01 .bgWhite h3 em span", 0.01, {
         opacity: 1,
         duration: 0.4,
         stagger: 0.09,
       });
       setTimeout(function () {
-        $("#site01 .reveal").addClass("in");
-      }, 3000);
-      scr.to("#site01 .orange_circle", 3, {
-        delay: 1,
+        $("#site01 .site_wrap.reveal").addClass("in");
+      }, 500);
+      scr.to("#site01 .orange_circle", 1, {
         opacity: 1,
         scaleX: 1,
         scaleY: 1,
@@ -499,12 +494,11 @@ jQuery(document).ready(function ($) {
       scr.to("#site01 .scrollDown .sub_titWrap", 0.7, {
         scaleX: 1,
         duration: 1,
-        transformOrigin: "-100%",
+        transformOrigin: "0%",
       });
       scr.to("#site01 .scrollDown .sub_tit", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        transformOrigin: "0%",
       });
       scr.to("#site01 .scrollDown .text_border", 0.25, {
         opacity: 1,
@@ -528,22 +522,21 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       scr.to("#site02 .bgWhite", { width: "100%" });
-      setTimeout(function () {
-        $("#site02 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      scr.to("#site02 .bgWhite h3 em:nth-child(1)", {
+        scaleX: 1,
+        opacity: 1,
+        transformOrigin: "0%",
       });
-      scr.to("#site02 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site02 .bgWhite h3 em span", 0.01, {
         opacity: 1,
         duration: 0.4,
         stagger: 0.09,
       });
       setTimeout(function () {
-        $("#site02 .reveal").addClass("in");
-      }, 3000);
-      scr.to("#site02 .orange_circle", 3, {
-        delay: 1,
+        $("#site02 .site_wrap.reveal").addClass("in");
+      }, 500);
+      scr.to("#site02 .orange_circle", 1, {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         scaleY: 1,
         ease: Expo.easeOut,
@@ -558,12 +551,11 @@ jQuery(document).ready(function ($) {
       scr.to("#site02 .scrollDown .sub_titWrap", 0.7, {
         scaleX: 1,
         duration: 1,
-        transformOrigin: "-100%",
+        transformOrigin: "0%",
       });
       scr.to("#site02 .scrollDown .sub_tit", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        transformOrigin: "0%",
       });
       scr.to("#site02 .scrollDown .text_border", 0.25, {
         opacity: 1,
@@ -586,22 +578,21 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site03").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site03 .bgWhite", { width: "100%" });
-      setTimeout(function () {
-        $("#site03 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      scr.to("#site03 .bgWhite h3 em:nth-child(1)", {
+        scaleX: 1,
+        opacity: 1,
+        transformOrigin: "0%",
       });
-      scr.to("#site03 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site03 .bgWhite h3 em span", 0.01, {
         opacity: 1,
         duration: 0.4,
         stagger: 0.09,
       });
       setTimeout(function () {
-        $("#site03 .reveal").addClass("in");
-      }, 3000);
-      scr.to("#site03 .orange_circle", 3, {
-        delay: 1,
+        $("#site03 .site_wrap.reveal").addClass("in");
+      }, 500);
+      scr.to("#site03 .orange_circle", 1, {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         scaleY: 1,
         ease: Expo.easeOut,
@@ -616,12 +607,11 @@ jQuery(document).ready(function ($) {
       scr.to("#site03 .scrollDown .sub_titWrap", 0.7, {
         scaleX: 1,
         duration: 1,
-        transformOrigin: "-100%",
+        transformOrigin: "0%",
       });
       scr.to("#site03 .scrollDown .sub_tit", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        transformOrigin: "0%",
       });
       scr.to("#site03 .scrollDown .text_border", 0.25, {
         opacity: 1,
@@ -644,22 +634,21 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site04").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
       scr.to("#site04 .bgWhite", { width: "100%" });
-      setTimeout(function () {
-        $("#site04 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      scr.to("#site04 .bgWhite h3 em:nth-child(1)", {
+        scaleX: 1,
+        opacity: 1,
+        transformOrigin: "0%",
       });
-      scr.to("#site04 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site04 .bgWhite h3 em span", 0.01, {
         opacity: 1,
         duration: 0.4,
         stagger: 0.09,
       });
       setTimeout(function () {
-        $("#site04 .reveal").addClass("in");
-      }, 3000);
-      scr.to("#site04 .orange_circle", 3, {
-        delay: 1,
+        $("#site04 .site_wrap.reveal").addClass("in");
+      }, 500);
+      scr.to("#site04 .orange_circle", 1, {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         scaleY: 1,
         ease: Expo.easeOut,
@@ -674,12 +663,11 @@ jQuery(document).ready(function ($) {
       scr.to("#site04 .scrollDown .sub_titWrap", 0.7, {
         scaleX: 1,
         duration: 1,
-        transformOrigin: "-100%",
+        transformOrigin: "0%",
       });
       scr.to("#site04 .scrollDown .sub_tit", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        transformOrigin: "0%",
       });
       scr.to("#site04 .scrollDown .text_border", 0.25, {
         opacity: 1,
@@ -703,22 +691,21 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       scr.to("#site05 .bgWhite", { width: "100%" });
-      setTimeout(function () {
-        $("#site05 .bgWhite h3 em:nth-child(1).reveal").addClass("in_txt");
+      scr.to("#site05 .bgWhite h3 em:nth-child(1)", {
+        scaleX: 1,
+        opacity: 1,
+        transformOrigin: "0%",
       });
-      scr.to("#site05 .bgWhite h3 em:nth-child(1)", { opacity: 1 });
       scr.to("#site05 .bgWhite h3 em span", 0.01, {
         opacity: 1,
         duration: 0.4,
         stagger: 0.09,
       });
       setTimeout(function () {
-        $("#site05 .reveal").addClass("in");
-      }, 3000);
-      scr.to("#site05 .orange_circle", 3, {
-        delay: 1,
+        $("#site05 .site_wrap.reveal").addClass("in");
+      }, 500);
+      scr.to("#site05 .orange_circle", 1, {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         scaleY: 1,
         ease: Expo.easeOut,
@@ -733,12 +720,11 @@ jQuery(document).ready(function ($) {
       scr.to("#site05 .scrollDown .sub_titWrap", 0.7, {
         scaleX: 1,
         duration: 1,
-        transformOrigin: "-100%",
+        transformOrigin: "0%",
       });
       scr.to("#site05 .scrollDown .sub_tit", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        transformOrigin: "0%",
       });
       scr.to("#site05 .scrollDown .text_border", 0.25, {
         opacity: 1,
@@ -758,15 +744,11 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site_app").offset().top - $(window).height() / 2) {
       $(".site_nav li").addClass("none");
       var scr = gsap.timeline();
-      scr.to("#site_app .section_tit", 0.7, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
       scr.to("#site_app .section_txt", 0.5, {
         opacity: 1,
-        duration: 2,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
       });
       scr.to("#site_app .section_txt > span:nth-child(1) ", 0.2, {
         opacity: 1,
@@ -774,45 +756,35 @@ jQuery(document).ready(function ($) {
       });
       scr.to("#site_app .section_txt .splitText span", 0.5, {
         opacity: 1,
-        duration: 0.1,
         translateY: 0,
         stagger: 0.1,
         ease: Expo.easeInOut,
       });
-      scr.to(".mobile_codeSection article:nth-child(1) ul li", 0.25, {
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li", 0.25, {
         opacity: 1,
         duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to(
-        ".mobile_codeSection article:nth-child(1) ul li:nth-child(2)",
-        0.2,
-        {
-          left: "8%",
-        }
-      );
-      scr.to(
-        ".mobile_codeSection article:nth-child(1) ul li:nth-child(3)",
-        0.2,
-        {
-          left: "16%",
-        }
-      );
-      scr.to(
-        ".mobile_codeSection article:nth-child(1) ul li:nth-child(4)",
-        0.2,
-        {
-          left: "24%",
-        }
-      );
-      scr.to(
-        ".mobile_codeSection article:nth-child(1) ul li:nth-child(5)",
-        0.2,
-        {
-          left: "32%",
-        }
-      );
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(2)", 0.2, {
+        left: "8%",
+      });
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(3)", 0.2, {
+        left: "16%",
+      });
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(4)", 0.2, {
+        left: "24%",
+      });
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(5)", 0.2, {
+        left: "32%",
+      });
+      scr.to(".mobile_codeSection .mobile_codeWrap", 0.2, {
+        opacity: 1,
+        scaleX: 1,
+        duration: 1,
+        transformOrigin: "-100%",
+      });
     }
+
     /* ************** app (mobile) scrolldown ***************** */
     if (
       scrollPosition >
@@ -822,12 +794,11 @@ jQuery(document).ready(function ($) {
       scr.to("#site_app .scrollDown .sub_titWrap", 0.7, {
         scaleX: 1,
         duration: 1,
-        transformOrigin: "-100%",
+        transformOrigin: "0%",
       });
       scr.to("#site_app .scrollDown .sub_tit", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        transformOrigin: "0%",
       });
       scr.to("#site_app .scrollDown .text_border", 0.25, {
         opacity: 1,
@@ -856,12 +827,11 @@ jQuery(document).ready(function ($) {
       scr.to("#ani_scroll .sub_titWrap", 0.7, {
         scaleX: 1,
         duration: 1,
-        transformOrigin: "-100%",
+        transformOrigin: "0%",
       });
       scr.to("#ani_scroll .sub_tit", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        transformOrigin: "0%",
       });
       scr.to("#ani_scroll .text_border", 0.25, {
         opacity: 1,
@@ -883,32 +853,45 @@ jQuery(document).ready(function ($) {
     ) {
       var scr = gsap.timeline();
       scr.to(".javascript_bgWhite", { width: "100%" });
-      scr.to(".javascript_bgWhite .section_tit", 0.7, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
       scr.to(".javascript_bgWhite .section_txt", 0.5, {
         opacity: 1,
-        duration: 2,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
       });
       scr.to(".javascript_bgWhite .section_txt > span:nth-child(1) ", 0.2, {
         opacity: 1,
         ease: Expo.easeOut,
       });
-      scr.to(".javascript_bgWhite .section_txt .splitText span", 0.5, {
+      scr.to(".javascript_bgWhite .section_txt .splitText span", 0.3, {
         opacity: 1,
-        duration: 0.1,
         translateY: 0,
         stagger: 0.1,
         ease: Expo.easeInOut,
       });
-      $(".javascript_bgWhite .canvas_wrap").keydown(function (e) {
-        if ([37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-          e.preventDefault();
-        }
-      }, false);
+      scr.to(".javascript_bgWhite .java_txt p span:nth-child(1) ", 0.2, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      scr.to(".javascript_bgWhite .java_txt p span:nth-child(2) ", 0.2, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      scr.to(".javascript_bgWhite .java_txt p span:nth-child(3) ", 0.2, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      scr.to(".javascript_bgWhite .java_txt p small ", 0.2, {
+        opacity: 1,
+        duration: 1,
+        ease: Expo.easeOut,
+      });
+      setTimeout(function () {
+        $(".javascript_bgWhite .canvas_wrap").addClass("in");
+      }, 500);
     }
 
     /* ************** about minji ***************** */
@@ -916,15 +899,11 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       // about minji tit
-      scr.to("#section4 .section_tit", 0.7, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
       scr.to("#section4 .section_txt", 0.5, {
         opacity: 1,
-        duration: 2,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
       });
       scr.to("#section4 .section_txt > span:nth-child(1) ", 0.2, {
         opacity: 1,
@@ -932,9 +911,9 @@ jQuery(document).ready(function ($) {
       });
       scr.to("#section4 .section_txt .splitText span", 0.5, {
         opacity: 1,
-        duration: 0.1,
         translateY: 0,
         stagger: 0.1,
+        ease: Expo.easeInOut,
         ease: Expo.easeInOut,
       });
       //무엇도 직선으로 움지이지 않는다.
@@ -1079,12 +1058,11 @@ jQuery(document).ready(function ($) {
         scr.to("#section5 .sub_titWrap", 0.7, {
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
         scr.to("#section5 .sub_tit", 0.25, {
           opacity: 1,
-          duration: 1,
-          ease: Expo.easeOut,
+          transformOrigin: "0%",
         });
 
         // 움직이는 글자
@@ -1120,15 +1098,11 @@ jQuery(document).ready(function ($) {
         $("#section6").offset().top - $(window).height() / 2
       ) {
         var scr = gsap.timeline();
-        scr.to("#section6 .section_tit", 0.7, {
-          scaleX: 1,
-          duration: 1,
-          transformOrigin: "-100%",
-        });
         scr.to("#section6 .section_txt", 0.5, {
           opacity: 1,
-          duration: 2,
-          ease: Expo.easeOut,
+          scaleX: 1,
+          duration: 0.5,
+          transformOrigin: "0%",
         });
         scr.to("#section6 .section_txt > span:nth-child(1) ", 0.2, {
           opacity: 1,
@@ -1136,7 +1110,6 @@ jQuery(document).ready(function ($) {
         });
         scr.to("#section6 .section_txt .splitText span", 0.5, {
           opacity: 1,
-          duration: 0.1,
           translateY: 0,
           stagger: 0.1,
           ease: Expo.easeInOut,
@@ -1183,12 +1156,11 @@ jQuery(document).ready(function ($) {
         scr.to("#section6 .sub_titWrap", 0.7, {
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
         scr.to("#section6 .sub_tit", 0.25, {
           opacity: 1,
-          duration: 1,
-          ease: Expo.easeOut,
+          transformOrigin: "0%",
         });
 
         // hello

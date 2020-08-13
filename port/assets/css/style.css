@@ -46,25 +46,23 @@
 .section_tit {
   display: inline-flex;
   justify-content: flex-end;
-  padding-bottom: 3vh;
   position: relative;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: -100% 0;
-}
-.section_tit:after {
-  content: " ";
-  position: absolute;
-  background-color: #fff;
-  height: 1px;
-  width: 58vw;
-  bottom: 0;
-  right: 0;
 }
 .section_txt {
   position: relative;
   overflow: hidden;
   opacity: 0;
+  transform: scaleX(0);
+  padding-bottom: 3vh;
+}
+.section_txt:after {
+  content: " ";
+  position: absolute;
+  background-color: #fff;
+  height: 1px;
+  width: 60vw;
+  right: 0;
+  bottom: 0;
 }
 .section_txt > span:nth-child(1) {
   font-size: 3.2vw;
@@ -76,7 +74,7 @@
   opacity: 0;
 }
 .section_txt > span:nth-child(2) {
-  width: 58vw;
+  width: 60vw;
   text-align: left;
   display: inline-block;
   font-size: 7.8vw;
@@ -86,7 +84,7 @@
 }
 .section_txt span span {
   opacity: 0;
-  transform: translateY(80px);
+  transform: translateY(30vh);
   padding-right: 0.2vw;
 }
 .section_txt .border_bottom {
@@ -103,18 +101,19 @@
   display: inline-flex;
   justify-content: flex-end;
   border-top: solid 1px #fff;
-  width: 58vw;
+  width: 60vw;
   transform: scaleX(0);
   transform-origin: -100% 0;
 }
 .sub_tit {
   font-family: "Montserrat Subrayada", sans-serif;
-  width: 58vw;
+  width: 60vw;
   text-align: left;
   display: inline-block;
   position: relative;
   padding-top: 3vh;
   opacity: 0;
+  transform-origin: -100% 0;
 }
 
 /* 내용 설명 */
@@ -125,7 +124,7 @@
   font-family: "s-core_dream5_medium";
   font-size: 2vw;
   letter-spacing: -0.1rem;
-  width: 58vw;
+  width: 60vw;
   text-align: left;
   display: inline-block;
   position: relative;
@@ -176,9 +175,6 @@
   transition: ease all 0.1s;
   opacity: 0;
   transform: scale(0);
-}
-.orange_circle:hover {
-  transform: scale(0.95);
 }
 .orange_circle span {
   font-family: "Montserrat Subrayada", sans-serif;
@@ -253,6 +249,7 @@
   margin-right: 2vw;
   flex-shrink: 0;
   white-space: nowrap;
+  transition: all ease 0.5s;
 }
 .text_border span:nth-child(2n) {
   font-style: italic;
@@ -272,6 +269,12 @@
   text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   -moz-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
   -webkit-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+.text_border:hover span {
+  color: #fff;
+}
+.text_border:hover span:before {
+  background-color: #fff;
 }
 /* 메인 내 사진 */
 .mainImg_content {
@@ -341,11 +344,13 @@
   margin-top: 3vh;
 }
 .reveal span,
-.reveal figure {
+.reveal figure,
+.reveal iframe {
   opacity: 0;
 }
 .reveal.in span,
 .reveal.in figure,
+.reveal.in iframe,
 .reveal.in_txt span,
 .reveal.in_txt figure {
   animation: textHidden 0.1s 1.1s forwards;
@@ -489,6 +494,9 @@
 /* 프로젝트 리스트 그리드 */
 #section2 {
   text-align: right;
+}
+#section2 .section_tit .splitText span:nth-child(3) {
+  width: 3vh;
 }
 #section2 ul {
   display: grid;
@@ -656,6 +664,7 @@
   -webkit-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515,
     0 -1px #151515;
   opacity: 0;
+  transform: scaleX(0);
 }
 #section3 .bgWhite h3 em:nth-child(2) {
   font-size: 6vw;
@@ -771,7 +780,7 @@
   width: 42vw;
   position: relative;
 }
-#section3 .mobile .mobile_codeSection article:nth-child(1) ul li {
+#section3 .mobile .mobile_codeSection .mobile_imgWrap ul li {
   position: absolute;
   top: 0;
   left: 0;
@@ -782,54 +791,58 @@
   background-size: contain;
   opacity: 0;
 }
-#section3 .mobile .mobile_codeSection article:nth-child(1) ul li:nth-child(1) {
+#section3 .mobile .mobile_codeSection .mobile_imgWrap ul li:nth-child(1) {
   background-image: url("../img/m-1.png");
   z-index: 5;
 }
-#section3 .mobile .mobile_codeSection article:nth-child(1) ul li:nth-child(2) {
+#section3 .mobile .mobile_codeSection .mobile_imgWrap ul li:nth-child(2) {
   background-image: url("../img/m-2.png");
   z-index: 4;
 }
-#section3 .mobile .mobile_codeSection article:nth-child(1) ul li:nth-child(3) {
+#section3 .mobile .mobile_codeSection .mobile_imgWrap ul li:nth-child(3) {
   background-image: url("../img/m-3.png");
   z-index: 3;
 }
-#section3 .mobile .mobile_codeSection article:nth-child(1) ul li:nth-child(4) {
+#section3 .mobile .mobile_codeSection .mobile_imgWrap ul li:nth-child(4) {
   background-image: url("../img/m-4.png");
   z-index: 2;
 }
-#section3 .mobile .mobile_codeSection article:nth-child(1) ul li:nth-child(5) {
+#section3 .mobile .mobile_codeSection .mobile_imgWrap ul li:nth-child(5) {
   background-image: url("../img/m-5.png");
   z-index: 1;
 }
 
-#section3 .mobile .mobile_codeSection article:nth-child(1) ul li a {
+#section3 .mobile .mobile_codeSection .mobile_imgWrap ul li a {
   display: block;
   width: 100%;
   height: 100%;
   font-size: 0;
 }
-#section3 .mobile .mobile_codeSection article .codeSection {
+#section3 .mobile .mobile_codeSection .mobile_codeWrap {
+  opacity: 0;
+  transform: scaleX(0);
+}
+#section3 .mobile .mobile_codeSection .mobile_codeWrap .codeSection {
   text-align: left;
   margin-top: 0;
 }
-#section3 .mobile .mobile_codeSection article .codeSection ul {
+#section3 .mobile .mobile_codeSection .mobile_codeWrap .codeSection ul {
   background-color: #efefef;
 }
-#section3 .mobile .mobile_codeSection article .codeSection li {
+#section3 .mobile .mobile_codeSection .mobile_codeWrap .codeSection li {
   flex: 1 1 30%;
 }
-#section3 .mobile .mobile_codeSection article .codeSection li a {
+#section3 .mobile .mobile_codeSection .mobile_codeWrap .codeSection li a {
   background-color: #efefef;
   color: #151515;
   width: auto;
 }
-#section3 .mobile .mobile_codeSection article .codeSection li a.active,
-#section3 .mobile .mobile_codeSection article .codeSection li a:hover {
+#section3 .mobile .mobile_codeSection .mobile_codeWrap .codeSection li a.active,
+#section3 .mobile .mobile_codeSection .mobile_codeWrap .codeSection li a:hover {
   background-color: #23241f;
   color: #fff;
 }
-#section3 .mobile .mobile_codeSection article .codeSection pre {
+#section3 .mobile .mobile_codeSection .mobile_codeWrap .codeSection pre {
   height: 82vh;
 }
 
@@ -846,7 +859,7 @@
   flex-direction: column;
 }
 
-.animation .container {
+.animation .ani_menu {
   overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -865,6 +878,7 @@
   margin-bottom: 2vh;
 }
 .ani_item a {
+  margin-left: 7.5%;
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -2148,7 +2162,10 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   background-color: #efefef;
   padding: 16vh 0;
 }
-#section3 .javascript_bgWhite .container .section_tit:after {
+#section3 .javascript_bgWhite .section_tit .splitText span:nth-child(6) {
+  width: 3vh;
+}
+#section3 .javascript_bgWhite .container .section_txt:after {
   background-color: #151515;
 }
 #section3 .javascript_bgWhite .container .section_txt span {
@@ -2156,26 +2173,32 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 }
 #section3 .javascript_bgWhite .java_txt {
   margin: 5vh 0;
-  width: 58vw;
+  width: 60vw;
   display: inline-block;
 }
 #section3 .javascript_bgWhite .java_txt p {
+  width: 60vw;
   text-align: left;
+}
+#section3 .javascript_bgWhite .java_txt p span,
+#section3 .javascript_bgWhite .java_txt p small {
+  display: block;
   color: #151515;
+  opacity: 0;
+}
+#section3 .javascript_bgWhite .java_txt p span {
   font-family: "s-core_dream5_medium";
   font-size: 2vw;
   letter-spacing: -0.1rem;
-  width: 58vw;
-  text-align: left;
 }
 #section3 .javascript_bgWhite .java_txt p small {
-  display: block;
   font-family: "s-core_dream4_regular", sans-serif;
   font-size: 1.4vw;
   line-height: 1.4em;
   letter-spacing: -0.06em;
 }
 #section3 .javascript_bgWhite .canvas_wrap {
+  position: relative;
   text-align: left;
   background-color: #151515;
   padding: 5vh;
@@ -2189,8 +2212,11 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 #section4 {
   margin: 16vh auto;
 }
+#section4 .section_tit .splitText span:nth-child(6) {
+  width: 3vh;
+}
 #section4 article {
-  width: 58vw;
+  width: 60vw;
   display: inline-block;
 }
 #section4 article > div {
@@ -2294,9 +2320,12 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 #section6 > div {
   margin-top: 16vh;
 }
+#section6 .section_tit .splitText span:nth-child(6) {
+  width: 3vh;
+}
 #section6 article:nth-child(1) ul {
   text-align: left;
-  width: 58vw;
+  width: 60vw;
   display: inline-flex;
   flex-wrap: wrap;
   margin-top: 5vh;
@@ -2335,7 +2364,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 #section6 article:nth-child(2) div h3 {
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: 7vw;
-  width: 58vw;
+  width: 60vw;
   text-align: left;
   display: inline-block;
   opacity: 0;
@@ -2354,7 +2383,7 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 }
 #section6 article:nth-child(2) div form dt {
   font-size: 7vw;
-  width: 58vw;
+  width: 60vw;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: -0.08em;
