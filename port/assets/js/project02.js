@@ -914,7 +914,6 @@ jQuery(document).ready(function ($) {
         translateY: 0,
         stagger: 0.1,
         ease: Expo.easeInOut,
-        ease: Expo.easeInOut,
       });
       //무엇도 직선으로 움지이지 않는다.
       scr.to("#section4 .exp_txt01 span:nth-child(1)", 0.25, {
@@ -986,65 +985,97 @@ jQuery(document).ready(function ($) {
       // 스킬박스 배경
       scr.to("#section4 .skillbox", { opacity: 1 });
       // 스킬박스 글자
-      scr.to("#section4 li:nth-child(1) div", 0.25, {
-        opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
-      });
       scr.to("#section4 li:nth-child(1)", 0.5, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
-      scr.to("#section4 li:nth-child(2) div", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
+      });
+      scr.to("#section4 li:nth-child(1) h6", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
+      });
+      scr.to("#section4 li:nth-child(1) span", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
       });
       scr.to("#section4 li:nth-child(2)", 0.5, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
-      scr.to("#section4 li:nth-child(3) div", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
+      });
+      scr.to("#section4 li:nth-child(2) h6", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
+      });
+      scr.to("#section4 li:nth-child(2) span", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
       });
       scr.to("#section4 li:nth-child(3)", 0.5, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
-      scr.to("#section4 li:nth-child(4) div", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
+      });
+      scr.to("#section4 li:nth-child(3) h6", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
+      });
+      scr.to("#section4 li:nth-child(3) span", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
       });
       scr.to("#section4 li:nth-child(4)", 0.5, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
-      scr.to("#section4 li:nth-child(5) div", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
+      });
+      scr.to("#section4 li:nth-child(4) h6", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
+      });
+      scr.to("#section4 li:nth-child(4) span", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
       });
       scr.to("#section4 li:nth-child(5)", 0.5, {
-        scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
-      });
-      scr.to("#section4 li:nth-child(6) div", 0.25, {
         opacity: 1,
-        duration: 1,
-        ease: Expo.easeOut,
+        scaleX: 1,
+        duration: 0.5,
+        transformOrigin: "0%",
+      });
+      scr.to("#section4 li:nth-child(5) h6", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
+      });
+      scr.to("#section4 li:nth-child(5) span", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        ease: Expo.easeInOut,
       });
       scr.to("#section4 li:nth-child(6)", 0.5, {
+        opacity: 1,
         scaleX: 1,
-        duration: 1,
-        transformOrigin: "-100%",
+        duration: 0.5,
+        transformOrigin: "0%",
+      });
+      scr.to("#section4 li:nth-child(6) h6", 0.25, {
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.1,
+        ease: Expo.easeInOut,
       });
 
       /* **************  my works style with ***************** */
@@ -1114,32 +1145,32 @@ jQuery(document).ready(function ($) {
           stagger: 0.1,
           ease: Expo.easeInOut,
         });
-        scr.to("#section6 ul li:nth-child(1) h5", 0.25, {
+        scr.to("#section6 ul li:nth-child(1) h5", 0.2, {
           opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
           ease: Expo.easeOut,
         });
-        scr.to("#section6 ul li:nth-child(1) p", 0.25, {
+        scr.to("#section6 ul li:nth-child(1) p", 0.2, {
           opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
           ease: Expo.easeOut,
         });
-        scr.to("#section6 ul li:nth-child(2) h5", 0.25, {
+        scr.to("#section6 ul li:nth-child(2) h5", 0.2, {
           opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
           ease: Expo.easeOut,
         });
-        scr.to("#section6 ul li:nth-child(2) p", 0.25, {
+        scr.to("#section6 ul li:nth-child(2) p", 0.2, {
           opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
           ease: Expo.easeOut,
         });
       }
@@ -1166,7 +1197,7 @@ jQuery(document).ready(function ($) {
         // hello
         scr.to("#section6 h3", 0.5, {
           opacity: 1,
-          scaleY: 1,
+          translateY: 0,
           duration: 2,
           transformOrigin: "0%",
           ease: Power4.easeInOut,
@@ -1188,15 +1219,15 @@ jQuery(document).ready(function ($) {
         });
         scr.to("#section6 form dt:nth-child(1) span", 0.5, {
           opacity: 1,
-          scaleX: 1,
+          translateY: 0,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
         scr.to("#section6 form dd:nth-child(2) input", 0.5, {
           opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
 
         scr.to("#section6 form dt:nth-child(3)", 0.5, {
@@ -1205,32 +1236,31 @@ jQuery(document).ready(function ($) {
         });
         scr.to("#section6 form dt:nth-child(3) span", 0.5, {
           opacity: 1,
-          scaleX: 1,
+          translateY: 0,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
         scr.to("#section6 form dd:nth-child(4) input", 0.5, {
           opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
-
         scr.to("#section6 form dt:nth-child(5)", 0.5, {
           opacity: 1,
           ease: Expo.easeOut,
         });
         scr.to("#section6 form dt:nth-child(5) span", 0.5, {
           opacity: 1,
-          scaleX: 1,
+          translateY: 0,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
         scr.to("#section6 form dd:nth-child(6) input", 0.5, {
           opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         });
         // 주황색 원
         scr.to("#section6 .orange_circle", {
