@@ -169,14 +169,15 @@ jQuery(document).ready(function ($) {
       scr.to(
         "#section2 .container .project_list li:nth-child(1) .subtitle_wrap",
         {
+          opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(1) .subtitle_wrap p ",
-        { opacity: 1, duration: 1, ease: Expo.easeOut }
+        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
       );
     }
 
@@ -206,14 +207,15 @@ jQuery(document).ready(function ($) {
       scr.to(
         "#section2 .container .project_list li:nth-child(2) .subtitle_wrap",
         {
+          opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(2) .subtitle_wrap p ",
-        { opacity: 1, duration: 1, ease: Expo.easeOut }
+        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
       );
     }
 
@@ -271,14 +273,15 @@ jQuery(document).ready(function ($) {
       scr.to(
         "#section2 .container .project_list li:nth-child(5) .subtitle_wrap",
         {
+          opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(5) .subtitle_wrap p ",
-        { opacity: 1, duration: 1, ease: Expo.easeOut }
+        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
       );
     }
 
@@ -308,14 +311,15 @@ jQuery(document).ready(function ($) {
       scr.to(
         "#section2 .container .project_list li:nth-child(6) .subtitle_wrap",
         {
+          opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(6) .subtitle_wrap p ",
-        { opacity: 1, duration: 1, ease: Expo.easeOut }
+        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
       );
     }
 
@@ -345,14 +349,15 @@ jQuery(document).ready(function ($) {
       scr.to(
         "#section2 .container .project_list li:nth-child(7) .subtitle_wrap",
         {
+          opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(7) .subtitle_wrap p ",
-        { opacity: 1, duration: 1, ease: Expo.easeOut }
+        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
       );
     }
 
@@ -396,14 +401,15 @@ jQuery(document).ready(function ($) {
       scr.to(
         "#section2 .container .project_list li:nth-child(9) .subtitle_wrap",
         {
+          opacity: 1,
           scaleX: 1,
           duration: 1,
-          transformOrigin: "-100%",
+          transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(9) .subtitle_wrap p ",
-        { opacity: 1, duration: 1, ease: Expo.easeOut }
+        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
       );
     }
 
