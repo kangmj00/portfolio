@@ -92,6 +92,26 @@ jQuery(document).ready(function ($) {
       });
     });
   }, 2000);
+
+  $(".orange_circle").hover(
+    function () {
+      gsap.to($(this), 0.2, {
+        css: {
+          scale: 1.09,
+          backgroundColor: "#3f7df4",
+        },
+      });
+    },
+
+    function () {
+      gsap.to($(this), 0.2, {
+        css: {
+          scale: 1,
+          backgroundColor: "#ffa63d",
+        },
+      });
+    }
+  );
   /* ************** 스크롤 섹션 ***************** */
   $(window).scroll(function () {
     let scrollPosition = $(window).scrollTop();
@@ -451,10 +471,10 @@ jQuery(document).ready(function ($) {
       scr.to(
         "#section2 .container .project_list li:nth-child(10) .orange_circle",
         {
-          opacity: 1,
-          duration: 4,
           scaleX: 1,
           scaleY: 1,
+          duration: 1,
+          opacity: 1,
           ease: Expo.easeOut,
         }
       );
@@ -504,21 +524,24 @@ jQuery(document).ready(function ($) {
       scr.to("#site01 .bgWhite h3 em:nth-child(1)", {
         opacity: 1,
         translateX: 0,
+        duration: 1,
         transformOrigin: "0%",
+        ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site01 .bgWhite h3 em span", 0.01, {
+      scr.to("#site01 .bgWhite h3 em span", 0.3, {
         opacity: 1,
-        duration: 0.4,
         stagger: 0.09,
-        ease: Circ.easeInOut,
+        duration: 0.4,
+        ease: "sine.inOut",
       });
       setTimeout(function () {
         $("#site01 .site_wrap.reveal").addClass("in");
       }, 500);
-      scr.to("#site01 .orange_circle", 1, {
-        opacity: 1,
+      scr.to("#site01 .orange_circle", {
         scaleX: 1,
         scaleY: 1,
+        duration: 1,
+        opacity: 1,
         ease: Expo.easeOut,
       });
     }
@@ -562,21 +585,26 @@ jQuery(document).ready(function ($) {
         width: "100%",
       });
       scr.to("#site02 .bgWhite h3 em:nth-child(1)", {
-        scaleX: 1,
         opacity: 1,
+        translateX: 0,
+        duration: 1,
+        transformOrigin: "0%",
+        ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site02 .bgWhite h3 em span", 0.01, {
+      scr.to("#site02 .bgWhite h3 em span", 0.3, {
         opacity: 1,
-        duration: 0.4,
         stagger: 0.09,
+        duration: 0.4,
+        ease: "sine.inOut",
       });
       setTimeout(function () {
         $("#site02 .site_wrap.reveal").addClass("in");
       }, 500);
       scr.to("#site02 .orange_circle", 1, {
-        opacity: 1,
         scaleX: 1,
         scaleY: 1,
+        duration: 1,
+        opacity: 1,
         ease: Expo.easeOut,
       });
     }
@@ -619,22 +647,26 @@ jQuery(document).ready(function ($) {
         width: "100%",
       });
       scr.to("#site03 .bgWhite h3 em:nth-child(1)", {
-        scaleX: 1,
         opacity: 1,
+        translateX: 0,
+        duration: 1,
         transformOrigin: "0%",
+        ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site03 .bgWhite h3 em span", 0.01, {
+      scr.to("#site03 .bgWhite h3 em span", 0.3, {
         opacity: 1,
-        duration: 0.4,
         stagger: 0.09,
+        duration: 0.4,
+        ease: "sine.inOut",
       });
       setTimeout(function () {
         $("#site03 .site_wrap.reveal").addClass("in");
       }, 500);
       scr.to("#site03 .orange_circle", 1, {
-        opacity: 1,
         scaleX: 1,
         scaleY: 1,
+        duration: 1,
+        opacity: 1,
         ease: Expo.easeOut,
       });
     }
@@ -677,22 +709,26 @@ jQuery(document).ready(function ($) {
         width: "100%",
       });
       scr.to("#site04 .bgWhite h3 em:nth-child(1)", {
-        scaleX: 1,
         opacity: 1,
+        translateX: 0,
+        duration: 1,
         transformOrigin: "0%",
+        ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site04 .bgWhite h3 em span", 0.01, {
+      scr.to("#site04 .bgWhite h3 em span", 0.3, {
         opacity: 1,
-        duration: 0.4,
         stagger: 0.09,
+        duration: 0.4,
+        ease: "sine.inOut",
       });
       setTimeout(function () {
         $("#site04 .site_wrap.reveal").addClass("in");
       }, 500);
       scr.to("#site04 .orange_circle", 1, {
-        opacity: 1,
         scaleX: 1,
         scaleY: 1,
+        duration: 1,
+        opacity: 1,
         ease: Expo.easeOut,
       });
     }
@@ -736,22 +772,26 @@ jQuery(document).ready(function ($) {
         width: "100%",
       });
       scr.to("#site05 .bgWhite h3 em:nth-child(1)", {
-        scaleX: 1,
         opacity: 1,
+        translateX: 0,
+        duration: 1,
         transformOrigin: "0%",
+        ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site05 .bgWhite h3 em span", 0.01, {
+      scr.to("#site05 .bgWhite h3 em span", 0.3, {
         opacity: 1,
-        duration: 0.4,
         stagger: 0.09,
+        duration: 0.4,
+        ease: "sine.inOut",
       });
       setTimeout(function () {
         $("#site05 .site_wrap.reveal").addClass("in");
       }, 500);
       scr.to("#site05 .orange_circle", 1, {
-        opacity: 1,
         scaleX: 1,
         scaleY: 1,
+        duration: 1,
+        opacity: 1,
         ease: Expo.easeOut,
       });
     }
@@ -1318,10 +1358,10 @@ jQuery(document).ready(function ($) {
         });
         // 주황색 원
         scr.to("#section6 .orange_circle", {
-          opacity: 1,
-          duration: 1,
           scaleX: 1,
           scaleY: 1,
+          duration: 1,
+          opacity: 1,
           ease: Expo.easeOut,
         });
       }

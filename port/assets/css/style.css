@@ -191,12 +191,8 @@
   width: 30vmin;
   height: 30vmin;
   text-align: center;
-  transition: ease all 0.3s;
   opacity: 0;
   transform: scale(0);
-}
-.orange_circle:hover {
-  transform: scale(1.09) !important;
 }
 .orange_circle span {
   font-family: "Montserrat Subrayada", sans-serif;
