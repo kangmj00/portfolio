@@ -118,8 +118,8 @@
   width: 60vw;
   transform: scaleX(0);
   transform-origin: -100% 0;
+  overflow: hidden;
 }
-
 .sub_tit {
   font-family: "Montserrat Subrayada", sans-serif;
   width: 60vw;
@@ -128,14 +128,13 @@
   position: relative;
   padding-top: 3vh;
   opacity: 0;
-  transform-origin: -100% 0;
+  transform: translateY(-30vh);
 }
 
 /* 내용 설명 */
 .exp_txt01 {
   margin: 5vh 0;
 }
-
 .exp_txt01 span {
   font-family: "s-core_dream5_medium";
   font-size: 2vw;
@@ -243,17 +242,17 @@
   white-space: nowrap;
   will-change: transform;
   transform: translateX(0);
-  animation: scrolling 10s linear infinite alternate;
+  animation: scrolling 10s linear infinite;
   opacity: 0;
   transform: scaleX(0);
   transform-origin: -100% 0;
 }
 @keyframes scrolling {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(3%);
+    transform: translateX(0%);
   }
 }
 .text_border span {
@@ -313,7 +312,6 @@
   width: 80vw;
   overflow: hidden;
 }
-
 .mainImg_content .mainImg_wrap {
   --x: 0;
   --y: 0;
@@ -324,7 +322,6 @@
   overflow: hidden;
   will-change: transform;
 }
-
 .mainImg_content .mainImg_wrap .mainImg {
   overflow: hidden;
   width: 100vw;
@@ -335,7 +332,6 @@
   will-change: transform;
   transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
 }
-
 .mainImg_content .mainImg_wrap:hover .mainImg {
   transform: scale(1);
 }
@@ -388,7 +384,6 @@
 .reveal.in_txt figure {
   animation: textHidden 0.1s 1.1s forwards;
 }
-
 .reveal.in:before,
 .reveal.in:after,
 .reveal.in_txt:before,
@@ -446,7 +441,6 @@
 .reveal.reveal-btt.in_txt:after {
   animation: revealBTT 1s 0.6s ease;
 }
-
 @keyframes textHidden {
   0% {
     opacity: 0;
@@ -489,13 +483,11 @@
     height: 0;
     top: 0;
   }
-
   65% {
     width: 100%;
     height: 100%;
     top: 0;
   }
-
   100% {
     width: 100%;
     height: 0;
@@ -510,7 +502,6 @@
     height: 0;
     bottom: 0;
   }
-
   65% {
     width: 100%;
     top: auto;
@@ -2583,30 +2574,25 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 #section4 {
   margin: 16vh auto;
 }
-
 #section4 .section_tit .splitText span:nth-child(6) {
   width: 3vh;
 }
-
 #section4 article {
   width: 60vw;
   display: inline-block;
 }
-
 #section4 article > div {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row-reverse;
 }
-
 #section4 article .minji_ImgWrap {
   flex-basis: 55%;
   height: 75vh;
   order: 2;
   position: relative;
 }
-
 #section4 article .minji_ImgWrap .minji_Img {
   background-image: url("../img/aboutphoto.png");
   background-position: center bottom;
@@ -2614,7 +2600,6 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   background-repeat: no-repeat;
   height: 100%;
 }
-
 #section4 article .minji_ImgWrap .minji_ImgReveal {
   height: 100%;
   position: absolute;
@@ -2622,18 +2607,15 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   background: #3f7df4;
   bottom: 0;
 }
-
 #section4 article div aside {
   text-align: left;
   order: 1;
   flex-basis: 38%;
 }
-
 #section4 article div aside p {
   width: 0;
   margin-bottom: 5vh;
 }
-
 #section4 article div aside p span {
   font-family: "s-core_dream4_regular", sans-serif;
   font-size: 1.4vw;
@@ -2643,7 +2625,6 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   display: block;
   opacity: 0;
 }
-
 #section4 article div .skillbox {
   background-color: #3f7df4;
   padding: 6vh 3vw;
@@ -2652,14 +2633,12 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   z-index: 1;
   opacity: 0;
 }
-
 #section4 article div .skillbox li {
   position: relative;
   padding: 2.5vh 0;
   opacity: 0;
   transform: scaleX(0);
 }
-
 #section4 article div .skillbox li:after {
   content: " ";
   position: absolute;
@@ -2669,7 +2648,6 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   left: 0;
   bottom: 0;
 }
-
 #section4 article div .skillbox li div {
   display: flex;
   align-items: center;
@@ -2677,14 +2655,12 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   flex-wrap: wrap;
   overflow: hidden;
 }
-
 #section4 article div .skillbox li h6 {
   font-size: 1.8vw;
   font-weight: 600;
   opacity: 0;
   transform: translateY(30vh);
 }
-
 #section4 article div .skillbox li span {
   font-family: "s-core_dream4_regular", sans-serif;
   font-size: 0.7vw;
@@ -2699,20 +2675,16 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   text-align: left;
   margin-top: 16vh;
 }
-
 #section5 article .text_border {
   margin: 2vh 0;
 }
-
 #section5 article .text_border:nth-child(2n) {
   animation: scrolling-r 10s linear infinite alternate;
 }
-
 @keyframes scrolling-r {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-22%);
   }
@@ -2722,11 +2694,9 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 #section6 > div {
   margin-top: 16vh;
 }
-
 #section6 .section_tit .splitText span:nth-child(6) {
   width: 3vh;
 }
-
 #section6 article:nth-child(1) ul {
   text-align: left;
   width: 60vw;
@@ -2734,25 +2704,23 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   flex-wrap: wrap;
   margin-top: 5vh;
 }
-
 #section6 article:nth-child(1) li {
   flex-basis: 35%;
+  overflow: hidden;
 }
-
 #section6 article:nth-child(1) li h5 {
   flex-basis: 35%;
   font-size: 1vw;
   font-family: "Montserrat Subrayada", sans-serif;
   opacity: 0;
-  transform: scaleX(0);
+  transform: translateX(-20vw);
   transform-origin: -100% 0;
 }
-
 #section6 article:nth-child(1) li p {
   font-size: 1.5vw;
   margin-top: 3vh;
   opacity: 0;
-  transform: scaleX(0);
+  transform: translateX(-20vw);
   transform-origin: -100% 0;
 }
 
@@ -2762,19 +2730,16 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   background-color: #efefef;
   color: #151515;
 }
-
 /* contact me 부제목 */
 #section6 .sub_titWrap {
   border-color: #151515;
   margin-top: 16vh;
   margin-bottom: 10vh;
 }
-
 /* HELLO */
 #section6 article:nth-child(2) div .tit_hello {
   overflow: hidden;
 }
-
 #section6 article:nth-child(2) div .tit_hello h3 {
   font-family: "Montserrat Subrayada", sans-serif;
   font-size: 7vw;
@@ -2784,19 +2749,16 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   opacity: 0;
   transform: translateY(30vh);
 }
-
 /* form 형식 */
 #section6 article:nth-child(2) div form {
   text-align: left;
 }
-
 #section6 article:nth-child(2) div form dl {
   text-align: left;
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
 }
-
 #section6 article:nth-child(2) div form dt {
   font-size: 7vw;
   width: 60vw;
@@ -2807,7 +2769,6 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   overflow: hidden;
   opacity: 0;
 }
-
 #section6 article:nth-child(2) div form dt span {
   display: inline-block;
   font-family: "Montserrat Subrayada", sans-serif;

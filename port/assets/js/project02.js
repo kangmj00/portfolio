@@ -38,23 +38,23 @@ jQuery(document).ready(function ($) {
 
   /* ********************************* */
   // 처음 들어갔을 때 로딩
-  gsap.to(".first", 1.5, {
-    delay: 0.1,
+  gsap.to(".first", 0.75, {
+    delay: 0.2,
     left: "-100%",
     ease: Expo.easeInOut,
   });
-  gsap.to(".second", 1.5, {
-    delay: 0.25,
-    left: "-100%",
-    ease: Expo.easeInOut,
-  });
-  gsap.to(".third", 1.5, {
+  gsap.to(".second", 0.75, {
     delay: 0.4,
     left: "-100%",
     ease: Expo.easeInOut,
   });
-  gsap.to(".fourth", 1.5, {
-    delay: 0.55,
+  gsap.to(".third", 0.75, {
+    delay: 0.6,
+    left: "-100%",
+    ease: Expo.easeInOut,
+  });
+  gsap.to(".fourth", 0.75, {
+    delay: 0.8,
     left: "-100%",
     ease: Expo.easeInOut,
   });
@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
       {
         delay: 0.8,
         opacity: 1,
-        duration: 0.4,
+        duration: 0.2,
         stagger: 0.09,
         ease: "elastic.out(1, 0.3)",
       }
@@ -119,10 +119,9 @@ jQuery(document).ready(function ($) {
     /* ************** 코드 섹션 ***************** */
     $(".codeSection").each(function () {
       if ($(window).scrollTop() + $(window).height() > $(this).offset().top) {
-        gsap.to(this, 0.75, {
+        gsap.to(this, {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "-100%",
         });
       }
@@ -147,26 +146,24 @@ jQuery(document).ready(function ($) {
       $("#section2 .section_tit").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#section2 .section_txt", 0.5, {
+      scr.to("#section2 .section_txt", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section2 .section_txt > span:nth-child(1) ", 0.2, {
+      scr.to("#section2 .section_txt > span:nth-child(1) ", {
         opacity: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section2 .section_txt .splitText span", 0.5, {
+      scr.to("#section2 .section_txt .splitText span", {
         opacity: 1,
         translateY: 0,
-        stagger: 0.1,
-        ease: Expo.easeInOut,
+        stagger: 0.05,
+        ease: "sine.inOut",
       });
     }
 
     /* ************** project list ***************** */
-
     // 평화문화진지
     if (
       scrollPosition >
@@ -178,11 +175,10 @@ jQuery(document).ready(function ($) {
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(1) h4.reveal").addClass("in");
       });
-      scr.to("#section2 .project_list li:nth-child(1) h4", 0.25, {
+      scr.to("#section2 .project_list li:nth-child(1) h4", {
         delay: 1.5,
         color: "rgb(255,255,255)",
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
       setTimeout(function () {
@@ -195,16 +191,16 @@ jQuery(document).ready(function ($) {
         {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(1) .subtitle_wrap p ",
+        0.2,
         {
           opacity: 1,
           translateY: 0,
-          ease: Expo.easeInOut,
+          ease: "sine.inOut",
         }
       );
     }
@@ -220,11 +216,10 @@ jQuery(document).ready(function ($) {
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(2) h4.reveal").addClass("in");
       });
-      scr.to("#section2 .project_list li:nth-child(2) h4", 0.25, {
+      scr.to("#section2 .project_list li:nth-child(2) h4", {
         delay: 1.5,
         color: "rgb(255,255,255)",
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
       setTimeout(function () {
@@ -237,16 +232,16 @@ jQuery(document).ready(function ($) {
         {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(2) .subtitle_wrap p ",
+        0.2,
         {
           opacity: 1,
           translateY: 0,
-          ease: Expo.easeInOut,
+          ease: "sine.inOut",
         }
       );
     }
@@ -290,11 +285,10 @@ jQuery(document).ready(function ($) {
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(5) h4.reveal").addClass("in");
       });
-      scr.to("#section2 .project_list li:nth-child(5) h4", 0.25, {
+      scr.to("#section2 .project_list li:nth-child(5) h4", {
         delay: 1.5,
         color: "rgb(255,255,255)",
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
       setTimeout(function () {
@@ -307,16 +301,16 @@ jQuery(document).ready(function ($) {
         {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(5) .subtitle_wrap p ",
+        0.2,
         {
           opacity: 1,
           translateY: 0,
-          ease: Expo.easeInOut,
+          ease: "sine.inOut",
         }
       );
     }
@@ -328,7 +322,6 @@ jQuery(document).ready(function ($) {
         $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-
       setTimeout(function () {
         $("#section2 .project_list li:nth-child(6) h4.reveal").addClass("in");
       });
@@ -336,7 +329,6 @@ jQuery(document).ready(function ($) {
         delay: 1.5,
         color: "rgb(255,255,255)",
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
       setTimeout(function () {
@@ -349,16 +341,16 @@ jQuery(document).ready(function ($) {
         {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(6) .subtitle_wrap p ",
+        0.2,
         {
           opacity: 1,
           translateY: 0,
-          ease: Expo.easeInOut,
+          ease: "sine.inOut",
         }
       );
     }
@@ -378,7 +370,6 @@ jQuery(document).ready(function ($) {
         delay: 1.5,
         color: "rgb(255,255,255)",
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
       setTimeout(function () {
@@ -391,16 +382,16 @@ jQuery(document).ready(function ($) {
         {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(7) .subtitle_wrap p ",
+        0.2,
         {
           opacity: 1,
           translateY: 0,
-          ease: Expo.easeInOut,
+          ease: "sine.inOut",
         }
       );
     }
@@ -434,7 +425,6 @@ jQuery(document).ready(function ($) {
         delay: 1.5,
         color: "rgb(255,255,255)",
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
       setTimeout(function () {
@@ -447,16 +437,16 @@ jQuery(document).ready(function ($) {
         {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         }
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(9) .subtitle_wrap p ",
+        0.2,
         {
           opacity: 1,
           translateY: 0,
-          ease: Expo.easeInOut,
+          ease: "sine.inOut",
         }
       );
     }
@@ -473,7 +463,6 @@ jQuery(document).ready(function ($) {
         {
           scaleX: 1,
           scaleY: 1,
-          duration: 1,
           opacity: 1,
           ease: Expo.easeOut,
         }
@@ -528,7 +517,7 @@ jQuery(document).ready(function ($) {
         transformOrigin: "0%",
         ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site01 .bgWhite h3 em span", 0.3, {
+      scr.to("#site01 .bgWhite h3 em span", {
         opacity: 1,
         stagger: 0.09,
         duration: 0.4,
@@ -551,22 +540,20 @@ jQuery(document).ready(function ($) {
       $("#site01 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#site01 .scrollDown .sub_titWrap", 0.7, {
+      scr.to("#site01 .scrollDown .sub_titWrap", {
         scaleX: 1,
-        duration: 1,
         transformOrigin: "0%",
       });
-      scr.to("#site01 .scrollDown .sub_tit", 0.25, {
+      scr.to("#site01 .scrollDown .sub_tit", 0.1, {
         opacity: 1,
-        transformOrigin: "0%",
+        translateY: 0,
       });
-      scr.to("#site01 .scrollDown .text_border", 0.25, {
+      scr.to("#site01 .scrollDown .text_border", {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#site01 .scrollDown .arrow_circle", 1, {
+      scr.to("#site01 .scrollDown .arrow_circle", {
         duration: 1,
         opacity: 1,
         ease: Expo.easeOut,
@@ -591,7 +578,7 @@ jQuery(document).ready(function ($) {
         transformOrigin: "0%",
         ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site02 .bgWhite h3 em span", 0.3, {
+      scr.to("#site02 .bgWhite h3 em span", {
         opacity: 1,
         stagger: 0.09,
         duration: 0.4,
@@ -614,22 +601,20 @@ jQuery(document).ready(function ($) {
       $("#site02 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#site02 .scrollDown .sub_titWrap", 0.7, {
+      scr.to("#site02 .scrollDown .sub_titWrap", {
         scaleX: 1,
-        duration: 1,
         transformOrigin: "0%",
       });
-      scr.to("#site02 .scrollDown .sub_tit", 0.25, {
+      scr.to("#site02 .scrollDown .sub_tit", 0.1, {
         opacity: 1,
-        transformOrigin: "0%",
+        translateY: 0,
       });
-      scr.to("#site02 .scrollDown .text_border", 0.25, {
+      scr.to("#site02 .scrollDown .text_border", {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#site02 .scrollDown .arrow_circle", 1, {
+      scr.to("#site02 .scrollDown .arrow_circle", {
         duration: 1,
         opacity: 1,
         ease: Expo.easeOut,
@@ -653,7 +638,7 @@ jQuery(document).ready(function ($) {
         transformOrigin: "0%",
         ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site03 .bgWhite h3 em span", 0.3, {
+      scr.to("#site03 .bgWhite h3 em span", {
         opacity: 1,
         stagger: 0.09,
         duration: 0.4,
@@ -676,18 +661,16 @@ jQuery(document).ready(function ($) {
       $("#site03 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#site03 .scrollDown .sub_titWrap", 0.7, {
+      scr.to("#site03 .scrollDown .sub_titWrap", {
         scaleX: 1,
-        duration: 1,
         transformOrigin: "0%",
       });
-      scr.to("#site03 .scrollDown .sub_tit", 0.25, {
+      scr.to("#site03 .scrollDown .sub_tit", 0.1, {
         opacity: 1,
-        transformOrigin: "0%",
+        translateY: 0,
       });
-      scr.to("#site03 .scrollDown .text_border", 0.25, {
+      scr.to("#site03 .scrollDown .text_border", {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         ease: Expo.easeOut,
       });
@@ -715,7 +698,7 @@ jQuery(document).ready(function ($) {
         transformOrigin: "0%",
         ease: "slow(0.7, 0.7, false)",
       });
-      scr.to("#site04 .bgWhite h3 em span", 0.3, {
+      scr.to("#site04 .bgWhite h3 em span", {
         opacity: 1,
         stagger: 0.09,
         duration: 0.4,
@@ -738,22 +721,20 @@ jQuery(document).ready(function ($) {
       $("#site04 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#site04 .scrollDown .sub_titWrap", 0.7, {
+      scr.to("#site04 .scrollDown .sub_titWrap", {
         scaleX: 1,
-        duration: 1,
         transformOrigin: "0%",
       });
-      scr.to("#site04 .scrollDown .sub_tit", 0.25, {
+      scr.to("#site04 .scrollDown .sub_tit", 0.1, {
         opacity: 1,
-        transformOrigin: "0%",
+        translateY: 0,
       });
-      scr.to("#site04 .scrollDown .text_border", 0.25, {
+      scr.to("#site04 .scrollDown .text_border", {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#site04 .scrollDown .arrow_circle", 1, {
+      scr.to("#site04 .scrollDown .arrow_circle", {
         duration: 1,
         opacity: 1,
         ease: Expo.easeOut,
@@ -801,22 +782,21 @@ jQuery(document).ready(function ($) {
       $("#site05 .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#site05 .scrollDown .sub_titWrap", 0.7, {
+      scr.to("#site05 .scrollDown .sub_titWrap", {
         scaleX: 1,
         duration: 1,
         transformOrigin: "0%",
       });
-      scr.to("#site05 .scrollDown .sub_tit", 0.25, {
+      scr.to("#site05 .scrollDown .sub_tit", 0.1, {
         opacity: 1,
-        transformOrigin: "0%",
+        translateY: 0,
       });
-      scr.to("#site05 .scrollDown .text_border", 0.25, {
+      scr.to("#site05 .scrollDown .text_border", {
         opacity: 1,
-        duration: 1,
         scaleX: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#site05 .scrollDown .arrow_circle", 1, {
+      scr.to("#site05 .scrollDown .arrow_circle", {
         duration: 1,
         opacity: 1,
         ease: Expo.easeOut,
@@ -828,43 +808,40 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site_app").offset().top - $(window).height() / 2) {
       $(".site_nav li").addClass("none");
       var scr = gsap.timeline();
-      scr.to("#site_app .section_txt", 0.5, {
+      scr.to("#site_app .section_txt", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#site_app .section_txt > span:nth-child(1) ", 0.2, {
+      scr.to("#site_app .section_txt > span:nth-child(1) ", {
         opacity: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#site_app .section_txt .splitText span", 0.5, {
+      scr.to("#site_app .section_txt .splitText span", {
         opacity: 1,
         translateY: 0,
-        stagger: 0.1,
-        ease: Expo.easeInOut,
+        stagger: 0.05,
+        ease: "sine.inOut",
       });
-      scr.to(".mobile_codeSection .mobile_imgWrap ul li", 0.25, {
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(2)", 0.2, {
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(2)", {
         left: "8%",
       });
-      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(3)", 0.2, {
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(3)", {
         left: "16%",
       });
-      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(4)", 0.2, {
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(4)", {
         left: "24%",
       });
-      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(5)", 0.2, {
+      scr.to(".mobile_codeSection .mobile_imgWrap ul li:nth-child(5)", {
         left: "32%",
       });
-      scr.to(".mobile_codeSection .mobile_codeWrap", 0.2, {
+      scr.to(".mobile_codeSection .mobile_codeWrap", {
         opacity: 1,
         scaleX: 1,
-        duration: 1,
         transformOrigin: "-100%",
       });
     }
@@ -875,16 +852,16 @@ jQuery(document).ready(function ($) {
       $("#site_app .scrollDown").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#site_app .scrollDown .sub_titWrap", 0.7, {
+      scr.to("#site_app .scrollDown .sub_titWrap", {
         scaleX: 1,
         duration: 1,
         transformOrigin: "0%",
       });
-      scr.to("#site_app .scrollDown .sub_tit", 0.25, {
+      scr.to("#site_app .scrollDown .sub_tit", 0.1, {
         opacity: 1,
-        transformOrigin: "0%",
+        translateY: 0,
       });
-      scr.to("#site_app .scrollDown .text_border", 0.25, {
+      scr.to("#site_app .scrollDown .text_border", {
         opacity: 1,
         duration: 1,
         scaleX: 1,
@@ -910,22 +887,20 @@ jQuery(document).ready(function ($) {
       $("#ani_scroll").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to("#ani_scroll .sub_titWrap", 0.7, {
+      scr.to("#ani_scroll .sub_titWrap", {
         scaleX: 1,
-        duration: 1,
         transformOrigin: "0%",
       });
-      scr.to("#ani_scroll .sub_tit", 0.25, {
+      scr.to("#ani_scroll .sub_tit", 0.1, {
         opacity: 1,
-        transformOrigin: "0%",
+        translateY: 0,
       });
-      scr.to("#ani_scroll .text_border", 0.25, {
+      scr.to("#ani_scroll .text_border", {
         opacity: 1,
         scaleX: 1,
-        duration: 1,
         transformOrigin: "-100%",
       });
-      scr.to("#ani_scroll .arrow_circle", 1, {
+      scr.to("#ani_scroll .arrow_circle", {
         duration: 1,
         opacity: 1,
         ease: Expo.easeOut,
@@ -941,40 +916,35 @@ jQuery(document).ready(function ($) {
       scr.to(".javascript_bgWhite", {
         width: "100%",
       });
-      scr.to(".javascript_bgWhite .section_txt", 0.5, {
+      scr.to(".javascript_bgWhite .section_txt", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to(".javascript_bgWhite .section_txt > span:nth-child(1) ", 0.2, {
+      scr.to(".javascript_bgWhite .section_txt > span:nth-child(1) ", {
         opacity: 1,
         ease: Expo.easeOut,
       });
-      scr.to(".javascript_bgWhite .section_txt .splitText span", 0.3, {
+      scr.to(".javascript_bgWhite .section_txt .splitText span", {
         opacity: 1,
         translateY: 0,
-        stagger: 0.1,
-        ease: Expo.easeInOut,
+        stagger: 0.05,
+        ease: "sine.inOut",
       });
-      scr.to(".javascript_bgWhite .java_txt p span:nth-child(1) ", 0.2, {
+      scr.to(".javascript_bgWhite .java_txt p span:nth-child(1) ", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to(".javascript_bgWhite .java_txt p span:nth-child(2) ", 0.2, {
+      scr.to(".javascript_bgWhite .java_txt p span:nth-child(2) ", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to(".javascript_bgWhite .java_txt p span:nth-child(3) ", 0.2, {
+      scr.to(".javascript_bgWhite .java_txt p span:nth-child(3) ", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to(".javascript_bgWhite .java_txt p small ", 0.2, {
+      scr.to(".javascript_bgWhite .java_txt p small ", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
       setTimeout(function () {
@@ -987,41 +957,37 @@ jQuery(document).ready(function ($) {
       var scr = gsap.timeline();
 
       // about minji tit
-      scr.to("#section4 .section_txt", 0.5, {
+      scr.to("#section4 .section_txt", {
         opacity: 1,
         scaleX: 1,
         duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section4 .section_txt > span:nth-child(1) ", 0.2, {
+      scr.to("#section4 .section_txt > span:nth-child(1) ", {
         opacity: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .section_txt .splitText span", 0.5, {
+      scr.to("#section4 .section_txt .splitText span", {
         opacity: 1,
         translateY: 0,
-        stagger: 0.1,
-        ease: Expo.easeInOut,
+        stagger: 0.05,
+        ease: "sine.inOut",
       });
       //무엇도 직선으로 움지이지 않는다.
-      scr.to("#section4 .exp_txt01 span:nth-child(1)", 0.25, {
+      scr.to("#section4 .exp_txt01 span:nth-child(1)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt01 span:nth-child(2)", 0.25, {
+      scr.to("#section4 .exp_txt01 span:nth-child(2)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt01 span:nth-child(3)", 0.25, {
+      scr.to("#section4 .exp_txt01 span:nth-child(3)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt01 span:nth-child(4)", 0.25, {
+      scr.to("#section4 .exp_txt01 span:nth-child(4)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
 
@@ -1034,43 +1000,36 @@ jQuery(document).ready(function ($) {
       scr.to("#section4 .exp_txt02 p:nth-child(1)", {
         width: "100%",
       });
-      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(1)", 0.2, {
+      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(1)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(2)", 0.2, {
+      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(2)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(3)", 0.2, {
+      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(3)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(4)", 0.2, {
+      scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(4)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
 
       scr.to("#section4 .exp_txt02 p:nth-child(2)", {
         width: "100%",
       });
-      scr.to("#section4 .exp_txt02 p:nth-child(2) span:nth-child(1)", 0.2, {
+      scr.to("#section4 .exp_txt02 p:nth-child(2) span:nth-child(1)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt02 p:nth-child(2) span:nth-child(2)", 0.2, {
+      scr.to("#section4 .exp_txt02 p:nth-child(2) span:nth-child(2)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
-      scr.to("#section4 .exp_txt02 p:nth-child(2) span:nth-child(3)", 0.2, {
+      scr.to("#section4 .exp_txt02 p:nth-child(2) span:nth-child(3)", {
         opacity: 1,
-        duration: 1,
         ease: Expo.easeOut,
       });
 
@@ -1079,96 +1038,89 @@ jQuery(document).ready(function ($) {
         opacity: 1,
       });
       // 스킬박스 글자
-      scr.to("#section4 li:nth-child(1)", 0.5, {
+      scr.to("#section4 li:nth-child(1)", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section4 li:nth-child(1) h6", 0.25, {
+      scr.to("#section4 li:nth-child(1) h6", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(1) span", 0.25, {
+      scr.to("#section4 li:nth-child(1) span", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(2)", 0.5, {
+      scr.to("#section4 li:nth-child(2)", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section4 li:nth-child(2) h6", 0.25, {
+      scr.to("#section4 li:nth-child(2) h6", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(2) span", 0.25, {
+      scr.to("#section4 li:nth-child(2) span", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(3)", 0.5, {
+      scr.to("#section4 li:nth-child(3)", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section4 li:nth-child(3) h6", 0.25, {
+      scr.to("#section4 li:nth-child(3) h6", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(3) span", 0.25, {
+      scr.to("#section4 li:nth-child(3) span", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(4)", 0.5, {
+      scr.to("#section4 li:nth-child(4)", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section4 li:nth-child(4) h6", 0.25, {
+      scr.to("#section4 li:nth-child(4) h6", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(4) span", 0.25, {
+      scr.to("#section4 li:nth-child(4) span", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(5)", 0.5, {
+      scr.to("#section4 li:nth-child(5)", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section4 li:nth-child(5) h6", 0.25, {
+      scr.to("#section4 li:nth-child(5) h6", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(5) span", 0.25, {
+      scr.to("#section4 li:nth-child(5) span", 0.3, {
         opacity: 1,
         translateY: 0,
         ease: Expo.easeInOut,
       });
-      scr.to("#section4 li:nth-child(6)", 0.5, {
+      scr.to("#section4 li:nth-child(6)", {
         opacity: 1,
         scaleX: 1,
-        duration: 0.5,
         transformOrigin: "0%",
       });
-      scr.to("#section4 li:nth-child(6) h6", 0.25, {
+      scr.to("#section4 li:nth-child(6) h6", 0.3, {
         opacity: 1,
         translateY: 0,
-        stagger: 0.1,
         ease: Expo.easeInOut,
       });
 
@@ -1180,39 +1132,33 @@ jQuery(document).ready(function ($) {
         var scr = gsap.timeline();
 
         // 작은 글자 타이틀
-        scr.to("#section5 .sub_titWrap", 0.7, {
+        scr.to("#section5 .sub_titWrap", {
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         });
-        scr.to("#section5 .sub_tit", 0.25, {
+        scr.to("#section5 .sub_tit", {
           opacity: 1,
-          transformOrigin: "0%",
+          translateY: 0,
         });
-
         // 움직이는 글자
-        scr.to("#section5 .text_border:nth-child(1)", 0.25, {
+        scr.to("#section5 .text_border:nth-child(1)", {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "-100%",
         });
-        scr.to("#section5 .text_border:nth-child(2)", 0.25, {
+        scr.to("#section5 .text_border:nth-child(2)", {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "-100%",
         });
-        scr.to("#section5 .text_border:nth-child(3)", 0.25, {
+        scr.to("#section5 .text_border:nth-child(3)", {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "-100%",
         });
-        scr.to("#section5 .text_border:nth-child(4)", 0.25, {
+        scr.to("#section5 .text_border:nth-child(4)", {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "-100%",
         });
       }
@@ -1223,47 +1169,42 @@ jQuery(document).ready(function ($) {
         $("#section6").offset().top - $(window).height() / 2
       ) {
         var scr = gsap.timeline();
-        scr.to("#section6 .section_txt", 0.5, {
+        scr.to("#section6 .section_txt", {
           opacity: 1,
           scaleX: 1,
-          duration: 0.5,
           transformOrigin: "0%",
         });
-        scr.to("#section6 .section_txt > span:nth-child(1) ", 0.2, {
+        scr.to("#section6 .section_txt > span:nth-child(1) ", {
           opacity: 1,
           ease: Expo.easeOut,
         });
-        scr.to("#section6 .section_txt .splitText span", 0.5, {
+        scr.to("#section6 .section_txt .splitText span", 0.2, {
           opacity: 1,
           translateY: 0,
-          stagger: 0.1,
-          ease: Expo.easeInOut,
+          stagger: 0.05,
+          ease: "sine.inOut",
         });
-        scr.to("#section6 ul li:nth-child(1) h5", 0.2, {
+        scr.to("#section6 ul li:nth-child(1) h5", {
           opacity: 1,
-          scaleX: 1,
-          duration: 1,
+          translateX: 1,
           transformOrigin: "0%",
           ease: Expo.easeOut,
         });
-        scr.to("#section6 ul li:nth-child(1) p", 0.2, {
+        scr.to("#section6 ul li:nth-child(1) p", {
           opacity: 1,
-          scaleX: 1,
-          duration: 1,
+          translateX: 1,
           transformOrigin: "0%",
           ease: Expo.easeOut,
         });
-        scr.to("#section6 ul li:nth-child(2) h5", 0.2, {
+        scr.to("#section6 ul li:nth-child(2) h5", {
           opacity: 1,
-          scaleX: 1,
-          duration: 1,
+          translateX: 1,
           transformOrigin: "0%",
           ease: Expo.easeOut,
         });
-        scr.to("#section6 ul li:nth-child(2) p", 0.2, {
+        scr.to("#section6 ul li:nth-child(2) p", {
           opacity: 1,
-          scaleX: 1,
-          duration: 1,
+          translateX: 1,
           transformOrigin: "0%",
           ease: Expo.easeOut,
         });
@@ -1278,21 +1219,19 @@ jQuery(document).ready(function ($) {
         var scr = gsap.timeline();
 
         // 작은 글자 타이틀
-        scr.to("#section6 .sub_titWrap", 0.7, {
+        scr.to("#section6 .sub_titWrap", {
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         });
-        scr.to("#section6 .sub_tit", 0.25, {
+        scr.to("#section6 .sub_tit", {
           opacity: 1,
-          transformOrigin: "0%",
+          translateY: 0,
         });
 
         // hello
-        scr.to("#section6 h3", 0.5, {
+        scr.to("#section6 h3", {
           opacity: 1,
           translateY: 0,
-          duration: 2,
           transformOrigin: "0%",
           ease: Power4.easeInOut,
         });
@@ -1307,53 +1246,47 @@ jQuery(document).ready(function ($) {
         var scr = gsap.timeline();
 
         // form
-        scr.to("#section6 form dt:nth-child(1)", 0.5, {
+        scr.to("#section6 form dt:nth-child(1)", {
           opacity: 1,
           ease: Expo.easeOut,
         });
-        scr.to("#section6 form dt:nth-child(1) span", 0.5, {
+        scr.to("#section6 form dt:nth-child(1) span", {
           opacity: 1,
           translateY: 0,
-          duration: 1,
           transformOrigin: "0%",
         });
-        scr.to("#section6 form dd:nth-child(2) input", 0.5, {
+        scr.to("#section6 form dd:nth-child(2) input", {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         });
 
-        scr.to("#section6 form dt:nth-child(3)", 0.5, {
+        scr.to("#section6 form dt:nth-child(3)", {
           opacity: 1,
           ease: Expo.easeOut,
         });
-        scr.to("#section6 form dt:nth-child(3) span", 0.5, {
+        scr.to("#section6 form dt:nth-child(3) span", {
           opacity: 1,
           translateY: 0,
-          duration: 1,
           transformOrigin: "0%",
         });
-        scr.to("#section6 form dd:nth-child(4) input", 0.5, {
+        scr.to("#section6 form dd:nth-child(4) input", {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         });
-        scr.to("#section6 form dt:nth-child(5)", 0.5, {
+        scr.to("#section6 form dt:nth-child(5)", {
           opacity: 1,
           ease: Expo.easeOut,
         });
-        scr.to("#section6 form dt:nth-child(5) span", 0.5, {
+        scr.to("#section6 form dt:nth-child(5) span", {
           opacity: 1,
           translateY: 0,
-          duration: 1,
           transformOrigin: "0%",
         });
-        scr.to("#section6 form dd:nth-child(6) input", 0.5, {
+        scr.to("#section6 form dd:nth-child(6) input", {
           opacity: 1,
           scaleX: 1,
-          duration: 1,
           transformOrigin: "0%",
         });
         // 주황색 원
