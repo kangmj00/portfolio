@@ -27,7 +27,9 @@ jQuery(document).ready(function ($) {
     let target = $($(this).attr("href"));
     if (target.length) {
       $("html, body").animate(
-        { scrollTop: target.offset().top },
+        {
+          scrollTop: target.offset().top,
+        },
         600,
         "easeInOutExpo"
       );
@@ -62,7 +64,9 @@ jQuery(document).ready(function ($) {
     gsap.fromTo(
       "#section1 h1 em span",
       0.09,
-      { opacity: 0 },
+      {
+        opacity: 0,
+      },
       {
         delay: 0.8,
         opacity: 1,
@@ -177,7 +181,11 @@ jQuery(document).ready(function ($) {
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(1) .subtitle_wrap p ",
-        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
+        {
+          opacity: 1,
+          translateY: 0,
+          ease: Expo.easeInOut,
+        }
       );
     }
 
@@ -215,7 +223,11 @@ jQuery(document).ready(function ($) {
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(2) .subtitle_wrap p ",
-        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
+        {
+          opacity: 1,
+          translateY: 0,
+          ease: Expo.easeInOut,
+        }
       );
     }
 
@@ -281,7 +293,11 @@ jQuery(document).ready(function ($) {
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(5) .subtitle_wrap p ",
-        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
+        {
+          opacity: 1,
+          translateY: 0,
+          ease: Expo.easeInOut,
+        }
       );
     }
 
@@ -319,7 +335,11 @@ jQuery(document).ready(function ($) {
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(6) .subtitle_wrap p ",
-        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
+        {
+          opacity: 1,
+          translateY: 0,
+          ease: Expo.easeInOut,
+        }
       );
     }
 
@@ -357,7 +377,11 @@ jQuery(document).ready(function ($) {
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(7) .subtitle_wrap p ",
-        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
+        {
+          opacity: 1,
+          translateY: 0,
+          ease: Expo.easeInOut,
+        }
       );
     }
 
@@ -409,7 +433,11 @@ jQuery(document).ready(function ($) {
       );
       scr.to(
         "#section2 .container .project_list li:nth-child(9) .subtitle_wrap p ",
-        { opacity: 1, translateY: 0, ease: Expo.easeInOut }
+        {
+          opacity: 1,
+          translateY: 0,
+          ease: Expo.easeInOut,
+        }
       );
     }
 
@@ -470,16 +498,19 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site01").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
 
-      scr.to("#site01 .bgWhite", { width: "100%" });
+      scr.to("#site01 .bgWhite", {
+        width: "100%",
+      });
       scr.to("#site01 .bgWhite h3 em:nth-child(1)", {
-        scaleX: 1,
         opacity: 1,
+        translateX: 0,
         transformOrigin: "0%",
       });
       scr.to("#site01 .bgWhite h3 em span", 0.01, {
         opacity: 1,
         duration: 0.4,
         stagger: 0.09,
+        ease: Circ.easeInOut,
       });
       setTimeout(function () {
         $("#site01 .site_wrap.reveal").addClass("in");
@@ -527,11 +558,12 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site02").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
 
-      scr.to("#site02 .bgWhite", { width: "100%" });
+      scr.to("#site02 .bgWhite", {
+        width: "100%",
+      });
       scr.to("#site02 .bgWhite h3 em:nth-child(1)", {
         scaleX: 1,
         opacity: 1,
-        transformOrigin: "0%",
       });
       scr.to("#site02 .bgWhite h3 em span", 0.01, {
         opacity: 1,
@@ -583,7 +615,9 @@ jQuery(document).ready(function ($) {
     }
     if (scrollPosition > $("#site03").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
-      scr.to("#site03 .bgWhite", { width: "100%" });
+      scr.to("#site03 .bgWhite", {
+        width: "100%",
+      });
       scr.to("#site03 .bgWhite h3 em:nth-child(1)", {
         scaleX: 1,
         opacity: 1,
@@ -639,7 +673,9 @@ jQuery(document).ready(function ($) {
     }
     if (scrollPosition > $("#site04").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
-      scr.to("#site04 .bgWhite", { width: "100%" });
+      scr.to("#site04 .bgWhite", {
+        width: "100%",
+      });
       scr.to("#site04 .bgWhite h3 em:nth-child(1)", {
         scaleX: 1,
         opacity: 1,
@@ -696,7 +732,9 @@ jQuery(document).ready(function ($) {
     if (scrollPosition > $("#site05").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
 
-      scr.to("#site05 .bgWhite", { width: "100%" });
+      scr.to("#site05 .bgWhite", {
+        width: "100%",
+      });
       scr.to("#site05 .bgWhite h3 em:nth-child(1)", {
         scaleX: 1,
         opacity: 1,
@@ -822,7 +860,9 @@ jQuery(document).ready(function ($) {
     /* ************** animation ***************** */
     if (scrollPosition > $("#ani").offset().top - $(window).height() / 2) {
       var scr = gsap.timeline();
-      scr.to("#ani", { width: "100%" });
+      scr.to("#ani", {
+        width: "100%",
+      });
     }
     /* ************** animation scrolldown ***************** */
     if (
@@ -858,7 +898,9 @@ jQuery(document).ready(function ($) {
       $(".javascript_bgWhite").offset().top - $(window).height() / 2
     ) {
       var scr = gsap.timeline();
-      scr.to(".javascript_bgWhite", { width: "100%" });
+      scr.to(".javascript_bgWhite", {
+        width: "100%",
+      });
       scr.to(".javascript_bgWhite .section_txt", 0.5, {
         opacity: 1,
         scaleX: 1,
@@ -949,7 +991,9 @@ jQuery(document).ready(function ($) {
       }, 1500);
 
       // 사진 옆 글자
-      scr.to("#section4 .exp_txt02 p:nth-child(1)", { width: "100%" });
+      scr.to("#section4 .exp_txt02 p:nth-child(1)", {
+        width: "100%",
+      });
       scr.to("#section4 .exp_txt02 p:nth-child(1) span:nth-child(1)", 0.2, {
         opacity: 1,
         duration: 1,
@@ -971,7 +1015,9 @@ jQuery(document).ready(function ($) {
         ease: Expo.easeOut,
       });
 
-      scr.to("#section4 .exp_txt02 p:nth-child(2)", { width: "100%" });
+      scr.to("#section4 .exp_txt02 p:nth-child(2)", {
+        width: "100%",
+      });
       scr.to("#section4 .exp_txt02 p:nth-child(2) span:nth-child(1)", 0.2, {
         opacity: 1,
         duration: 1,
@@ -989,7 +1035,9 @@ jQuery(document).ready(function ($) {
       });
 
       // 스킬박스 배경
-      scr.to("#section4 .skillbox", { opacity: 1 });
+      scr.to("#section4 .skillbox", {
+        opacity: 1,
+      });
       // 스킬박스 글자
       scr.to("#section4 li:nth-child(1)", 0.5, {
         opacity: 1,
