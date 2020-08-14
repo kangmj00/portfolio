@@ -264,7 +264,7 @@
   font-size: 8vw;
   letter-spacing: -0.06em;
   text-transform: uppercase;
-  margin-right: 2vw;
+  padding-right: 2vw;
   flex-shrink: 0;
   white-space: nowrap;
   transition: all ease 0.5s;
@@ -273,7 +273,12 @@
 .text_border span:nth-child(2n) {
   font-style: italic;
 }
-
+.text_border span:before,
+.text_border span {
+  background-image: linear-gradient(0deg, #fff 0%, #fff 50%, transparent 50.1%);
+  background-position: 100% 100%;
+  background-size: 100% 0%;
+}
 .text_border span:before {
   content: " ";
   width: 5vw;
@@ -283,21 +288,21 @@
   vertical-align: middle;
   margin: 0 3vw;
 }
-
-.text_border span,
-.text_border span:before {
-  color: #151515;
-  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
-  -moz-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
-  -webkit-text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+.text_border span {
+  cursor: pointer;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
 }
 
 .text_border:hover span {
-  color: #fff;
+  background-size: 100% 200%;
 }
 
 .text_border:hover span:before {
-  background-color: #fff;
+  background-size: 100% 200%;
 }
 
 /* 메인 내 사진 */
