@@ -4,10 +4,10 @@
   width: 85%;
   margin: 0 auto;
 }
-
 .container.right {
   text-align: right;
 }
+/* 프리즘 css 초기화 */
 
 #section1 {
   background-image: url("../img/Untitled-3.svg");
@@ -814,15 +814,12 @@
   transform: scaleX(0);
   transform-origin: -100% 0;
 }
-
 #section3 .codeSection ul {
   display: flex;
 }
-
 #section3 .codeSection li {
   background-color: #151515;
 }
-
 #section3 .codeSection li a {
   font-family: "Montserrat Subrayada", sans-serif;
   display: block;
@@ -831,13 +828,11 @@
   line-height: 6vh;
   text-align: center;
 }
-
 #section3 .codeSection li a.active,
 #section3 .codeSection li a:hover {
   background-color: #23241f;
   color: #fff;
 }
-
 #section3 .codeSection div pre {
   clear: both;
   width: 100%;
@@ -845,12 +840,13 @@
   display: none;
   height: 60vh;
   overflow: auto !important;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
 }
-
 #section3 .codeSection div pre:nth-child(1) {
   display: block;
 }
-
 #section3 .codeSection div pre div {
   padding: 0;
 }
