@@ -123,6 +123,7 @@
 .sub_tit {
   font-family: "Montserrat Subrayada", sans-serif;
   width: 60vw;
+  margin-bottom: 16vh;
   text-align: left;
   display: inline-block;
   position: relative;
@@ -230,35 +231,44 @@
   font-style: italic;
   padding: 0 0.5vw;
 }
+
 /* 배경색이랑 같고 선이 있는 텍스트 (움직이는 텍스트) */
 .text_wrap {
-  width: 100%;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  --marquee-width: 100vw;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+  --offset2: -80vw;
+  --move-initial2: calc(0% + var(--offset2));
+  --move-final2: calc(25% + var(--offset2));
+  counter-reset: text_border;
+}
+.text_inner {
+  width: var(--marquee-width);
   overflow: hidden;
 }
 .text_border {
-  margin-top: 16vh;
+  width: fit-content;
   display: flex;
-  text-transform: uppercase;
-  white-space: nowrap;
-  will-change: transform;
-  transform: translateX(0);
-  animation: scrolling 10s linear infinite;
-  opacity: 0;
-  transform: scaleX(0);
-  transform-origin: -100% 0;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 8s linear infinite;
 }
-@keyframes scrolling {
+@keyframes marquee {
   0% {
-    transform: translateX(-100%);
+    transform: translate3d(var(--move-initial), 0, 0);
   }
   100% {
-    transform: translateX(0%);
+    transform: translate3d(var(--move-final), 0, 0);
   }
 }
 .text_border span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 600;
   font-size: 8vw;
   letter-spacing: -0.06em;
@@ -268,7 +278,6 @@
   white-space: nowrap;
   transition: all ease 0.5s;
 }
-
 .text_border span:nth-child(2n) {
   font-style: italic;
 }
@@ -295,11 +304,9 @@
   -webkit-background-clip: text;
   background-repeat: no-repeat;
 }
-
 .text_border:hover span {
   background-size: 100% 200%;
 }
-
 .text_border:hover span:before {
   background-size: 100% 200%;
 }
@@ -961,7 +968,6 @@
   align-content: center;
   flex-direction: column;
 }
-
 .animation .ani_menu {
   overflow: hidden;
   -webkit-touch-callout: none;
@@ -975,13 +981,11 @@
   --move-final: calc(-50% + var(--offset));
   counter-reset: menu;
 }
-
 .ani_item {
   cursor: default;
   position: relative;
   margin-bottom: 2vh;
 }
-
 .ani_item a {
   margin-left: 7.5%;
   display: inline-block;
@@ -993,14 +997,12 @@
   -webkit-text-shadow: -1px 0 #151515, 0 1px #151515, 1px 0 #151515;
   transition: opacity 0.4s;
 }
-
 .ani_item a:hover {
   transition-duration: 0.1s;
   opacity: 0;
   color: #151515;
   outline: none;
 }
-
 .ani_con {
   pointer-events: none;
   position: absolute;
@@ -1012,13 +1014,11 @@
   top: 50%;
   transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px, 0);
 }
-
 .ani_item a:hover + .ani_con {
   opacity: 1;
   transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
   transition: all 0.4s;
 }
-
 .ani_txtWrap {
   position: absolute;
   top: 0;
@@ -1027,7 +1027,6 @@
   pointer-events: none;
   mix-blend-mode: color-burn;
 }
-
 .ani_txt {
   width: fit-content;
   display: flex;
@@ -1038,17 +1037,14 @@
   opacity: 0;
   transition: opacity 0.1s;
 }
-
 .ani_item a:hover ~ .ani_txtWrap .ani_txt {
   animation-play-state: running;
   opacity: 1;
   transition-duration: 0.4s;
 }
-
 .ani_txt li {
   text-align: center;
 }
-
 .ani_item a,
 .ani_txt li {
   white-space: nowrap;
@@ -1056,25 +1052,21 @@
   font-weight: 600;
   line-height: 1.15;
 }
-
 .ani_txt li {
   font-style: italic;
   margin-left: 3vw;
   font-weight: 600;
 }
-
 .ani_txt li:hover,
 .ani_txt li:focus {
   font-style: italic;
   color: #151515;
   outline: none;
 }
-
 @keyframes marquee {
   0% {
     transform: translate3d(var(--move-initial), 0, 0);
   }
-
   100% {
     transform: translate3d(var(--move-final), 0, 0);
   }
@@ -2594,8 +2586,8 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
   position: relative;
 }
 #section4 article .minji_ImgWrap .minji_Img {
-  background-image: url("../img/aboutphoto.png");
-  background-position: center bottom;
+  background-image: url("../img/aboutphoto.jpeg");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -2671,22 +2663,20 @@ body .planet_saturn__ring .around_part:nth-of-type(18) {
 }
 
 /* my works style with */
-#section5 article {
-  text-align: left;
-  margin-top: 16vh;
-}
-#section5 article .text_border {
+#section5 .text_wrap {
   margin: 2vh 0;
 }
-#section5 article .text_border:nth-child(2n) {
-  animation: scrolling-r 10s linear infinite alternate;
+#section5 .text_wrap:nth-child(2n + 1) .text_border {
+  transform: translate3d(var(--move-initial2), 0, 0);
+  animation: marquee2 8s linear infinite;
 }
-@keyframes scrolling-r {
+@keyframes marquee2 {
   0% {
-    transform: translateX(0);
+    transform: translate3d(var(--move-initial2), 0, 0);
   }
+
   100% {
-    transform: translateX(-22%);
+    transform: translate3d(var(--move-final2), 0, 0);
   }
 }
 

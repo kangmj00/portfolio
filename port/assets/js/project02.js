@@ -548,11 +548,6 @@ jQuery(document).ready(function ($) {
         opacity: 1,
         translateY: 0,
       });
-      scr.to("#site01 .scrollDown .text_border", {
-        opacity: 1,
-        scaleX: 1,
-        ease: Expo.easeOut,
-      });
       scr.to("#site01 .scrollDown .arrow_circle", {
         duration: 1,
         opacity: 1,
@@ -609,11 +604,6 @@ jQuery(document).ready(function ($) {
         opacity: 1,
         translateY: 0,
       });
-      scr.to("#site02 .scrollDown .text_border", {
-        opacity: 1,
-        scaleX: 1,
-        ease: Expo.easeOut,
-      });
       scr.to("#site02 .scrollDown .arrow_circle", {
         duration: 1,
         opacity: 1,
@@ -669,11 +659,6 @@ jQuery(document).ready(function ($) {
         opacity: 1,
         translateY: 0,
       });
-      scr.to("#site03 .scrollDown .text_border", {
-        opacity: 1,
-        scaleX: 1,
-        ease: Expo.easeOut,
-      });
       scr.to("#site03 .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
@@ -728,11 +713,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site04 .scrollDown .sub_tit", 0.1, {
         opacity: 1,
         translateY: 0,
-      });
-      scr.to("#site04 .scrollDown .text_border", {
-        opacity: 1,
-        scaleX: 1,
-        ease: Expo.easeOut,
       });
       scr.to("#site04 .scrollDown .arrow_circle", {
         duration: 1,
@@ -790,11 +770,6 @@ jQuery(document).ready(function ($) {
       scr.to("#site05 .scrollDown .sub_tit", 0.1, {
         opacity: 1,
         translateY: 0,
-      });
-      scr.to("#site05 .scrollDown .text_border", {
-        opacity: 1,
-        scaleX: 1,
-        ease: Expo.easeOut,
       });
       scr.to("#site05 .scrollDown .arrow_circle", {
         duration: 1,
@@ -861,12 +836,6 @@ jQuery(document).ready(function ($) {
         opacity: 1,
         translateY: 0,
       });
-      scr.to("#site_app .scrollDown .text_border", {
-        opacity: 1,
-        duration: 1,
-        scaleX: 1,
-        ease: Expo.easeOut,
-      });
       scr.to("#site_app .scrollDown .arrow_circle", 1, {
         duration: 1,
         opacity: 1,
@@ -894,11 +863,6 @@ jQuery(document).ready(function ($) {
       scr.to("#ani_scroll .sub_tit", 0.1, {
         opacity: 1,
         translateY: 0,
-      });
-      scr.to("#ani_scroll .text_border", {
-        opacity: 1,
-        scaleX: 1,
-        transformOrigin: "-100%",
       });
       scr.to("#ani_scroll .arrow_circle", {
         duration: 1,
@@ -1139,27 +1103,6 @@ jQuery(document).ready(function ($) {
         scr.to("#section5 .sub_tit", {
           opacity: 1,
           translateY: 0,
-        });
-        // 움직이는 글자
-        scr.to("#section5 .text_border:nth-child(1)", {
-          opacity: 1,
-          scaleX: 1,
-          transformOrigin: "-100%",
-        });
-        scr.to("#section5 .text_border:nth-child(2)", {
-          opacity: 1,
-          scaleX: 1,
-          transformOrigin: "-100%",
-        });
-        scr.to("#section5 .text_border:nth-child(3)", {
-          opacity: 1,
-          scaleX: 1,
-          transformOrigin: "-100%",
-        });
-        scr.to("#section5 .text_border:nth-child(4)", {
-          opacity: 1,
-          scaleX: 1,
-          transformOrigin: "-100%",
         });
       }
 
