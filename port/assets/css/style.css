@@ -761,36 +761,29 @@
   text-align: right;
   position: relative;
 }
-
 #section3 .bgWhite .site_wrap .container {
   position: absolute;
   top: 0;
   width: 92.5%;
 }
-
 #section3 .bgWhite .site_wrap figure {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 68vh;
 }
-
 #section3 .bgWhite figure.site01 {
   background-image: url("../img/site01.png");
 }
-
 #section3 .bgWhite figure.site02 {
   background-image: url("../img/site02.png");
 }
-
 #section3 .bgWhite figure.site03 {
   background-image: url("../img/site03.png");
 }
-
 #section3 .bgWhite figure.site04 {
   background-image: url("../img/site04.png");
 }
-
 #section3 .bgWhite figure.site05 {
   background-image: url("../img/site04.png");
 }
