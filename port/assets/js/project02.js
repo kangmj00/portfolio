@@ -36,44 +36,28 @@ jQuery(document).ready(function ($) {
   });
 
   /* ********************************* */
-  // 처음 들어갔을 때 로딩
-  gsap.to(".first", 0.75, {
-    delay: 0.2,
-    left: "-100%",
-    ease: Expo.easeInOut,
+  //main bg
+  gsap.to("#section1 .blackBg", 6.5, {
+    scale: 0,
+    transformOrigin: "50% 50%",
+    ease: "power4.out",
   });
-  gsap.to(".second", 0.75, {
-    delay: 0.4,
-    left: "-100%",
-    ease: Expo.easeInOut,
-  });
-  gsap.to(".third", 0.75, {
-    delay: 0.6,
-    left: "-100%",
-    ease: Expo.easeInOut,
-  });
-  gsap.to(".fourth", 0.75, {
-    delay: 0.8,
-    left: "-100%",
-    ease: Expo.easeInOut,
-  });
-
-  /* ************** 메인 타이틀 ***************** */
-  setTimeout(function () {
-    gsap.fromTo(
-      "#section1 h1 em span",
-      0.09,
-      {
-        opacity: 0,
-      },
-      {
-        delay: 0.8,
-        opacity: 1,
-        duration: 0.2,
-        stagger: 0.09,
-        ease: "elastic.out(1, 0.3)",
-      }
-    );
+  //main txt
+  TweenMax.staggerFrom(
+    "#section1 h1 .splitText span",
+    2,
+    {
+      delay: 3,
+      opacity: 0,
+      ease: "Elastic.easeOut",
+      y: "10%",
+    },
+    0.05
+  );
+  TweenMax.to("#section1 img:nth-child(2)", 10, {
+    rotation: -360,
+    repeat: -1,
+    ease: Linear.easeNone,
   });
   /* ************** 스크롤에 따라 움직이는 화살표 ***************** */
   $(function () {

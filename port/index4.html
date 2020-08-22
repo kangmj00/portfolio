@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style3.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/prism.css" />
     <title>강민지 포트폴리오</title>
   </head>
   <body>
@@ -14338,26 +14339,295 @@ s5Uxf4mwEGbsPIR//9k="
         </ul>
       </nav>
       <article class="site_wrap">
-        <div class="bgWhite">
-          <div class="container">
-            <h3 class="reveal reveal-ltr"><span>culturebunker</span></h3>
-            <p class="reveal reveal-ltr"><span>평화문화진지</span></p>
-          </div>
-          <div class="photo reveal reveal-ltr">
-            <figure>
-              <figcaption>평화문화진지 사진</figcaption>
-            </figure>
-            <div class="orange_circle"><a href="">site view</a></div>
-          </div>
-          <div class="codeSec container">
-            <ul>
-              <li>
-                <a href="">html</a>
-                <div></div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <section id="site01">
+          <article class="bgWhite">
+            <div class="container">
+              <h3 class="reveal reveal-ltr"><span>culturebunker</span></h3>
+              <p class="reveal reveal-ltr"><span>평화문화진지</span></p>
+            </div>
+            <div class="photo reveal reveal-ltr">
+              <figure>
+                <figcaption>평화문화진지 사진</figcaption>
+              </figure>
+              <div class="orange_circle"><a href="">site view</a></div>
+            </div>
+            <div class="codeSec container">
+              <ul>
+                <li>
+                  <a href="#" class="active">HTML</a>
+                </li>
+                <li>
+                  <a href="#">SCSS</a>
+                </li>
+                <li>
+                  <a href="#">JS</a>
+                </li>
+              </ul>
+              <div class="codeSection_items">
+                <div>
+                  <pre class="line-numbers">
+<code class="language-html">&lt;!-- 대전차방호시설 --&gt;
+    &lt;section class=&quot;protective__wrap&quot;&gt;
+        &lt;article class=&quot;section__inner&quot;&gt;
+            &lt;h4&gt;
+                평화문화진지는 대전차방호시설의 흔적들을 보존한 채
+                문화예술공간으로 재탄생했습니다. 공간의 역사를 통해
+                시민들과 함께 문화를 이어가고자 합니다.
+            &lt;/h4&gt;
+            &lt;div class=&quot;tab__img&quot;&gt;
+				&lt;img 
+										src=&quot;../images/graphic-1970.png&quot; 
+										alt=&quot;1970 대전차방호시설&quot; 
+										/&gt;
+				&lt;img 
+										src=&quot;../images/graphic-2004.png&quot;
+										alt=&quot;2004 대전차방호시설&quot; 
+										/&gt;
+				&lt;img 
+										src=&quot;../images/graphic-2017.png&quot;
+										alt=&quot;2017 대전차방호시설&quot;
+										/&gt;
+            &lt;/div&gt;
+            &lt;p&gt;
+                연도를 클릭하시면, 연도별 변화하는 모습을 확인하실 수 있습니다.
+            &lt;/p&gt;
+        &lt;/article&gt;
+        &lt;article class=&quot;section__full&quot;&gt;
+       	 	&lt;ul class=&quot;tab__menu&quot;&gt;
+            	&lt;li class=&quot;on&quot;&gt;
+                    &lt;h4&gt;1970&lt;/h4&gt;
+                    &lt;p&gt;시민아파트(옛 대전차방호시설)&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h4&gt;2004&lt;/h4&gt;
+                    &lt;p&gt;철거, 군사시설로 존치&lt;/p&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;h4&gt;2017&lt;/h4&gt;
+                    &lt;p&gt;평화문화진지&lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+&lt;!-- // 대전차방호시설 --&gt;
+
+</code>
+								</pre>
+                </div>
+                <div>
+                  <pre class="line-numbers">
+<code class="language-scss">// 대전차방호 시설
+.protective__wrap {
+    .section__inner {
+        h4 {
+            @include p;
+        }
+        p {
+            @include extra-small-p;
+            color: $grey-dark;
+        }
+        div {
+            text-align: center;
+            position: relative;
+            &:after {
+                content: " ";
+                display: block;
+                background-color: $grey;
+                position: absolute;
+                bottom: 0;
+                z-index: -1;
+            }
+            img {
+                display: none;
+                margin: 0 auto;
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
+    .section__full {
+        background-color: $green;
+        ul {
+            li {
+                float: left;
+                width: 33.3333%;
+                color: $white;
+                cursor: pointer;
+                h4 {
+                    @include H3-Bold;
+                    border-bottom: solid 3px $green-light;
+                    color: $green-light;
+                }
+                p {
+                    @include extra-small-p;
+                    color: $green-light;
+                }
+                &.on {
+                    h4 {
+                        border-color: $white;
+                    }
+                    h4,
+                    							p {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1168px) {
+	// 대전차방호 시설
+	.protective__wrap {
+		.section__inner {
+				h4 {
+						width: 100%;
+						padding-top: 64px;
+						padding-bottom: 40px;
+						text-align: center;
+				}
+				p {
+						padding: 32px 0;
+						text-align: center;
+				}
+				div {
+						min-height: 95px;
+						@media (min-width: 385px) and (max-width: 487px) {
+								min-height: 120px;
+						}
+						@media (min-width: 488px) and (max-width: 516px) {
+								min-height: 115px;
+						}
+						&:after {
+								width: calc(100% + 48px);
+								margin-left: -24px;
+								min-height: 52px;
+						}
+						img {
+								width: 100%;
+						}
+				}
+		}
+		.section__full {
+				ul {
+						padding-top: 16px;
+						padding-bottom: 60px;
+						position: relative;
+						li {
+								h4 {
+										padding-bottom: 4px;
+								}
+								p {
+										position: absolute;
+										bottom: 26px;
+										display: none;
+								}
+								&.on {
+										p {
+												width: 100%;
+												display: block;
+												left: 0;
+										}
+								}
+						}
+				}
+		}
+}
+@media screen and (min-width: 1167px) {
+	.mo {
+			display: none !important;
+	}
+	// 대전차방호 시설
+	.protective__wrap {
+			.section__inner {
+					h4 {
+							padding-top: 80px;
+							padding-bottom: 64px;
+							width: 558px;
+							margin: 0 auto;
+					}
+					p {
+							padding: 40px 0;
+							width: 431px;
+							margin: 0 auto;
+					}
+					div {
+							min-height: 225px;
+							&:after {
+									width: 100%;
+									height: 120px;
+							}
+							img {
+									width: 756px;
+									height: 192px;
+							}
+					}
+			}
+			.section__full {
+					ul {
+							padding-top: 15px;
+							padding-bottom: 28px;
+							li {
+									h4 {
+											padding-bottom: 3px;
+									}
+									p {
+											padding-top: 8px;
+									}
+									&:hover {
+											h4 {
+													border-color: $white;
+											}
+											h4,
+																									p {
+													color: $white;
+											}
+									}
+							}
+					}
+			}
+	}
+}</code>
+								</pre>
+                </div>
+                <div>
+                  <pre class="line-numbers">
+<code class="language-js">// main 년도 클릭시 나오는 그림
+$(".tab__menu li").click(function () {
+    event.returnValue = false;
+    var $this = $(this);
+    var $tab__img = $(".tab__img");
+    var thisIndex = $(this).index();
+    $this.siblings().removeClass("on");
+    $this.addClass("on");
+    $tab__img.find("img").hide();
+    $tab__img.find("img").eq(thisIndex).fadeIn(700);
+});						
+</code>
+								</pre>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="scrollDown">
+            <div class="sub_tit container"><h6>next project</h6></div>
+            <div class="text_flowWrap">
+              <div class="text_flowinner">
+                <div class="text_flowborder">
+                  <span>genderequity</span>
+                  <span>genderequity</span>
+                  <span>genderequity</span>
+                  <span>genderequity</span>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="arrow_circle">
+                <p>scrollDown</p>
+              </div>
+            </div>
+          </article>
+        </section>
       </article>
     </section>
 
@@ -14367,5 +14637,6 @@ s5Uxf4mwEGbsPIR//9k="
     <script src="assets/js/jquery-1.12.4.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/project3.js"></script>
+    <script src="assets/js/prism.js"></script>
   </body>
 </html>
